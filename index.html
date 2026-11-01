@@ -1,0 +1,1283 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aegis — Линейная алгебра: матрицы, определители, системы</title><link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAAAAACPAi4CAAAI4klEQVR4nKVX244cSRE9EZlV1deZHs+sxzv22ma9Y5tdtEIsIJ4Qgjck+Fj+AF5XCHERa2xje33Bl5mxpy9V3VWZGYeHrB57heCFVpVUKnVERUaciDhHAAAi+RIBBAIBIIAg/wgQAEEQIEmCIJH/lk3kwvy9EwHkA1MCfO+if+O/Y39hLgKQxj4+EQEJUIQALyITwuMi+vwAEYEy0RXloHACprDpQhKnBpKCrQcKKNyeXntTEYEY3c6kKmTO9VW8GMouQ7taJFGC7G8YCXJrpAKBAqJQs/H+br1cmw9qE6zUiqjD6Xh+tnJqMBAGgkYSFO3tkZ8EYXyk89g4LwajQUVEGdPI79q/6gIkCSN6D6L99/tIkt4aP6kLLzFZzi9BQJ1nDOOb9T/N2cUxjKTflk8gCg37h3XRTmJnIvq+zEAMUlabbnP79VlhYhQQIgAkexCBqCBdHz+xSWilh4GwxxEoJKtipTfrp07McgxGitf8cVGB3eX9qayhQoHASK/cIpFCw5DLY72noBFGkCaFXtjL8fl82HWacajx1uXmycp9B4OpLNez3Qe88GA+AwEK2N3T80lj2oMb/rPZIj5bK4VCCkBQuzg8Ccf3FEII2BdQoNB05/zd7ppORFRUPS/t8e33bptz6tQ5VVERcWx2z8/vJBXNsNecLtHwCRc7KwhFRFRVeW2oaf/zqTinTlVVRUQoWE0XvBa075qMHpV4afRgsEb+uqqqVjfKMJxd/jz63oPTHAXWgwfjS1FURDJ8IYD7+Om0s9xMqqqOex8XzZXd6me7VFV1TkU1d5t106cfu95QcyuFW3WSTrffd87ZjZm2n45HN38SC+eyi/4c2kmqbwV934WwyWQyXeu291VF9e4kjW4MZ8Nf7ZlT1fw2w9atp5PxxEQgUIGIpqPHj8LWWFXF8dLtUXNjf2d38NkvOq9O8xG0dxEePTlKGb8AkCauHrQK5L5SUReOr5bN58OdyU7xm0Pz2a1K3x7aDmo3SQCgIqp28K5Iuf6izqlzXr/atfKzcjKZ+E9/Haui8P59EkQkFe8OTCW3HP1O9EGIi6ZWu/TD4fyT/Wo4GIzsN1dZeO+9UxXkkSqdjzueAihEbKduxLA1Fqc+3r1Rvv1Cq6LwhV39LYdlWRRF4b2K9PO0qXcs4wA2XbrYD4UMA8+fTkP8NHknAq1/eVOHVVWWhXcu54GIbjm1nAO4svGpn8wq4tRx9iN/sjcNFlJoN/Pq5240HAyqqiy80zxokl+XDiIeYOGZJ3U/X9WFu9fk2dGyIWqPlM7v/Oncx6hOFEwmJGAwXwTAAyzFWb9Acme48JVv3tx4leL4d5d/vEDw3//aB69BhJYszylzUnYKD7FqEQq+X0oqGO3hXVU2TN39x7c2MDu8urTgN2TyPvY7MyyqJcQLWNAxL9R+xenod28OFt+oK5rx8tHNWBBffBs2zYrmvNN+Ujor8m6EW/U70PWJ0GL48GT41HvBD5vmdDAqsc96M9fQuYxHipCbMZB349U3KxGR2FZlToMvD64dTuOyjth3fjisBt3k7bKwzaZTp2oCwKYfLZAjyNiIvHPl2VunTkSl2P/qi5GdfvNMDo72K3Lg2tcPuFkUqtJDCRQB4EHwResiDoovf68gVJzj/vWDkfjDzZvm5h0FUioHvpkPKrfFMuDrF2MACiANBcBB+vPJwsw6ixFF/fJFF+oV3z1aghSaL2azqhr7ft0BkKHlI0goU0n5uzsZKggB6Iv6wbOPyrAMg4f48jJTiCM/O3w9OD74etGfQDvpBPCkbPYXAApxefEDVrHV5kzFpSkfP//+pWpQusHex3+Pf/nyKJ0i04xy57mAHpAOqcw8CMgraNgWe6fMC3PQPFoPR3tewjyknb8uDk8yu9KOnTAfISl1u0BJ0A82BzgTETZVNRi1r0eD+d4neDK98mq5fEmCEKFaEMKTkrrRysW8u0jChkW6fLpUiCrSeuOq4cCfXNkPuPZHQI0EWMRxmzzpAehib1EGkNsYJjL+6B+WIKJRVVzb+GL4zQ/m9xZdSJYduHbyrscBdXFtlLYFJukmdlXOLVEcGVNaL0fXsfrb/dcni1VIyYwUxWj8rSMzEsOiaMugOYXCwUBunGxiIkM0Q3F+Vg4mtkrsFm0XkxHCMlSLWBBQ0kxPd4MjSTMzSyM3PXweuy6+fP62jtYNXfO4qd/KMjb1pu1iJOHD7FTNcg7g6jjeVK3LOdQJr8mrFFJYlolBoH7+ajwNbVRfpxCjCQftOK48AXgKafryTnjdEWICK0fuszeLtrP5hlChEMXi4TFDaJs2xpAAKa8U9zPuPCgUretuOW6UAnBcTI/+0LZdnKcOubh+ev7ItyElREsUjlerqi6NIDwhpBWPbquVnSMpY71WPG27dlM7Qw8OjNdEYrIEilWm4/tF5rraYzi9vr6onIH0Qz0+Pdm0oY4WY4oxxhhDR0vJSEDhB6vrr1JvqCBJoz+rj5uBGMyXk08e1m1sl0wpxZRiTClZMqORItTh+rg58zSChG4VRPHc7y4malK/OZreOz9786pFNDPLhuz1icBNVzP3rMh8F/SZtNLUfXM3nO+0yf2r+fqPL9ZGTdhSZTJnA5Lc8Hw2u+dI6yXIBdFUyu13y2FK4z1parPUC5MtySQIWlk2s9kDkwui+R2qyzt8uOs3UDEYmckEe81FoWFky2P9h3xIdb1kqgdRpV0fPcU0tIJek0EuFBvIqlzKzeapAz8g207eexAJB4fryeNBDPah5gNAauE331uNXp8VloMHjKTvuTwgJFC8nd8qimVRSkgUIfJFeM+4GZXVfSt6wdF3/4Xk2cbAMDly57HxydA5EJK80Lk4drP0clXkiuSb/yG6RETEbHywW58vNf3kzKc4/+Kvc2fT2XhxmkUX8aHo8oSAMBXCBBQR8esnfuaM8jZhoFzQhO7826ie7/VSLhN72QrZKsd+wzPBA50KINErEOHEcCGa+/Gdmc1/k76AclsISm8MXqQv4+t/im/IRR3/q/jO1f4/5P+/Aah90CV0mDQ8AAAAAElFTkSuQmCC"><style>:root{--bg:#101010;--bg2:#1a1a1a;--bg3:#232323;--line:#333333;--fg:#ececec;--fg2:#a5a5a5;--mut:#797979;--acc:#949494;--acc2:#9c9c9c;
+--blue:#9a9a9a;--green:#9d9d9d;--red:#999999;--yellow:#bfbfbf;--violet:#a4a4a4;--pink:#a1a1a1;--r:14px;--sh:0 8px 30px rgba(0,0,0,.35)}
+body.light{--bg:#f8f8f8;--bg2:#ffffff;--bg3:#f1f1f1;--line:#e2e2e2;--fg:#1f1f1f;--fg2:#555555;--mut:#848484;--acc:#6b6b6b;--acc2:#656565;--blue:#606060;--green:#666666;--red:#5c5c5c;--yellow:#686868;--violet:#626262;--sh:0 6px 20px rgba(30,30,30,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 "Segoe UI",Inter,system-ui,-apple-system,Roboto,Arial,sans-serif}
+a{color:var(--acc2)}
+/* layout */
+#side{position:fixed;inset:0 auto 0 0;width:285px;background:var(--bg2);border-right:1px solid var(--line);display:flex;flex-direction:column;z-index:30;transition:transform .25s}
+#side .brand{padding:16px 18px 10px;font-weight:800;font-size:18px;display:flex;align-items:center;gap:10px}
+#side .brand .logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--acc),var(--acc2));display:grid;place-items:center;color:var(--onacc);font-size:15px}
+#nav-search{margin:0 14px 8px;padding:9px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg3);color:var(--fg);font:inherit;font-size:14px}
+#nav{overflow:auto;padding:0 8px 20px;flex:1}
+#nav .ng{margin-top:10px}#nav .ngh{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);padding:6px 10px;font-weight:700}
+#nav a{display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:9px;color:var(--fg2);text-decoration:none;font-size:14.5px}
+#nav a:hover{background:var(--bg3);color:var(--fg)}#nav a.cur{background:color-mix(in srgb,var(--acc) 20%,transparent);color:var(--fg);font-weight:600}
+#nav a .num{font-size:11px;min-width:24px;height:20px;border-radius:6px;display:grid;place-items:center;background:var(--bg3);color:var(--mut);font-weight:700}
+#nav a.seen .num{background:color-mix(in srgb,var(--green) 25%,transparent);color:var(--green)}
+#top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:12px;padding:10px 22px;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);margin-left:285px}
+#top .sp{flex:1}#top .stat{font-size:13px;color:var(--fg2);display:flex;gap:14px}#top .stat b{color:var(--fg)}
+#burger{display:none}
+main{margin-left:285px;padding:26px 34px 80px;max-width:1180px}
+main>section{display:none;animation:fade .25s}main>section.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1}}
+@media(max-width:900px){#side{transform:translateX(-100%)}body.navopen #side{transform:none;box-shadow:var(--sh)}#top,main{margin-left:0}#burger{display:inline-grid}main{padding:18px 14px 70px}}
+/* typography */
+h1{font-size:30px;line-height:1.2;margin:4px 0 6px}h2{font-size:22px;margin:30px 0 10px}h3{font-size:18px;margin:22px 0 8px}
+.sub{color:var(--fg2);margin:0 0 18px}.muted{color:var(--mut)}.small{font-size:13px}
+.sh{display:flex;align-items:center;gap:12px;margin-bottom:6px}.sh .no{font-weight:800;font-size:13px;padding:4px 9px;border-radius:8px;background:linear-gradient(135deg,var(--acc),var(--acc2));color:var(--onacc)}
+.box{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;margin:14px 0;box-shadow:var(--sh)}
+.box>.bt{font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.simple{border-left:4px solid var(--acc2)}.whyb{border-left:4px solid var(--pink)}.altb{border-left:4px solid var(--yellow)}.mem{border-left:4px solid var(--violet);background:color-mix(in srgb,var(--violet) 8%,var(--bg2))}.warnb{border-left:4px solid var(--red)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.formula{font-size:20px;text-align:center;padding:10px;margin:8px 0;background:var(--bg3);border-radius:10px;font-family:"Cambria Math","Times New Roman",serif}
+kbd{font:11px monospace;padding:1px 5px;border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;background:var(--bg3);color:var(--fg2)}
+.hl-b{color:var(--blue);font-weight:700}.hl-g{color:var(--green);font-weight:700}.hl-r{color:var(--red);font-weight:700}.hl-y{color:var(--yellow);font-weight:700}.hl-v{color:var(--violet);font-weight:700}
+table.t{border-collapse:collapse;width:100%;font-size:15px}table.t td,table.t th{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}table.t th{background:var(--bg3)}
+/* matrices */
+.mx{display:inline-flex;align-items:center;gap:6px;vertical-align:middle;margin:4px 2px;flex-wrap:nowrap;position:relative}
+.mname{font-style:italic;white-space:nowrap}.mlab{position:absolute;bottom:-18px;left:0;right:0;text-align:center;font-size:11px;color:var(--mut);white-space:nowrap}
+.m{display:inline-flex;position:relative;padding:5px 12px}
+.m-p::before,.m-p::after,.m-d::before,.m-d::after,.m-b::before,.m-b::after{content:'';position:absolute;top:2px;bottom:2px;width:9px;border:2px solid var(--fg2)}
+.m-p::before{left:0;border-right:0;border-radius:12px 0 0 12px}.m-p::after{right:0;border-left:0;border-radius:0 12px 12px 0}
+.m-d::before{left:3px;width:0;border-width:0 0 0 2px}.m-d::after{right:3px;width:0;border-width:0 2px 0 0}
+.m-b::before{left:0;border-right:0}.m-b::after{right:0;border-left:0}
+.mg{display:grid;gap:5px 6px;align-items:center}
+.c{min-width:36px;height:32px;padding:0 6px;display:flex;align-items:center;justify-content:center;border-radius:9px;border:1.5px solid transparent;font-variant-numeric:tabular-nums;font-size:16px;transition:.2s;white-space:nowrap}
+.c.b{background:color-mix(in srgb,var(--blue) 18%,transparent);border-color:var(--blue)}.c.g{background:color-mix(in srgb,var(--green) 18%,transparent);border-color:var(--green)}
+.c.r{background:color-mix(in srgb,var(--red) 18%,transparent);border-color:var(--red)}.c.y{background:color-mix(in srgb,var(--yellow) 20%,transparent);border-color:var(--yellow);font-weight:700}
+.c.v{background:color-mix(in srgb,var(--violet) 18%,transparent);border-color:var(--violet)}.c.x{opacity:.22;text-decoration:line-through}
+.c.aug,.ain.aug{margin-left:12px;position:relative}.c.aug::before{content:'';position:absolute;left:-10px;top:-4px;bottom:-4px;border-left:2px solid var(--fg2)}
+.fr{display:inline-flex;flex-direction:column;font-size:.78em;line-height:1.05;text-align:center;vertical-align:middle}.fr i{font-style:normal}.fr i:first-child{border-bottom:1.5px solid currentColor;padding:0 2px}
+.row{display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px;margin:6px 0}.op{font-size:20px;color:var(--fg2);padding:0 2px}
+.sizes{font-size:22px;font-family:monospace;padding:6px 0}.calc{font-family:"Cambria Math",Georgia,serif;font-size:17px;line-height:1.8;background:var(--bg3);border-radius:10px;padding:8px 12px;margin:6px 0;overflow-x:auto}
+.bigres{font-size:26px;font-weight:800;color:var(--green)}
+.sys{display:inline-block;border-left:2px solid var(--fg2);border-radius:10px 0 0 10px;padding:4px 12px;margin:6px 8px;font-family:"Cambria Math",Georgia,serif;font-size:17px}
+.minicard{background:var(--bg3);border-radius:12px;padding:6px 10px;text-align:center}
+.mini{background:var(--bg3);border-radius:12px;padding:4px}.mini.plus{outline:1px solid color-mix(in srgb,var(--green) 40%,transparent)}.mini.minus{outline:1px solid color-mix(in srgb,var(--red) 40%,transparent)}
+svg.tri text{font:600 17px "Segoe UI",sans-serif;fill:var(--fg)}svg.tri text.off{fill:var(--mut);opacity:.45}svg.tri text.off2{fill:var(--mut)}svg.tri .bar{stroke:var(--fg2);stroke-width:2}svg.tri .ghost{fill:var(--bg3);stroke:var(--line)}
+/* buttons */
+.btn{font:inherit;font-size:14.5px;border:1px solid var(--line);background:var(--bg3);color:var(--fg);padding:8px 14px;border-radius:10px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:.15s}
+.btn:hover{border-color:var(--acc);transform:translateY(-1px)}.btn.pri{background:linear-gradient(135deg,var(--acc),#737373);border-color:transparent;color:var(--onacc);font-weight:600}
+.btn.ghost{background:transparent}.btn.sm{padding:5px 10px;font-size:13px}.btn.icon{width:38px;justify-content:center;padding:8px 0}.btn.on{border-color:var(--acc);background:color-mix(in srgb,var(--acc) 22%,transparent)}
+.btn.good{background:color-mix(in srgb,var(--green) 25%,transparent);border-color:var(--green)}.btn.bad{background:color-mix(in srgb,var(--red) 22%,transparent);border-color:var(--red)}
+.btn kbd{background:rgba(255,255,255,.15);color:var(--onacc);border-color:rgba(255,255,255,.3)}
+.lnk{background:none;border:0;color:var(--acc2);cursor:pointer;font:inherit;font-size:12px}
+.hidden{display:none!important}
+/* stepper */
+.stepper{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;margin:12px 0;outline:none}.stepper:focus-visible{border-color:var(--acc)}
+.stepper.flash{animation:fl .5s}@keyframes fl{50%{box-shadow:0 0 0 3px var(--green)}}
+.st-ctrl{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding-bottom:10px;border-bottom:1px dashed var(--line)}
+.st-count{font-weight:700;min-width:54px;text-align:center;color:var(--fg2)}
+.segs{display:flex;gap:3px;flex:1;min-width:120px}.seg{flex:1;height:6px;border-radius:4px;background:var(--bg3);cursor:pointer}.seg.done{background:color-mix(in srgb,var(--acc) 55%,transparent)}.seg.cur{background:var(--acc2)}
+.tog{font-size:13px;color:var(--fg2);display:flex;align-items:center;gap:4px;cursor:pointer}
+.st-body{padding:12px 4px 4px}.st-wrap .st-body+.st-body{border-top:1px dashed var(--line);margin-top:8px}
+.st-t{font-weight:700;font-size:17px;display:flex;gap:10px;align-items:center;margin-bottom:6px}.st-n{min-width:26px;height:26px;border-radius:8px;background:var(--acc);color:var(--onacc);display:grid;place-items:center;font-size:13px}
+.st-v{overflow-x:auto;padding:4px 0 8px}.st-e{font-size:16px}
+details{margin-top:8px;border-radius:10px;padding:6px 12px;background:var(--bg3)}details summary{cursor:pointer;font-weight:600;color:var(--fg2)}details[open] summary{margin-bottom:6px}
+details.why summary{color:var(--pink)}details.alt summary{color:var(--yellow)}
+.ask{display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:color-mix(in srgb,var(--violet) 12%,var(--bg3));padding:10px 12px;border-radius:10px;margin-top:6px}
+.ask-msg.ok{color:var(--green);font-weight:700}.ask-msg.bad{color:var(--red)}
+input.ask-in,.ain{font:inherit;font-size:16px;background:var(--bg);color:var(--fg);border:1.5px solid var(--line);border-radius:9px;padding:6px 10px;width:190px;outline:none}
+.ain.cell{width:68px;text-align:center;padding:5px 4px}.ain.wide{width:220px}.ain:focus,.ask-in:focus{border-color:var(--acc)}
+.ain.ok{border-color:var(--green);background:color-mix(in srgb,var(--green) 12%,var(--bg))}.ain.bad{border-color:var(--red);background:color-mix(in srgb,var(--red) 12%,var(--bg))}
+/* problem card */
+.pcard{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:18px 20px;box-shadow:var(--sh);margin:12px 0}.pcard.solved{border-color:color-mix(in srgb,var(--green) 60%,transparent)}
+.ph{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px}.tag{font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:6px;background:color-mix(in srgb,var(--acc2) 18%,transparent);color:var(--acc2);font-weight:700}
+.pq{font-size:17px;margin:6px 0 10px;overflow-x:auto}.hint{font-size:13px;color:var(--mut);margin-top:4px}
+.answer{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:10px 0}.answer label{display:flex;align-items:center;gap:6px}.arow{display:flex;align-items:center;gap:10px}
+.choices{display:flex;flex-wrap:wrap;gap:8px}.choice.sel{border-color:var(--acc);background:color-mix(in srgb,var(--acc) 25%,transparent)}
+.pbar{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.fb{margin-top:10px;padding:10px 12px;border-radius:10px;font-size:15px}.fb:empty{display:none}.fb.ok{background:color-mix(in srgb,var(--green) 14%,transparent);border:1px solid color-mix(in srgb,var(--green) 50%,transparent)}
+.fb.bad{background:color-mix(in srgb,var(--red) 12%,transparent);border:1px solid color-mix(in srgb,var(--red) 45%,transparent)}.fb.warn{background:color-mix(in srgb,var(--yellow) 12%,transparent)}
+/* trainer */
+.tgroup{margin:6px 0}.tgh{font-size:12px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin:8px 0 4px}
+.chip{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--bg3);color:var(--fg2);padding:5px 11px;border-radius:999px;margin:3px;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.chip.on{background:color-mix(in srgb,var(--acc) 25%,transparent);border-color:var(--acc);color:var(--fg)}
+.acc{font-size:11px;font-weight:700}.acc.hi{color:var(--green)}.acc.mid{color:var(--yellow)}.acc.lo{color:var(--red)}
+.trbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0}.seggrp{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden}.seggrp button{border:0;border-radius:0}
+/* home */
+.hero{background:radial-gradient(1200px 300px at 0% 0%,color-mix(in srgb,var(--acc) 30%,transparent),transparent),var(--bg2);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:var(--sh)}
+.hero h1{font-size:34px}.cards3{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:16px}
+.tile{background:var(--bg3);border:1px solid var(--line);border-radius:14px;padding:14px;text-decoration:none;color:var(--fg);display:block;transition:.15s}.tile:hover{border-color:var(--acc);transform:translateY(-2px)}.tile b{display:block;margin-bottom:4px}.tile span{color:var(--fg2);font-size:14px}
+.kpis{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0}.kpi{background:var(--bg3);border-radius:12px;padding:10px 16px;min-width:120px}.kpi b{font-size:24px;display:block}.kpi span{font-size:12px;color:var(--mut)}
+#heat{display:flex;gap:3px;flex-wrap:wrap}.hc{width:16px;height:16px;border-radius:4px;background:var(--bg3)}.hc.l1{background:color-mix(in srgb,var(--green) 35%,transparent)}.hc.l2{background:color-mix(in srgb,var(--green) 65%,transparent)}.hc.l3{background:var(--green)}
+.tp{display:grid;grid-template-columns:200px 1fr 60px;gap:10px;align-items:center;font-size:13.5px;padding:3px 0}.tpb{height:8px;background:var(--bg3);border-radius:5px;overflow:hidden}.tpb i{display:block;height:100%;background:var(--acc)}.tpb i.hi{background:var(--green)}.tpb i.mid{background:var(--yellow)}.tpb i.lo{background:var(--red)}
+/* cards */
+.fc{background:var(--bg2);border:1px solid var(--line);border-radius:20px;padding:26px;text-align:center;box-shadow:var(--sh);max-width:640px;margin:14px auto}.fcn{color:var(--mut);font-size:13px}.fcq{font-size:22px;font-weight:700;margin:14px 0}.fca{font-size:19px;color:var(--green);margin:10px 0 14px}.fcb{display:flex;justify-content:center;gap:10px;margin:12px 0}
+.lbox{display:inline-block;background:var(--bg3);border-radius:10px;padding:6px 12px;margin:3px;font-size:12.5px;color:var(--fg2)}.lbox b{display:block;font-size:20px;color:var(--fg)}
+/* exam */
+.exh{display:flex;gap:12px;align-items:center;font-weight:700}.exres{text-align:center;padding:18px}.exitem{display:flex;gap:12px;align-items:center;padding:8px 12px;border-radius:10px;background:var(--bg2);margin:6px 0;border:1px solid var(--line)}.exitem.ok span:first-child{color:var(--green)}.exitem.bad span:first-child{color:var(--red)}.exitem span:nth-child(2){flex:1}
+/* tri game */
+.tg-grid{display:grid;grid-template-columns:repeat(3,64px);gap:8px;margin:12px 0;padding:10px 18px;border-left:2px solid var(--fg2);border-right:2px solid var(--fg2);width:max-content}
+.tg-c{height:48px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg3);color:var(--fg);font:inherit;font-size:17px;cursor:pointer}.tg-c.on{border-color:var(--acc);background:color-mix(in srgb,var(--acc) 25%,transparent)}.tg-c.g{border-color:var(--green);background:color-mix(in srgb,var(--green) 30%,transparent)}.tg-c.r{border-color:var(--red);background:color-mix(in srgb,var(--red) 25%,transparent)}.tg-c.ans{outline:2px dashed var(--yellow)}
+.lab-v{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.pn{display:flex;justify-content:space-between;gap:10px;margin-top:34px;padding-top:16px;border-top:1px solid var(--line)}
+.dh{font-weight:700;color:var(--acc2);margin-bottom:4px}.demo{margin:14px 0}
+.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,30px);opacity:0;background:var(--bg3);border:1px solid var(--line);padding:10px 18px;border-radius:12px;box-shadow:var(--sh);transition:.3s;z-index:99}.toast.show{opacity:1;transform:translate(-50%,0)}
+.chess{display:inline-grid;grid-template-columns:repeat(4,34px);gap:3px}.chess span{height:34px;display:grid;place-items:center;border-radius:6px;font-weight:800}.chess .p{background:color-mix(in srgb,var(--green) 22%,transparent);color:var(--green)}.chess .n{background:color-mix(in srgb,var(--red) 20%,transparent);color:var(--red)}
+.steps-list li{margin:4px 0}
+@media print{#side,#top,.pbar,.st-ctrl{display:none}main{margin:0}main>section{display:block!important}}
+@media(max-width:900px){#ttl{display:none}#top{padding:8px 12px}#top .stat{font-size:12px;gap:6px}.ain.cell{width:56px}h1{font-size:24px}.hero h1{font-size:26px}.tp{grid-template-columns:120px 1fr 44px}}
+#burger{font-size:22px;line-height:1}
+</style><style id="aegis-theme">:root{--bg:#0c0c0c;--bg2:#141414;--bg3:#1c1c1c;--line:#2b2b2b;--fg:#f2f2f2;--fg2:#bdbdbd;--mut:#8c8c8c;--acc:#f2f2f2;--acc2:#f2f2f2;
+--blue:#f2f2f2;--green:#f2f2f2;--red:#f2f2f2;--yellow:#f2f2f2;--violet:#f2f2f2;--pink:#f2f2f2;--onacc:#0c0c0c;--r:10px;--sh:none;--fill:#2a2a2a}
+body.light{--bg:#ffffff;--bg2:#ffffff;--bg3:#f3f3f3;--line:#e2e2e2;--fg:#111111;--fg2:#3d3d3d;--mut:#6b6b6b;--acc:#111111;--acc2:#111111;
+--blue:#111111;--green:#111111;--red:#111111;--yellow:#111111;--violet:#111111;--pink:#111111;--onacc:#ffffff;--sh:none;--fill:#e6e6e6}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;letter-spacing:0;-webkit-font-smoothing:antialiased}
+a{color:var(--fg);text-underline-offset:3px}
+::selection{background:var(--fg);color:var(--bg)}
+/* sidebar + brand */
+#side{background:var(--bg);border-right:1px solid var(--line)}
+#side .brand{padding:18px 18px 14px;gap:12px;border-bottom:1px solid var(--line);margin-bottom:12px}
+#side .brand .logo-img{width:40px;height:40px;border-radius:8px;display:block;object-fit:cover;border:1px solid var(--line)}
+.brand-t{display:flex;flex-direction:column;line-height:1.15}.brand-t b{font-size:17px;letter-spacing:.18em;font-weight:800}.brand-t span{font-size:12.5px;color:var(--mut);font-weight:500;margin-top:3px}
+#nav-search{border-radius:8px;background:var(--bg2)}
+#nav-search:focus{outline:none;border-color:var(--fg)}
+#nav a{border-radius:6px}
+#nav a.cur{background:var(--bg3);color:var(--fg);box-shadow:inset 2px 0 0 var(--fg)}
+#nav a .num{background:transparent;border:1px solid var(--line);color:var(--mut);border-radius:5px}
+#nav a.seen .num{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+#top{background:color-mix(in srgb,var(--bg) 92%,transparent)}
+#top .stat b{color:var(--fg)}
+/* headings */
+h1{letter-spacing:-.015em}h2{letter-spacing:-.01em}
+.sh .no{background:var(--fg);color:var(--bg);border-radius:6px}
+.kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);font-weight:700;margin-bottom:10px}
+/* boxes */
+.box{box-shadow:none;border-radius:10px;background:var(--bg2)}
+.simple,.whyb,.altb,.mem,.warnb{border-left-width:3px;border-left-color:var(--fg)}
+.altb{border-left-style:dashed}
+.mem{background:var(--bg3)}
+.warnb{border-left-width:5px}
+.formula,.calc{background:var(--bg3)}
+/* highlights in text */
+.hl-b,.hl-g,.hl-r,.hl-y,.hl-v{color:var(--fg);font-weight:700;padding:0 4px;border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hl-b{box-shadow:inset 0 0 0 1.5px var(--fg)}
+.hl-g{background:var(--fill)}
+.hl-r{outline:1.5px dashed var(--fg);outline-offset:-1.5px}
+.hl-y{background:var(--fg);color:var(--bg)}
+.hl-v{text-decoration:underline dotted;text-underline-offset:3px;padding:0}
+.hero h1 .hl-b{box-shadow:none;padding:0}
+/* matrix cells */
+.c.b{background:transparent;border:2px solid var(--fg)}
+.c.g{background:var(--fill);border-color:transparent}
+.c.r{background:transparent;border:2px dashed var(--fg)}
+.c.y{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.c.v{background:transparent;border:2px dotted var(--fg)}
+.bigres{color:var(--fg)}
+.mini.plus{outline:1.5px solid var(--fg)}.mini.minus{outline:1.5px dashed var(--fg)}
+/* buttons */
+.btn{border-radius:8px;background:var(--bg2);border-color:var(--line)}
+.btn:hover{border-color:var(--fg);transform:none}
+.btn.pri{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn.pri:hover{opacity:.88}
+.btn.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn.good{background:var(--fill);border-color:var(--fg)}
+.btn.bad{background:transparent;border:1.5px dashed var(--fg)}
+.btn kbd{background:transparent;color:inherit;border-color:currentColor}
+.btn:focus-visible,.chip:focus-visible,a:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.lnk{color:var(--fg);text-decoration:underline}
+/* stepper */
+.stepper{border-radius:10px}
+.stepper.flash{animation:none}
+.seg.done{background:var(--mut)}.seg.cur{background:var(--fg)}
+.st-n{background:var(--fg);color:var(--bg);border-radius:6px}
+details{background:var(--bg3);border-radius:8px}
+details.why summary,details.alt summary{color:var(--fg)}
+details.alt{border:1px dashed var(--line)}
+.ask{background:var(--bg3);border:1px solid var(--line)}
+.ask-msg.ok{color:var(--fg)}.ask-msg.bad{color:var(--fg);text-decoration:underline dashed}
+.ain:focus,.ask-in:focus{border-color:var(--fg)}
+.ain.ok{border:2px solid var(--fg);background:var(--fill)}
+.ain.bad{border:2px dashed var(--fg);background:transparent}
+/* problems */
+.pcard{border-radius:12px;box-shadow:none}
+.pcard.solved{border-color:var(--fg)}
+.tag{background:transparent;border:1px solid var(--line);color:var(--fg2)}
+.choice.sel{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.fb.ok{background:var(--bg3);border:1.5px solid var(--fg)}
+.fb.bad{background:transparent;border:1.5px dashed var(--fg)}
+.fb.warn{background:var(--bg3);border:1px solid var(--line)}
+.chip{border-radius:6px;background:var(--bg2)}
+.chip.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.chip.on .acc{color:var(--bg)}
+.acc.hi{color:var(--fg)}.acc.mid{color:var(--fg2)}.acc.lo{color:var(--mut)}
+/* home */
+.hero{background:var(--bg2);border-radius:12px;box-shadow:none;padding:36px}
+.hero-in{display:flex;gap:32px;align-items:center;justify-content:space-between}
+.hero-txt{flex:1;min-width:0}
+.hero-logo{width:168px;height:168px;border-radius:12px;flex:none;border:1px solid var(--line);object-fit:cover}
+.hero h1{font-size:36px;line-height:1.15;margin:0 0 12px}
+.tile{background:var(--bg);border-radius:10px}
+.tile:hover{border-color:var(--fg);transform:none}
+.kpi{background:var(--bg2);border:1px solid var(--line);border-radius:10px}
+.hc{border:1px solid var(--line)}
+.hc.l1{background:color-mix(in srgb,var(--fg) 25%,transparent)}.hc.l2{background:color-mix(in srgb,var(--fg) 55%,transparent)}.hc.l3{background:var(--fg)}
+.tpb i,.tpb i.hi{background:var(--fg)}.tpb i.mid{background:var(--fg2)}.tpb i.lo{background:var(--mut)}
+.fc{border-radius:12px;box-shadow:none}.fca{color:var(--fg);font-weight:600}
+.exitem.ok span:first-child,.exitem.bad span:first-child{color:var(--fg)}
+.tg-c{border-radius:8px}
+.tg-c.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.tg-c.g{background:var(--fill);border:2px solid var(--fg)}
+.tg-c.r{background:transparent;border:2px dashed var(--fg)}
+.tg-c.ans{outline:2px dotted var(--fg)}
+.dh{color:var(--fg)}
+.toast{background:var(--fg);color:var(--bg);border-color:var(--fg);box-shadow:none}
+.chess .p{background:var(--fill);color:var(--fg)}.chess .n{background:transparent;color:var(--fg);outline:1.5px dashed var(--fg);outline-offset:-1.5px}
+@media(max-width:900px){.hero{padding:22px}.hero-in{flex-direction:column-reverse;align-items:flex-start;gap:16px}.hero-logo{width:72px;height:72px}.hero h1{font-size:26px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+#theme{font-size:19px;line-height:1}
+</style></head><body>
+<aside id="side">
+ <div class="brand"><img class="logo-img" src="data:image/jpeg;base64,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" alt="Aegis"><div class="brand-t"><b>Aegis</b><span>Линейная алгебра</span></div></div>
+ <input id="nav-search" placeholder="Поиск темы…">
+ <nav id="nav">
+  <div class="ng"><div class="ngh">Старт</div>
+   <a href="#home" data-t="Главная"><span class="num">◦</span>Главная</a>
+   <a href="#learn" data-t="Как учиться"><span class="num">★</span>Как учиться, чтобы запомнить</a></div>
+  <div class="ng"><div class="ngh">Часть 1 · Матрицы</div>
+   <a href="#t-matrix" data-t="Что такое матрица" data-k="aij индекс размер"><span class="num">1</span>Что такое матрица, aᵢⱼ</a>
+   <a href="#t-trans" data-t="Транспонирование"><span class="num">2</span>Транспонирование Aᵀ</a>
+   <a href="#t-add" data-t="Сложение и число"><span class="num">3</span>Сложение, умножение на число</a>
+   <a href="#t-mul" data-t="Умножение матриц" data-k="произведение степень"><span class="num">4</span>Умножение матриц, A²</a></div>
+  <div class="ng"><div class="ngh">Часть 2 · Определители</div>
+   <a href="#t-det2" data-t="Определитель 2×2"><span class="num">5</span>Определитель 2×2</a>
+   <a href="#t-props" data-t="Свойства"><span class="num">6</span>Свойства определителя</a>
+   <a href="#t-det3" data-t="Треугольники 3×3" data-k="саррюс треугольник"><span class="num">7</span>3×3: правило треугольников</a>
+   <a href="#t-minor" data-t="Минор и дополнение" data-k="шахматка"><span class="num">8</span>Минор и алг. дополнение</a>
+   <a href="#t-expand" data-t="Разложение"><span class="num">9</span>Разложение по строке</a>
+   <a href="#t-tri" data-t="Треугольный вид, 4×4" data-k="понижение порядка гаусс"><span class="num">10</span>Треугольный вид, 4×4</a></div>
+  <div class="ng"><div class="ngh">Часть 3 · Обратная матрица</div>
+   <a href="#t-inv2" data-t="Обратная 2×2" data-k="присоединенная быстрое правило минус поменялись"><span class="num">11</span>Обратная 2×2: почему так</a>
+   <a href="#t-inv3" data-t="Обратная 3×3"><span class="num">12</span>Обратная 3×3</a>
+   <a href="#t-sing" data-t="Вырожденная, параметр"><span class="num">13</span>Когда обратной нет</a>
+   <a href="#t-mateq" data-t="Матричные уравнения"><span class="num">14</span>Уравнения A·X = B</a></div>
+  <div class="ng"><div class="ngh">Часть 4 · Системы уравнений</div>
+   <a href="#t-sys" data-t="Системы в матрицах"><span class="num">15</span>Система → матрица</a>
+   <a href="#t-cramer" data-t="Крамер"><span class="num">16</span>Метод Крамера</a>
+   <a href="#t-gauss" data-t="Гаусс"><span class="num">17</span>Метод Гаусса</a>
+   <a href="#t-rank" data-t="Ранг"><span class="num">18</span>Ранг матрицы</a>
+   <a href="#t-kk" data-t="Сколько решений" data-k="кронекер капелли однородная"><span class="num">19</span>Сколько решений, однородные</a></div>
+  <div class="ng"><div class="ngh">Практика</div>
+   <a href="#trainer" data-t="Тренажёр"><span class="num">∞</span>Бесконечный тренажёр</a>
+   <a href="#exam" data-t="Контрольная"><span class="num">К</span>Мини-контрольная</a>
+   <a href="#cards" data-t="Карточки"><span class="num">↻</span>Карточки-повторялки</a>
+   <a href="#checker" data-t="Проверялка"><span class="num">✓</span>Проверялка домашки</a>
+   <a href="#cheat" data-t="Шпаргалка"><span class="num">≡</span>Шпаргалка</a></div>
+ </nav>
+</aside>
+<header id="top"><button id="burger" class="btn icon">≡</button><b id="ttl">Матрицы, определители, системы</b><span class="sp"></span>
+ <span class="stat">серия <b class="st-streak">0</b> · сегодня <b class="st-today">0</b> · всего ✓ <b class="st-total">0</b></span><button id="theme" class="btn icon" title="Светлая/тёмная тема" aria-label="Сменить тему"><svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true" style="display:block"><circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 2a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button></header>
+<main>
+<section id="home">
+ <div class="hero"><div class="hero-in"><div class="hero-txt"><div class="kicker">Aegis · курс с нуля</div><h1>Матрицы, определители и системы — понятно до последней цифры</h1>
+  <p class="sub">Все 4 лекции и 4 практики в одном курсе. Каждое правило объяснено: <b>что делать</b>, <b>почему именно так</b>, <b>откуда берётся</b> и <b>что будет, если сделать иначе</b>. И бесконечная практика с пошаговыми разборами.</p>
+  <div class="row"><a class="btn pri" href="#t-matrix">Начать с нуля →</a><a class="btn" href="#t-inv2">«Почему поменялись числа и откуда минус?»</a><a class="btn" href="#trainer">∞ Сразу тренироваться</a></div></div><img class="hero-logo" src="data:image/jpeg;base64,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" alt="Aegis"></div>
+  <div class="cards3">
+   <a class="tile" href="#learn"><b>★ Как учиться</b><span>7 приёмов памяти, на которых построен курс</span></a>
+   <a class="tile" href="#t-det3"><b>△ Правило треугольников</b><span>С картинками, мини-игрой и бесконечными примерами</span></a>
+   <a class="tile" href="#trainer"><b>∞ Тренажёр</b><span>21 тип задач, 3 уровня, каждая цифра объяснена</span></a>
+   <a class="tile" href="#checker"><b>✓ Проверялка</b><span>Вбей задачу из домашки — получи разбор</span></a></div></div>
+ <h2>Твой прогресс</h2>
+ <div class="kpis"><div class="kpi"><b class="st-total">0</b><span>верно решено</span></div><div class="kpi"><b class="st-today">0</b><span>сегодня</span></div><div class="kpi"><b class="st-streak">0</b><span>серия подряд</span></div><div class="kpi"><b class="st-best">0</b><span>лучшая серия</span></div></div>
+ <div class="box"><div class="bt">Последние 4 недели</div><div id="heat"></div><div class="muted small" style="margin-top:6px">Цель — понемногу, но часто. 15 минут каждый день лучше, чем 3 часа перед контрольной.</div></div>
+ <div class="box"><div class="bt">Точность по темам</div><div id="topic-prog"></div></div>
+ <h2>Карта курса</h2>
+ <div class="box"><p>Каждая тема опирается на предыдущие, поэтому лучше идти по порядку:</p>
+  <p><b>Матрицы</b> (что это, сложение, умножение) → <b>Определители</b> (2×2 → 3×3 → миноры → любой размер) → <b>Обратная матрица</b> (использует определитель и миноры) → <b>Системы уравнений</b> (используют всё сразу).</p>
+  <p class="muted">Язык выделений везде одинаковый: <span class="hl-b">рамка</span> — строка / первая матрица, <span class="hl-g">серая заливка</span> — столбец / «плюс» / верно, <span class="hl-r">пунктир</span> — «минус» / вычёркнутое / что убираем, <span class="hl-y">залитая плашка</span> — результат.</p></div>
+ <div class="pn"></div>
+</section>
+
+<section id="learn">
+ <div class="sh"><span class="no">★</span><h1>Как учиться, чтобы реально запомнить</h1></div>
+ <p class="sub">Этот файл построен на приёмах, которые проверены исследованиями памяти. Зная их, ты будешь учиться в 2–3 раза эффективнее.</p>
+ <div class="grid2">
+  <div class="box mem"><div class="bt">1. Сначала угадай</div>В разборах включи «угадывать»: перед каждым ключевым числом тебя спросят ответ. <b>Попытка вспомнить</b> укрепляет память сильнее, чем перечитывание (эффект тестирования). Даже ошибка помогает — ты потом лучше запомнишь правильный ответ.</div>
+  <div class="box mem"><div class="bt">2. Спрашивай «почему»</div>У каждого правила есть блок «Почему так?». Правило, которое ты <b>понял</b>, вспоминается само: его можно вывести заново. Правило, которое ты просто зазубрил, путается (например, где минус, а где плюс).</div>
+  <div class="box mem"><div class="bt">3. Подсказки убираются</div>Порядок: посмотри разбор → реши «по шагам» (тренажёр спрашивает каждое число) → реши сам сразу ответ. Это называют «затухающие примеры»: от готового решения к самостоятельному.</div>
+  <div class="box mem"><div class="bt">4. Вперемешку</div>В тренажёре можно выбрать сразу несколько тем. Так сложнее, но на контрольной ты сам должен понять, <b>какой метод нужен</b> — и именно этот навык тренируется при перемешивании.</div>
+  <div class="box mem"><div class="bt">5. Повторение с паузами</div>Карточки сами покажут вопрос через 1, 3, 7 и 16 дней. Повторить в момент, когда начинаешь забывать, — самый сильный способ запомнить надолго.</div>
+  <div class="box mem"><div class="bt">6. Цвет + картинка + слова</div>Каждое правило есть в трёх видах: формула, картинка с подсветкой и фраза-запоминалка. Мозг лучше держит то, что закодировано несколькими способами.</div>
+  <div class="box mem"><div class="bt">7. Ищи ошибку</div>Тренажёр узнаёт типичные ошибки (забыл минус, не транспонировал, сложил вместо вычитания) и говорит, какая именно. Знать «ловушку в лицо» — лучший способ в неё не попасть.</div>
+  <div class="box"><div class="bt">Маршрут на один день (≈ 60 мин)</div><ol class="steps-list"><li>Прочитай одну тему (10 мин), разбор — с угадыванием.</li><li>10 задач этой темы в тренажёре.</li><li>5 задач вперемешку со старыми темами.</li><li>Карточки — 5 минут.</li><li>Раз в неделю — мини-контрольная.</li></ol></div>
+ </div>
+ <div class="pn"></div>
+</section>
+
+<section id="t-matrix">
+ <div class="sh"><span class="no">01</span><h1>Что такое матрица и как читать aᵢⱼ</h1></div><p class="sub">Таблица чисел. И у каждого числа есть «адрес».</p>
+ <div class="box simple"><div class="bt">Простыми словами</div>
+  <p><b>Матрица</b> — это прямоугольная таблица чисел в скобках. Как таблица в Excel, только без подписей.</p>
+  <div class="row"><m-x data-a="4,7,9;5,0,2" data-n="A ="></m-x><span>← 2 строки, 3 столбца. Размер пишут <b>2×3</b> («два на три»): <b>сначала строки, потом столбцы</b>.</span></div>
+  <p>Каждое число — <b>элемент</b> a<sub>ij</sub>: <span class="hl-b">i — номер строки</span> (сверху вниз), <span class="hl-g">j — номер столбца</span> (слева направо). Здесь a<sub>13</sub> = 9, a<sub>21</sub> = 5.</p>
+  <p><b>Квадратная</b> матрица — строк столько же, сколько столбцов (2×2, 3×3…). Это число называют <b>порядком</b>. Иначе матрица <b>прямоугольная</b>.</p></div>
+ <div class="box whyb"><div class="bt">Почему важен порядок индексов?</div>a<sub>23</sub> и a<sub>32</sub> — разные клетки! a<sub>23</sub> — строка 2, столбец 3; a<sub>32</sub> — строка 3, столбец 2. Договорились всегда писать «строка, потом столбец», чтобы все читали одинаково. Этот же порядок — в размере m×n и во всех формулах дальше.</div>
+ <div class="box mem"><div class="bt">Запоминалка</div><b>Как в кинотеатре:</b> «ряд 2, место 3» — это a<sub>23</sub>. Сначала ряд (строка, горизонтально →), потом место (столбец, вертикально ↓).</div>
+ <div class="grid2"><div class="box"><div class="bt">Особые матрицы</div><table class="t"><tr><td>Нулевая O</td><td>все нули: <m-x data-a="0,0;0,0"></m-x></td></tr><tr><td>Единичная E</td><td>на диагонали 1, остальное 0: <m-x data-a="1,0;0,1"></m-x> — работает как число 1</td></tr><tr><td>Треугольная</td><td>под (или над) диагональю — нули</td></tr><tr><td>Строка / столбец</td><td>1×n или n×1</td></tr></table></div>
+  <div class="box"><div class="bt">Равенство матриц</div>A = B, если <b>одинаковый размер</b> и все элементы на одинаковых местах равны. Матрицы 2×3 и 3×2 никогда не равны, даже из одних и тех же чисел.<br><br><b>Главная диагональ</b> — от a₁₁ вниз-вправо ↘. <b>Побочная</b> — из правого верхнего угла вниз-влево ↙.</div></div>
+ <div class="demo" data-gen="addr" data-d='{"A":[[3,-1,0,7],[2,5,-1,4],[-2,8,6,1]],"i":1,"j":2}'></div>
+ <button class="btn pri" data-train="addr">Тренироваться: адрес элемента</button>
+ <div class="pn"></div>
+</section>
+
+<section id="t-trans">
+ <div class="sh"><span class="no">02</span><h1>Транспонирование Aᵀ</h1></div><p class="sub">Строки становятся столбцами.</p>
+ <div class="box simple"><div class="bt">Простыми словами</div><p>1-я строка → 1-й столбец, 2-я строка → 2-й столбец и т.д. Размер «переворачивается»: m×n → n×m.</p>
+  <div class="row"><m-x data-a="1,0,-1;2,1,-3" data-n="A =" data-h="r0:b;r1:g"></m-x><span class="op">→</span><m-x data-a="1,2;0,1;-1,-3" data-n="Aᵀ =" data-h="c0:b;c1:g"></m-x></div></div>
+ <div class="box whyb"><div class="bt">Что происходит на самом деле</div>Элемент с адресом (i, j) переезжает на адрес (j, i): a<sub>ij</sub> → a<sub>ji</sub>. У квадратной матрицы это <b>зеркальное отражение относительно главной диагонали</b> — сама диагональ стоит на месте.</div>
+ <div class="box"><div class="bt">Свойства (пригодятся позже)</div>(Aᵀ)ᵀ = A — дважды отразить = вернуть. &nbsp; (A + B)ᵀ = Aᵀ + Bᵀ. &nbsp; <b>(AB)ᵀ = BᵀAᵀ</b> — порядок меняется! &nbsp; |Aᵀ| = |A|.</div>
+ <div class="demo" data-gen="trans" data-d='{"A":[[2,-1,0],[3,5,4]]}'></div>
+ <button class="btn pri" data-train="trans">Тренироваться</button><div class="pn"></div>
+</section>
+
+<section id="t-add">
+ <div class="sh"><span class="no">03</span><h1>Сложение и умножение на число</h1></div><p class="sub">Самое простое: клеточка к клеточке.</p>
+ <div class="box simple"><div class="bt">Простыми словами</div><p><b>Сложение:</b> только для матриц <b>одного размера</b>. Складываем числа на одинаковых местах.</p>
+  <div class="row"><m-x data-a="1,1;2,5;3,1"></m-x><span class="op">+</span><m-x data-a="1,2;-1,0;4,1"></m-x><span class="op">=</span><m-x data-a="2,3;1,5;7,2" data-h="all:y"></m-x></div>
+  <p><b>Умножение на число k:</b> умножаем <b>каждый</b> элемент. <b>−A</b> — у всех элементов меняем знак. A − B = A + (−B).</p></div>
+ <div class="box warnb"><div class="bt">Ловушка: матрица ≠ определитель</div>Матрицу на число — умножаются <b>все</b> элементы. Определитель на число — умножается <b>только одна строка</b> (или столбец). Поэтому |2A| для матрицы 3×3 = 2³·|A| = 8|A|, а не 2|A|.</div>
+ <div class="box altb"><div class="bt">А почему нельзя сложить 2×2 и 2×3?</div>У «лишнего» столбца нет пары — непонятно, с чем его складывать. Поэтому ответ в такой задаче: «не определено».</div>
+ <div class="box"><div class="bt">Свойства как у обычных чисел</div>A + B = B + A; (A + B) + C = A + (B + C); A + O = A; A + (−A) = O; k(A + B) = kA + kB; (k + m)A = kA + mA; 0·A = O.</div>
+ <div class="box mem"><div class="bt">Приём против ошибок в A − 3B</div>Сначала посчитай <b>−3B</b> целиком (знак «приклеен» к числу), а потом только <b>складывай</b>. Ошибки со знаками почти исчезают.</div>
+ <div class="demo" data-gen="lin" data-d='{"A":[[1,2],[0,-3]],"B":[[-1,4],[2,1]],"k":1,"m":3,"sg":-1}'></div>
+ <button class="btn pri" data-train="lin">Тренироваться</button><div class="pn"></div>
+</section>
+
+<section id="t-mul">
+ <div class="sh"><span class="no">04</span><h1>Умножение матриц: строка × столбец</h1></div><p class="sub">Главное правило всей темы.</p>
+ <div class="box simple"><div class="bt">Простыми словами</div>
+  <p><b>Шаг 0 — можно ли?</b> Пишем размеры рядом: <span class="sizes" style="font-size:18px">3×<b class="hl-b">2</b> · <b class="hl-b">2</b>×4 → 3×4</span>. <b>Внутренние</b> числа должны совпасть, <b>внешние</b> дают размер ответа.</p>
+  <p><b>Шаг 1 — как?</b> Клетка ответа c<sub>ij</sub> = <span class="hl-b">i-я строка A</span> × <span class="hl-g">j-й столбец B</span>: перемножаем пары по порядку (1-е с 1-м, 2-е со 2-м…) и складываем.</p>
+  <div class="formula">c<sub>ij</sub> = a<sub>i1</sub>b<sub>1j</sub> + a<sub>i2</sub>b<sub>2j</sub> + … + a<sub>in</sub>b<sub>nj</sub></div></div>
+ <div class="box whyb"><div class="bt">Почему такое странное правило? (история про магазин)</div>
+  <p>Аня купила 2 кофе и 1 булку, Боря — 0 кофе и 4 булки. В магазине 1 кофе стоит 100, булка 40; в магазине 2 — 120 и 30.</p>
+  <div class="row"><m-x data-a="2,1;0,4" data-n="покупки" data-h="r0:b"></m-x><span class="op">·</span><m-x data-a="100,120;40,30" data-n="цены" data-h="c0:g"></m-x><span class="op">=</span><m-x data-a="240,270;160,120" data-h="0,0:y"></m-x></div>
+  <p>Сколько Аня заплатит в магазине 1? Её покупки (<span class="hl-b">строка</span>) × цены магазина 1 (<span class="hl-g">столбец</span>): 2·100 + 1·40 = 240. Вот и «строка × столбец»! А размеры должны совпасть, потому что у каждого товара должна быть цена.</p></div>
+ <div class="box warnb"><div class="bt">AB ≠ BA</div>Для чисел 2·3 = 3·2, а для матриц — <b>в общем случае нет</b>. Иногда BA даже не существует. Поэтому множители в матричных выражениях <b>нельзя переставлять</b>: (A + B)² = A² + AB + BA + B², а не A² + 2AB + B².<br>Ещё сюрприз: произведение двух ненулевых матриц может быть нулевой матрицей.</div>
+ <div class="box"><div class="bt">Свойства</div>A·E = E·A = A (единичная — как 1). &nbsp;(AB)C = A(BC). &nbsp;A(B + C) = AB + AC. &nbsp;|AB| = |A|·|B|.<br><b>Степень:</b> A² = A·A, A³ = A²·A — <b>только для квадратных</b> и <b>не</b> «каждый элемент в квадрат». В многочлене число превращается в число·E: f(A) = A² − 3A + 2 → A² − 3A + 2E.</div>
+ <div class="box mem"><div class="bt">Запоминалка</div>«<b>Лежачий × стоячий</b>»: строка лежит, столбец стоит. Палец левой руки ведёт по строке →, палец правой — по столбцу ↓, одновременно.</div>
+ <div class="demo" data-gen="mul" data-d='{"A":[[1,-2],[3,0]],"B":[[3,1],[-4,2]]}'></div>
+ <div class="row"><button class="btn pri" data-train="mul">Умножение</button><button class="btn" data-train="size">Размер произведения</button><button class="btn" data-train="pow">A²</button></div><div class="pn"></div>
+</section>
+
+<section id="t-det2">
+ <div class="sh"><span class="no">05</span><h1>Определитель 2×2</h1></div><p class="sub">Одно число, которое многое говорит о матрице.</p>
+ <div class="box simple"><div class="bt">Простыми словами</div><p><b>Определитель</b> (детерминант, |A|, det A, Δ) — это <b>число</b>, которое считают по <b>квадратной</b> матрице. У прямоугольных его нет вообще.</p>
+  <div class="row"><m-x data-a="a,b;c,d" data-t="d" data-h="d:g;0,1:r;1,0:r"></m-x><span class="op">=</span><span class="formula" style="margin:0"><span class="hl-g">a·d</span> − <span class="hl-r">b·c</span></span><span>«главная диагональ минус побочная»</span></div>
+  <p>Пример: <m-x data-a="1,4;5,2" data-t="d"></m-x> = 1·2 − 4·5 = 2 − 20 = −18.</p>
+  <p>Прямые черточки | | — это <b>число</b>. Скобки ( ) — это <b>таблица</b>. Не путай!</p></div>
+ <div class="box whyb"><div class="bt">Зачем он нужен и откуда минус?</div>
+  <p>Представь, что строки матрицы — это две стрелки на плоскости. Они натягивают параллелограмм. <b>Определитель = площадь этого параллелограмма со знаком.</b></p>
+  <ul><li>Поменяли строки местами → фигура «перевернулась» → <b>знак поменялся</b>. Формула ad − bc именно так и устроена: cb − da = −(ad − bc).</li>
+   <li>Строки пропорциональны (стрелки на одной прямой) → площадь 0 → <b>Δ = 0</b>.</li>
+   <li>Δ = 0 значит: матрица «сплющивает» плоскость в линию, информация теряется → <b>обратной матрицы нет</b> (часть 3) и система не имеет единственного решения (часть 4).</li></ul></div>
+ <div class="box altb"><div class="bt">А почему не ad + bc?</div>Тогда у матрицы с двумя одинаковыми строками (2 3; 2 3) получилось бы 6 + 6 = 12. Но две одинаковые стрелки лежат на одной прямой — площадь должна быть 0. Только с минусом: 6 − 6 = 0 ✓.</div>
+ <div class="box mem"><div class="bt">Запоминалка</div>«<b>Вниз — плюс, вверх — минус</b>»: стрелка ↘ (главная) идёт со знаком +, стрелка ↗ (побочная) — со знаком −. И всегда сначала главная.</div>
+ <div class="demo" data-gen="det2" data-d='{"A":[[3,5],[-2,4]]}'></div>
+ <button class="btn pri" data-train="det2">Тренироваться</button><div class="pn"></div>
+</section>
+
+<section id="t-props">
+ <div class="sh"><span class="no">06</span><h1>Свойства определителя</h1></div><p class="sub">Приёмы, которые экономят кучу вычислений. Работают для любого размера.</p>
+ <div class="box"><table class="t"><tr><th>№</th><th>Свойство</th><th>Почему так (через «площадь»)</th><th>Пример</th></tr>
+  <tr><td>1</td><td>|Aᵀ| = |A| — строки и столбцы равноправны</td><td>Разложение по строке = разложение по столбцу</td><td><m-x data-a="1,2;3,4" data-t="d"></m-x> = <m-x data-a="1,3;2,4" data-t="d"></m-x> = −2</td></tr>
+  <tr><td>2</td><td>Поменяли 2 строки → <b>знак меняется</b></td><td>Фигура «перевернулась»</td><td><m-x data-a="3,4;1,2" data-t="d"></m-x> = +2</td></tr>
+  <tr><td>3</td><td>Две одинаковые строки → 0</td><td>Стрелки совпали, площади нет</td><td><m-x data-a="2,3;2,3" data-t="d"></m-x> = 0</td></tr>
+  <tr><td>4</td><td>Общий множитель строки выносится</td><td>Растянули одну сторону в k раз → площадь в k раз больше</td><td><m-x data-a="2,4;3,5" data-t="d"></m-x> = 2·<m-x data-a="1,2;3,5" data-t="d"></m-x></td></tr>
+  <tr><td>5</td><td>Нулевая строка → 0</td><td>Одна стрелка нулевой длины</td><td>частный случай 4 при k = 0</td></tr>
+  <tr><td>6</td><td>К строке прибавили другую × k → <b>не меняется</b></td><td>Параллелограмм «сдвинули» вдоль стороны — площадь та же (как колода карт, которую сдвинули)</td><td>главный инструмент: так делают нули</td></tr>
+  <tr><td>+</td><td>Пропорциональные строки → 0</td><td>4 + 3</td><td><m-x data-a="7,2;14,4" data-t="d"></m-x> = 0</td></tr>
+  <tr><td>+</td><td>|kA| = kⁿ|A| (n×n), |AB| = |A||B|, |A⁻¹| = 1/|A|</td><td>В kA на k умножена каждая из n строк</td><td>3×3: |2A| = 8|A|</td></tr></table></div>
+ <div class="box whyb"><div class="bt">Почему свойство 6 верно (по-честному)</div>Определитель «раскладывается» по строке как сумма: |строка1 + k·строка2; строка2| = |строка1; строка2| + k·|строка2; строка2|. Второй определитель с двумя одинаковыми строками = 0 (свойство 3). Остаётся исходный. Поэтому можно сколько угодно прибавлять строки — и ничего не испортится.</div>
+ <div class="box mem"><div class="bt">Запоминалка «3 действия и что они делают»</div><b>Переставил</b> → минус. &nbsp; × <b>Умножил строку</b> → определитель умножился. &nbsp; + <b>Прибавил строку</b> → ничего не изменилось.</div>
+ <div class="demo" data-gen="props" data-d='{"v":2}'></div>
+ <button class="btn pri" data-train="props">Тренироваться</button><div class="pn"></div>
+</section>
+
+<section id="t-det3">
+ <div class="sh"><span class="no">07</span><h1>Определитель 3×3: правило треугольников</h1></div><p class="sub">Шесть произведений: три с «+», три с «−».</p>
+ <div class="box simple"><div class="bt">Простыми словами</div>
+  <p>Определитель 3×3 = сумма <b>6 произведений по 3 числа</b>. Какие тройки брать — показывают картинки:</p>
+  <div id="tri-legend"></div>
+  <div class="formula"><span class="hl-g">(a₁₁a₂₂a₃₃ + a₁₂a₂₃a₃₁ + a₁₃a₂₁a₃₂)</span> − <span class="hl-r">(a₁₃a₂₂a₃₁ + a₁₁a₂₃a₃₂ + a₁₂a₂₁a₃₃)</span></div>
+  <p><b>Как найти треугольник:</b> одна его сторона <b>параллельна диагонали</b> (главной для «плюсовых», побочной для «минусовых»), а третья вершина — в <b>противоположном углу</b>.</p>
+  <p><b>Проверка любой тройки:</b> в ней ровно <b>одно число из каждой строки и одно из каждого столбца</b>. Если две клетки в одной строке — тройка неправильная.</p></div>
+ <div class="box whyb"><div class="bt">Откуда берутся эти 6 произведений?</div>Разложим по первой строке (тема 9): Δ = a₁₁·(a₂₂a₃₃ − a₂₃a₃₂) − a₁₂·(a₂₁a₃₃ − a₂₃a₃₁) + a₁₃·(a₂₁a₃₂ − a₂₂a₃₁). Раскроем скобки — получится ровно 6 слагаемых, 3 с «+» и 3 с «−». Правило треугольников — это просто <b>картинка этих 6 слагаемых</b>, чтобы не раскрывать скобки каждый раз.</div>
+ <div class="box altb"><div class="bt">Если треугольники путаются — правило Саррюса</div><p>Допиши справа первые два столбца ещё раз. Тогда все «плюсовые» тройки — это три <span class="hl-g">параллельные диагонали вниз-вправо</span>, а «минусовые» — три <span class="hl-r">диагонали вниз-влево</span>. Результат тот же самый.</p><div id="sarrus"></div></div>
+ <div class="box warnb"><div class="bt">Ошибка №1: минус перед скобкой</div>Δ = (плюсы) − (минусы). Если сумма минусов отрицательная, например −7, то −4 − (−7) = −4 + 7 = <b>3</b>, а не −11. Считай сначала две суммы отдельно, а вычитай в самом конце.<br>И ещё: правило треугольников работает <b>только для 3×3</b>. Для 4×4 — разложение или треугольный вид.</div>
+ <div class="box mem"><div class="bt">Мини-игра: собери треугольник</div><p class="muted">Кликни 3 клетки, которые входят в нужное произведение. Повторяй, пока не будешь делать это не задумываясь.</p><div class="trigame"></div></div>
+ <div class="demo" data-gen="det3t" data-title="пример из лекции" data-d='{"A":[[1,2,3],[0,-1,1],[1,3,4]]}'></div>
+ <button class="btn pri" data-train="det3t">Решать треугольниками до посинения</button><div class="pn"></div>
+</section>
+
+<section id="t-minor">
+ <div class="sh"><span class="no">08</span><h1>Минор Mᵢⱼ и алгебраическое дополнение Aᵢⱼ</h1></div><p class="sub">Ключ к определителям любого размера и к обратной матрице.</p>
+ <div class="grid2"><div class="box simple"><div class="bt">Минор Mᵢⱼ</div>Вычёркиваем <b>строку i и столбец j</b> (те, где стоит элемент a<sub>ij</sub>). То, что осталось, — определитель на размер меньше. Его значение и есть минор.<div class="row"><m-x data-a="1,2,3;-1,0,1;1,2,2" data-t="d" data-h="x0,1"></m-x><span class="op">→</span><m-x data-a="-1,1;1,2" data-t="d" data-h="all:b"></m-x><span>M₁₂ = −1·2 − 1·1 = −3</span></div></div>
+  <div class="box simple"><div class="bt">Алгебраическое дополнение Aᵢⱼ</div><div class="formula">A<sub>ij</sub> = (−1)<sup>i+j</sup> · M<sub>ij</sub></div>Тот же минор, но <b>со знаком</b>. i + j чётное → «+» (минор как есть). Нечётное → «−» (меняем знак минора).<br>A₁₂ = (−1)<sup>1+2</sup>·(−3) = (−1)·(−3) = <b>3</b>.</div></div>
+ <div class="box"><div class="bt"> Шахматка знаков — чтобы не считать (−1)ⁱ⁺ʲ</div><div class="row"><div class="chess"><span class="p">+</span><span class="n">−</span><span class="p">+</span><span class="n">−</span><span class="n">−</span><span class="p">+</span><span class="n">−</span><span class="p">+</span><span class="p">+</span><span class="n">−</span><span class="p">+</span><span class="n">−</span><span class="n">−</span><span class="p">+</span><span class="n">−</span><span class="p">+</span></div><span>В левом верхнем углу всегда «+», дальше чередуется, как на шахматной доске. Например, a₂₃: 2 + 3 = 5 нечётное → «−», и в шахматке на месте (2, 3) тоже «−».</span></div></div>
+ <div class="box whyb"><div class="bt">Зачем вообще знак?</div>Когда раскладываем определитель по строке, слагаемые идут с чередующимися знаками: + a₁₁M₁₁ − a₁₂M₁₂ + a₁₃M₁₃. Чтобы не помнить, где минус, знак «прячут» внутрь: A<sub>ij</sub> = ±M<sub>ij</sub>. Тогда формула становится простой суммой: Δ = a₁₁A₁₁ + a₁₂A₁₂ + a₁₃A₁₃. А чередуются знаки потому, что каждая перестановка соседних столбцов меняет знак (свойство 2).</div>
+ <div class="box mem"><div class="bt">Запоминалка</div><b>Минор — голый, дополнение — одетое (в знак).</b> Сначала вычеркни и посчитай, потом «одень» знаком из шахматки.</div>
+ <div class="demo" data-gen="minor" data-d='{"A":[[1,2,3],[4,5,6],[7,8,10]],"i":1,"j":2}'></div>
+ <button class="btn pri" data-train="minor">Тренироваться</button><div class="pn"></div>
+</section>
+
+<section id="t-expand">
+ <div class="sh"><span class="no">09</span><h1>Разложение по строке или столбцу</h1></div><p class="sub">Универсальный способ: большой определитель → несколько маленьких.</p>
+ <div class="box simple"><div class="bt">Простыми словами</div><div class="formula">Δ = a<sub>i1</sub>A<sub>i1</sub> + a<sub>i2</sub>A<sub>i2</sub> + … + a<sub>in</sub>A<sub>in</sub></div>
+  Берём <b>любую</b> строку (или столбец). Каждый её элемент умножаем на его алгебраическое дополнение и всё складываем. Знаки — из шахматки: по 1-й строке <b>+ − +</b>, по 2-й <b>− + −</b>.</div>
+ <div class="box whyb"><div class="bt">Почему можно по любой линии?</div>Любую строку можно «переставить наверх» соседними перестановками — каждая меняет знак. Отсюда и шахматка: она просто учитывает эти смены знака. Поэтому ответ всегда один и тот же (свойство 7). <br>Свойство 8: если умножить элементы одной строки на дополнения <b>другой</b> строки, получится 0 (это как определитель с двумя одинаковыми строками). Понадобится для обратной матрицы.</div>
+ <div class="box mem"><div class="bt">Стратегия</div><b>Ищи нули!</b> Ноль × что угодно = 0 — это слагаемое исчезает, и его минор даже не надо считать. Для 4×4 без нулей пришлось бы считать четыре 3×3, а каждый ноль убирает один из них.</div>
+ <div class="demo" data-gen="expand" data-title="тот же определитель из лекции, по 2-му столбцу" data-d='{"A":[[1,2,3],[-1,0,1],[1,2,2]],"line":{"col":true,"k":1}}'></div>
+ <button class="btn pri" data-train="expand">Тренироваться</button><div class="pn"></div>
+</section>
+
+<section id="t-tri">
+ <div class="sh"><span class="no">10</span><h1>Треугольный вид, определители 4×4 и n×n</h1></div><p class="sub">Делаем нули под диагональю — и просто перемножаем диагональ.</p>
+ <div class="box simple"><div class="bt">Простыми словами</div><p>Если под главной диагональю одни нули, то <b>определитель = произведение чисел на диагонали</b>. Нули делаем свойством 6: из строки вычитаем верхнюю строку, умноженную на нужное число.</p>
+  <div class="formula">k = (число, которое убиваем) / (ступенька на диагонали)</div>
+  <p>Проверка: a − k·p = a − (a/p)·p = 0 ✓.</p></div>
+ <div class="box"><div class="bt">Алгоритм</div><ol class="steps-list"><li>Если a₁₁ = 0 — поменяй строки (знак Δ меняется!). Лучше, чтобы a₁₁ = 1 или −1 — тогда множители целые.</li><li>Обнули весь 1-й столбец под a₁₁ (каждую строку — своим k).</li><li>Забудь 1-ю строку и 1-й столбец, повтори то же для оставшейся матрицы.</li><li>Ответ = произведение диагонали × (−1 за каждую перестановку) × (вынесенные множители).</li></ol></div>
+ <div class="box whyb"><div class="bt">Почему треугольный = произведение диагонали?</div>Раскладываем по 1-му столбцу: там только a₁₁, остальные нули → Δ = a₁₁·(минор). Минор тоже треугольный → a₂₂·(ещё меньше)… Итог: a₁₁·a₂₂·…·aₙₙ.</div>
+ <div class="box altb"><div class="bt">Метод понижения порядка (другой путь)</div>Не обязательно доводить до треугольника. Достаточно сделать в одной строке (или столбце) все нули, кроме одного, — и разложить по ней. 4×4 превращается в один 3×3. Пример из лекции: в строках 1 и 3 последние три числа одинаковые → С₁ − С₃ = (3 0 0 0) → Δ = 3·(определитель 3×3).</div>
+ <div class="demo" data-gen="tri" data-title="пример из лекции (с дробями)" data-d='{"A":[[1,3,4],[0,5,2],[3,1,1]]}'></div>
+ <div class="demo" data-gen="det4" data-title="4×4 из лекции" data-d='{"A":[[1,2,-1,3],[2,5,0,4],[-1,1,3,2],[3,4,2,1]]}'></div>
+ <div class="row"><button class="btn pri" data-train="tri">Треугольный вид 3×3</button><button class="btn" data-train="det4">Определители 4×4</button></div><div class="pn"></div>
+</section>
+
+<section id="t-inv2">
+ <div class="sh"><span class="no">11</span><h1>Обратная 2×2: почему числа меняются местами и откуда минус</h1></div>
+ <p class="sub">Разбираем именно тот пример со скриншота: A = (3 4; 1 2) → A* = (2 −4; −1 3). Это не фокус — сейчас станет видно, откуда каждая цифра.</p>
+ <div class="box simple"><div class="bt">Ответ в двух фразах</div>
+  <p>«Быстрое правило» — это <b>сокращённая общая формула</b> A⁻¹ = (1/|A|)·A*, где A* — таблица алгебраических дополнений, повёрнутая (транспонированная).</p>
+  <p>У матрицы 2×2, если вычеркнуть строку и столбец, остаётся <b>одно число из противоположного угла</b> → поэтому <span class="hl-b">3 и 2 «меняются местами»</span>. А <span class="hl-r">минус</span> у 4 и 1 — это знак из шахматки (+ −; − +): на местах (1,2) и (2,1) сумма индексов нечётная.</p></div>
+ <div class="box"><div class="bt">Медленно, по одной клетке (A = (3 4; 1 2))</div>
+  <table class="t"><tr><th>Клетка</th><th>Вычёркиваем её строку и столбец</th><th>Остаётся</th><th>Знак (шахматка)</th><th>Дополнение</th></tr>
+   <tr><td>a₁₁ = 3</td><td><m-x data-a="3,4;1,2" data-t="d" data-h="x0,0"></m-x></td><td>2</td><td class="hl-g">+ (1+1 = 2)</td><td>A₁₁ = <b>2</b></td></tr>
+   <tr><td>a₁₂ = 4</td><td><m-x data-a="3,4;1,2" data-t="d" data-h="x0,1"></m-x></td><td>1</td><td class="hl-r">− (1+2 = 3)</td><td>A₁₂ = <b>−1</b></td></tr>
+   <tr><td>a₂₁ = 1</td><td><m-x data-a="3,4;1,2" data-t="d" data-h="x1,0"></m-x></td><td>4</td><td class="hl-r">− (2+1 = 3)</td><td>A₂₁ = <b>−4</b></td></tr>
+   <tr><td>a₂₂ = 2</td><td><m-x data-a="3,4;1,2" data-t="d" data-h="x1,1"></m-x></td><td>3</td><td class="hl-g">+ (2+2 = 4)</td><td>A₂₂ = <b>3</b></td></tr></table>
+  <div class="row" style="margin-top:12px"><span>Ставим дополнения на свои места:</span><m-x data-a="2,-1;-4,3" data-h="d:b;0,1:r;1,0:r"></m-x><span class="op">транспонируем →</span><m-x data-a="2,-4;-1,3" data-n="A* =" data-h="d:b;0,1:r;1,0:r"></m-x></div>
+  <p>Смотри, что получилось по сравнению с A = (3 4; 1 2):</p>
+  <ul><li><span class="hl-b">Главная диагональ: 3 и 2 поменялись местами</span> — потому что у 3 «напротив» стоит 2, а у 2 — 3.</li>
+   <li><span class="hl-r">Побочная диагональ: 4 и 1 остались на своих местах</span>, но получили минус. (У 4 напротив стоит 1, у 1 — 4; дополнения сначала «поменялись», а транспонирование вернуло их обратно. Минус — из шахматки.)</li></ul>
+  <p>Последний шаг: |A| = 3·2 − 4·1 = 2, делим всё на 2: A⁻¹ = ½·(2 −4; −1 3) = (1 −2; −½ 3/2).</p></div>
+ <div class="box whyb"><div class="bt">А почему вообще это даёт обратную? (проверка умножением)</div>
+  <p>Умножим A на A* в общем виде:</p>
+  <div class="calc">(a b; c d) · (d −b; −c a) = ( a·d + b·(−c) &nbsp;&nbsp; a·(−b) + b·a ; &nbsp; c·d + d·(−c) &nbsp;&nbsp; c·(−b) + d·a )<br>= ( <span class="hl-g">ad − bc</span> &nbsp;&nbsp; <span class="hl-b">−ab + ab</span> ; &nbsp; <span class="hl-b">cd − cd</span> &nbsp;&nbsp; <span class="hl-g">ad − bc</span> ) = ( |A| &nbsp; 0 ; &nbsp; 0 &nbsp; |A| ) = |A|·E</div>
+  <ul><li><b>Перестановка a ↔ d</b> нужна, чтобы на диагонали получилось <span class="hl-g">ad − bc</span>, то есть определитель.</li>
+   <li><b>Минус у b и c</b> нужен, чтобы вне диагонали произведения <span class="hl-b">уничтожили друг друга</span>: −ab + ab = 0. Без минуса было бы ab + ab = 2ab ≠ 0.</li>
+   <li><b>Деление на |A|</b> превращает |A|·E в E. Как с числами: 5 · ⅕ = 1. Если |A| = 0 — делить нельзя, обратной нет.</li></ul></div>
+ <div class="box altb"><div class="bt">Лаборатория «а если по-другому?» — проверь сам</div><p class="muted">Меняй числа A и выбирай вариант. Справа — A, умноженная на «кандидата». Обратная получится только если результат = (число)·E.</p><div class="invlab"></div></div>
+ <div class="box mem"><div class="bt">Запоминалка</div>«<b>Главные — переезжают, побочные — меняют знак, все — делятся</b>».<br>Главная диагональ: числа меняются местами. Побочная: остаются на месте, но с минусом. Всё делим на |A|. И обязательно <b>проверка</b>: A·A⁻¹ = E.</div>
+ <div class="demo" data-gen="inv2" data-title="пример со скриншота" data-d='{"A":[[3,4],[1,2]]}'></div>
+ <button class="btn pri" data-train="inv2">Тренироваться: обратная 2×2</button><div class="pn"></div>
+</section>
+
+<section id="t-inv3">
+ <div class="sh"><span class="no">12</span><h1>Обратная матрица 3×3 (и любая)</h1></div><p class="sub">A⁻¹ = (1/|A|)·A*. Тот же алгоритм, что и для 2×2, только дополнений 9.</p>
+ <div class="box simple"><div class="bt">5 шагов</div><ol class="steps-list"><li>Посчитай <b>|A|</b>. Ноль → обратной нет, стоп.</li><li>Посчитай <b>9 алгебраических дополнений</b> A<sub>ij</sub> (вычеркнул → 2×2 → знак по шахматке).</li><li>Запиши их таблицей и <b>транспонируй</b> — это A* (присоединённая). Дополнение A<sub>ij</sub> встаёт на место (j, i).</li><li><b>Раздели</b> каждый элемент на |A|.</li><li><b>Проверь</b>: A·A⁻¹ = E.</li></ol></div>
+ <div class="box whyb"><div class="bt">Почему транспонируем?</div>При умножении A·A* строка i матрицы A умножается на столбец j матрицы A*. После транспонирования этот столбец — это дополнения <b>строки j</b>.<br>• Если i = j: элементы строки × <b>свои</b> дополнения = разложение по строке = <b>|A|</b> (свойство 7).<br>• Если i ≠ j: элементы строки × <b>чужие</b> дополнения = <b>0</b> (свойство 8).<br>Итог: A·A* = |A|·E. Делим на |A| → E. Без транспонирования строки встретились бы не со «своими» дополнениями.</div>
+ <div class="box mem"><div class="bt">Запоминалка</div>«<b>Определи → дополни → переверни → подели → проверь</b>» (О-Д-П-П-П). Самая частая ошибка — забыть «переверни» (транспонировать).</div>
+ <div class="box"><div class="bt">Свойства обратной</div>A·A⁻¹ = A⁻¹·A = E; &nbsp;(A⁻¹)⁻¹ = A; &nbsp;|A⁻¹| = 1/|A|; &nbsp;<b>(AB)⁻¹ = B⁻¹A⁻¹</b> — как носки и ботинки: надеваем носки, потом ботинки, а снимаем в обратном порядке. &nbsp;(Aᵀ)⁻¹ = (A⁻¹)ᵀ.</div>
+ <div class="demo" data-gen="inv3" data-title="главный пример практики 3" data-d='{"A":[[3,1,-5],[1,2,4],[3,2,-1]]}'></div>
+ <button class="btn pri" data-train="inv3">Тренироваться</button><div class="pn"></div>
+</section>
+
+<section id="t-sing">
+ <div class="sh"><span class="no">13</span><h1>Когда обратной матрицы нет (вырожденная матрица, параметр)</h1></div>
+ <div class="box simple"><div class="bt">Простыми словами</div><p>Обратная существует <b>только если |A| ≠ 0</b>. Матрица с |A| = 0 называется <b>вырожденной</b>.</p><p>Задача «при каких x нет обратной?» = «при каких x определитель равен 0?». Считаем |A| с буквой, приравниваем к нулю, решаем уравнение.</p></div>
+ <div class="box whyb"><div class="bt">Почему при |A| = 0 обратной нет?</div>1) В формуле A⁻¹ = A*/|A| пришлось бы делить на 0.<br>2) Глубже: |A·A⁻¹| = |E| = 1, но |A·A⁻¹| = |A|·|A⁻¹| = 0·|A⁻¹| = 0. Получается 1 = 0 — противоречие. Значит, такой A⁻¹ не бывает.<br>3) Картинкой: матрица с |A| = 0 «сплющивает» плоскость в линию. Разные точки слипаются в одну — и «разлепить» их обратно невозможно.</div>
+ <div class="box warnb"><div class="bt">Ловушка: не дели на x!</div>2x² − 18x = 0 → <b>выносим</b>: 2x(x − 9) = 0 → x = 0 <b>или</b> x = 9. Если поделить на x, корень x = 0 теряется (а делить на x можно только когда x ≠ 0). И не забывай отрицательные корни: x² = 9 → x = ±3.</div>
+ <div class="demo" data-gen="sing" data-title="из практики 3" data-d='{"form":2}'></div>
+ <button class="btn pri" data-train="sing">Тренироваться</button><div class="pn"></div>
+</section>
+
+<section id="t-mateq">
+ <div class="sh"><span class="no">14</span><h1>Матричные уравнения A·X = B и X·A = B</h1></div>
+ <div class="box simple"><div class="bt">Простыми словами</div><p>Делить матрицы нельзя. Вместо деления умножаем на обратную — <b>с той же стороны, где стоит A</b>:</p>
+  <table class="t"><tr><td>A + X = B</td><td>X = B − A</td></tr><tr><td>A·X = B (A <b>слева</b>)</td><td>X = <b>A⁻¹·B</b> (A⁻¹ слева)</td></tr><tr><td>X·A = B (A <b>справа</b>)</td><td>X = <b>B·A⁻¹</b> (A⁻¹ справа)</td></tr><tr><td>A·X·B = C</td><td>X = A⁻¹·C·B⁻¹</td></tr><tr><td>A·X·B·C = E</td><td>X = A⁻¹·C⁻¹·B⁻¹ (снимаем «одежду» снаружи)</td></tr></table></div>
+ <div class="box whyb"><div class="bt">Почему сторона важна</div>A⁻¹ «уничтожает» A, только когда стоит <b>вплотную</b>: A⁻¹·A = E. Если A·X = B умножить на A⁻¹ справа, получится A·X·A⁻¹ — A и A⁻¹ разделены иксом и не сокращаются (ведь AB ≠ BA, переставлять нельзя).</div>
+ <div class="box mem"><div class="bt">Запоминалка</div>«<b>Где A, там и A⁻¹</b>». И всегда подставь ответ обратно — проверка занимает минуту.</div>
+ <div class="demo" data-gen="mateq" data-d='{"A":[[2,1],[1,1]],"B":[[3,1],[2,0]],"side":"L"}'></div>
+ <button class="btn pri" data-train="mateq">Тренироваться</button><div class="pn"></div>
+</section>
+
+<section id="t-sys">
+ <div class="sh"><span class="no">15</span><h1>Система уравнений → матрицы</h1></div>
+ <div class="box simple"><div class="bt">Простыми словами</div><p>Систему записывают как <b>A·X = C</b>: A — коэффициенты, X — столбец неизвестных, C — правые части.</p>
+  <div class="row"><div class="sys"><div>2x + y = 5</div><div>x − 3y = −1</div></div><span class="op">⇔</span><m-x data-a="2,1;1,-3" data-h="all:b"></m-x><span class="op">·</span><m-x data-a="x;y"></m-x><span class="op">=</span><m-x data-a="5;-1" data-h="all:g"></m-x></div>
+  <p>Перемножь левую часть «строка × столбец» — получишь ровно левые части уравнений. Вот зачем умножение матриц устроено именно так!</p>
+  <p><b>Расширенная матрица</b> (A | C) — коэффициенты и правые части в одной таблице, через черту. Правила записи: каждый столбец — одна переменная, нет переменной → пишем <b>0</b>, «x» без числа — это <b>1</b>, «−x» — это <b>−1</b>.</p></div>
+ <div class="box whyb"><div class="bt">Сколько бывает решений и почему никогда «ровно два»</div>Каждое уравнение с двумя неизвестными — прямая. Решение — общая точка. Прямые пересекаются (1 решение), параллельны (0) или совпадают (∞). Две прямые не могут пересечься ровно в двух точках — поэтому вариантов только три.</div>
+ <div class="box"><div class="bt">Какой метод выбрать</div><table class="t"><tr><td><b>Крамер</b></td><td>Квадратная система, Δ ≠ 0, особенно 2×2 и 3×3. «Посчитал и забыл».</td></tr><tr><td><b>Обратная матрица</b></td><td>X = A⁻¹·C. Удобно, если A⁻¹ уже есть или правых частей много.</td></tr><tr><td><b>Гаусс</b></td><td>Работает всегда: любой размер, даже если решений нет или их бесконечно много.</td></tr></table></div>
+ <div class="pn"></div>
+</section>
+
+<section id="t-cramer">
+ <div class="sh"><span class="no">16</span><h1>Метод Крамера</h1></div>
+ <div class="box simple"><div class="bt">Простыми словами</div><div class="formula">x = Δ<sub>x</sub>/Δ, &nbsp; y = Δ<sub>y</sub>/Δ, &nbsp; z = Δ<sub>z</sub>/Δ</div><p>Δ — определитель коэффициентов. Δ<sub>x</sub> — тот же Δ, но <b>столбец при x заменён на правые части</b>. Аналогично Δ<sub>y</sub>, Δ<sub>z</sub>. Работает только при Δ ≠ 0.</p></div>
+ <div class="box whyb"><div class="bt">Откуда эта формула (честный вывод в 3 строки)</div>Правые части = x·(столбец 1) + y·(столбец 2) + z·(столбец 3). Подставим это в Δ<sub>x</sub> вместо 1-го столбца. По свойству 6 вычтем из него y·(столбец 2) и z·(столбец 3) — определитель не изменится, а в 1-м столбце останется x·(столбец 1). Вынесем x (свойство 4): Δ<sub>x</sub> = x·Δ. Отсюда x = Δ<sub>x</sub>/Δ. </div>
+ <div class="box mem"><div class="bt">Запоминалка</div>«<b>Ищешь x — выгони столбец x, посади на его место ответы</b>».</div>
+ <div class="demo" data-gen="cramer" data-d='{"A":[[2,1],[1,-3]],"b":[5,-1]}'></div>
+ <button class="btn pri" data-train="cramer">Тренироваться</button><div class="pn"></div>
+</section>
+
+<section id="t-gauss">
+ <div class="sh"><span class="no">17</span><h1>Метод Гаусса: прямой и обратный ход</h1></div>
+ <div class="box simple"><div class="bt">Простыми словами</div><p><b>Прямой ход</b> — спускаемся сверху вниз и делаем нули под «ступеньками» (как в треугольном виде определителя). <b>Обратный ход</b> — поднимаемся снизу вверх: из последней строки находим последнюю неизвестную, подставляем выше и т.д.</p>
+  <p><b>Разрешено только 3 действия</b> (П-У-П): <b>П</b>ереставить уравнения; <b>У</b>множить уравнение на число ≠ 0; <b>П</b>рибавить к уравнению другое, умноженное на число.</p></div>
+ <div class="box whyb"><div class="bt">Почему эти действия не меняют ответ? </div>Уравнение — это весы в равновесии. Сделаем с обеими чашами одно и то же (умножим, добавим равный груз) — равновесие сохранится. Каждое из 3 действий можно <b>отменить</b> (поделить обратно, вычесть обратно, переставить обратно) — значит, информация не теряется.</div>
+ <div class="box altb"><div class="bt">А почему нельзя умножать на 0?</div>Это нельзя отменить: 2x + y = 5 превратится в 0 = 0, и условие пропадёт. Система {x + y = 2, x − y = 0} имеет одно решение (1; 1), а после «×0» останется только x + y = 2 — бесконечно много решений. Ответ испортился.</div>
+ <div class="box mem"><div class="bt">Запоминалка</div>«<b>Минус жертва на ступеньку</b>»: k = −(убиваемое)/(ступенька). Ставь наверх строку со ступенькой ±1 — тогда без дробей.</div>
+ <div class="demo" data-gen="gauss" data-d='{"A":[[1,2,-1],[2,3,1],[-1,1,2]],"b":[2,11,7]}'></div>
+ <button class="btn pri" data-train="gauss">Тренироваться</button><div class="pn"></div>
+</section>
+
+<section id="t-rank">
+ <div class="sh"><span class="no">18</span><h1>Ранг матрицы</h1></div>
+ <div class="box simple"><div class="bt">Простыми словами</div><p><b>Ранг</b> — сколько в матрице «по-настоящему разных» строк, т.е. таких, которые нельзя получить из других. Считаем так: приводим к ступенчатому виду (тем же Гауссом) и считаем <b>ненулевые строки</b>.</p>
+  <p>Пример: у <m-x data-a="1,2;2,4"></m-x> ранг 1 — вторая строка = 2 × первая.</p></div>
+ <div class="box whyb"><div class="bt">Почему ранг не меняется от преобразований</div>Все три действия П-У-П можно отменить — «новой информации» не появляется и старая не теряется. А «лишние» строки (суммы других) при вычитании превращаются в нули — так мы их и находим.</div>
+ <div class="box mem"><div class="bt">Полезно знать</div>rg A ≤ min(строк, столбцов). У 3×2 ранг не больше 2. В задачах с параметром <b>делить на α можно только если α ≠ 0</b> — случай α = 0 разбирай отдельно.<br>Без дробей: С<sub>i</sub> → p·С<sub>i</sub> − a·С<sub>1</sub> (умножение строки на p ≠ 0 разрешено).</div>
+ <div class="demo" data-gen="rank" data-d='{"A":[[1,2,-1,3],[2,1,1,0],[-1,1,1,1],[1,2,2,1]]}'></div>
+ <button class="btn pri" data-train="rank">Тренироваться</button><div class="pn"></div>
+</section>
+
+<section id="t-kk">
+ <div class="sh"><span class="no">19</span><h1>Сколько решений: Кронекер–Капелли. Однородные системы</h1></div>
+ <div class="box simple"><div class="bt">Простыми словами</div><p>r — ранг матрицы коэффициентов, r̄ — ранг расширенной (с правыми частями), n — число неизвестных.</p>
+  <table class="t"><tr><td><b>r ≠ r̄</b></td><td>решений <b>нет</b>: появилась строка 0 0 … 0 | b (b ≠ 0), то есть «0 = b»</td></tr><tr><td><b>r = r̄ = n</b></td><td><b>ровно одно</b> решение: у каждой неизвестной своя ступенька</td></tr><tr><td><b>r = r̄ &lt; n</b></td><td><b>бесконечно много</b>: n − r переменных свободные (любые числа t, v…)</td></tr></table></div>
+ <div class="box whyb"><div class="bt">Откуда это</div>После прямого хода каждая ненулевая строка — «настоящее» уравнение. Строка «0 = 5» неверна ни при каких x → решений нет. Если противоречий нет, каждая ступенька «привязывает» одну переменную. Переменные без ступенек ничем не привязаны → их можно брать любыми → решений бесконечно много.</div>
+ <div class="box"><div class="bt">Однородные системы A·X = 0</div>Все правые части — нули. Такая система <b>всегда</b> имеет решение X = 0 (подставь — получится 0 = 0). Ненулевые решения есть ⇔ <b>r &lt; n</b> (для квадратной: ⇔ |A| = 0).<br>Если X₁ и X₂ — решения, то X₁ + X₂ и α·X₁ — тоже решения: A(X₁ + X₂) = 0 + 0 = 0.</div>
+ <div class="box mem"><div class="bt">Запоминалка</div>«<b>Ранги равны — решения есть. Ступенек столько, сколько неизвестных, — одно, меньше — бесконечно. Ноль равно пяти — решений нет.</b>»</div>
+ <div class="demo" data-gen="kk" data-d='{"M":[[1,2,-1,3],[2,5,1,4],[3,7,0,9]]}'></div>
+ <button class="btn pri" data-train="kk">Тренироваться</button><div class="pn"></div>
+</section>
+
+<section id="trainer">
+ <div class="sh"><span class="no">∞</span><h1>Бесконечный тренажёр</h1></div>
+ <p class="sub">Каждая задача генерируется заново — их бесконечно много. После ответа — полный разбор, где видно, откуда каждая цифра.</p>
+ <div class="box"><div class="bt">1. Выбери темы <span class="muted small">(несколько = вперемешку, так полезнее)</span></div><div id="tr-topics"></div>
+  <div class="trbar"><button class="btn sm" id="tr-all">Все темы вперемешку</button><button class="btn sm" id="tr-weak">Только слабые темы</button>
+   <span>Уровень:</span><span class="seggrp" id="tr-level"><button class="btn sm" data-l="1">лёгкий</button><button class="btn sm" data-l="2">обычный</button><button class="btn sm" data-l="3">сложный</button></span>
+   <button class="btn pri sm" id="tr-new">Новая задача →</button><span class="muted small">задач в этой сессии: <b id="tr-count">0</b></span></div></div>
+ <div class="muted small">Не получается сразу? Жми «Решать по шагам» — тренажёр спросит каждое промежуточное число и покажет, откуда оно. Enter — проверить, ещё раз Enter — следующая.</div>
+ <div id="tr-card"></div>
+</section>
+
+<section id="exam">
+ <div class="sh"><span class="no">К</span><h1>Мини-контрольная</h1></div><p class="sub">8 случайных задач из разных тем, без подсказок — как на настоящей. Разбор всех задач — в конце.</p>
+ <button class="btn pri" id="exam-start">Начать контрольную</button><div id="exam-box"></div>
+</section>
+
+<section id="cards">
+ <div class="sh"><span class="no">↻</span><h1>Карточки с интервальным повторением</h1></div>
+ <p class="sub">Система Лейтнера: помнишь — карточка переезжает в следующую коробку и появится через 1, 3, 7, 16 дней; забыл — возвращается в первую. Клавиши: пробел — показать, 1 — не помнил, 2 — помнил.</p>
+ <div id="cards-stat"></div><div id="cards-box"></div>
+</section>
+
+<section id="checker">
+ <div class="sh"><span class="no">✓</span><h1>Проверялка домашки</h1></div><p class="sub">Вбей задачу из тетради — получишь ответ и такой же пошаговый разбор. Дроби: 3/4, отрицательные: −2.</p>
+ <div class="box"><div class="row"><select id="ck-type" class="btn"><option value="det">Определитель</option><option value="inv">Обратная матрица</option><option value="mul">Произведение A·B</option><option value="gauss">Система (Гаусс / сколько решений)</option><option value="rank">Ранг</option></select><select id="ck-size" class="btn"></select><button class="btn" id="ck-rand">Случайные числа</button><button class="btn pri" id="ck-go">Решить по шагам</button></div><div id="ck-grid" style="margin-top:10px"></div></div>
+ <div id="ck-out"></div>
+</section>
+
+<section id="cheat">
+ <div class="sh"><span class="no">≡</span><h1>Шпаргалка</h1></div><p class="sub">Вся тема на одном экране — для повторения перед парой.</p>
+ <div class="box"><table class="t">
+  <tr><th>Что</th><th>Как</th><th>Почему (в двух словах)</th></tr>
+  <tr><td>aᵢⱼ, m×n</td><td>i — строка, j — столбец; строки × столбцы</td><td>«ряд, потом место»</td></tr>
+  <tr><td>Aᵀ</td><td>строки → столбцы; aᵢⱼ → aⱼᵢ; (AB)ᵀ = BᵀAᵀ</td><td>зеркало по диагонали</td></tr>
+  <tr><td>A ± B, kA</td><td>одинаковый размер, поэлементно; kA — каждый элемент</td><td>клетке нужна пара</td></tr>
+  <tr><td>A·B</td><td>(m×<b>n</b>)·(<b>n</b>×p) = m×p; cᵢⱼ = строка i × столбец j</td><td>покупки × цены; AB ≠ BA</td></tr>
+  <tr><td>|A| 2×2</td><td>ad − bc</td><td>площадь со знаком</td></tr>
+  <tr><td>|A| 3×3</td><td>(главная + 2 треуг.) − (побочная + 2 треуг.); или Саррюс</td><td>раскрытое разложение по строке</td></tr>
+  <tr><td>Mᵢⱼ, Aᵢⱼ</td><td>вычеркнуть строку i, столбец j; Aᵢⱼ = (−1)ⁱ⁺ʲMᵢⱼ; шахматка + − + / − + −</td><td>знак от перестановок</td></tr>
+  <tr><td>Разложение</td><td>Δ = Σ aᵢⱼAᵢⱼ по любой линии; бери ту, где нули</td><td>ответ не зависит от линии</td></tr>
+  <tr><td>Свойства Δ</td><td>переставил → −; строку×k → Δ×k; прибавил строку → не меняется; одинаковые/пропорц./нулевая → 0; |kA| = kⁿ|A|; |AB| = |A||B|</td><td>площадь: перевернул / растянул / сдвинул</td></tr>
+  <tr><td>Треугольный вид</td><td>нули под диагональю → Δ = произведение диагонали; k = убиваемое/ступенька</td><td>разложение по 1-му столбцу</td></tr>
+  <tr><td>A⁻¹</td><td>|A| ≠ 0 → таблица Aᵢⱼ → транспонировать (A*) → разделить на |A| → проверить A·A⁻¹ = E</td><td>A·A* = |A|·E</td></tr>
+  <tr><td>A⁻¹ 2×2</td><td>главные меняются местами, побочные — минус, всё / |A|</td><td>противоположный угол + шахматка</td></tr>
+  <tr><td>Нет обратной</td><td>|A| = 0 (вырожденная); параметр: |A| = 0, выносить, не делить</td><td>сплющивание необратимо</td></tr>
+  <tr><td>Уравнения</td><td>AX = B → X = A⁻¹B; XA = B → X = BA⁻¹</td><td>где A, там и A⁻¹</td></tr>
+  <tr><td>Крамер</td><td>xᵢ = Δᵢ/Δ; Δᵢ — столбец i заменён правыми частями</td><td>Δₓ = x·Δ (свойства 6 и 4)</td></tr>
+  <tr><td>Гаусс</td><td>П-У-П; прямой ход ↓ (нули), обратный ход ↑ (подстановка)</td><td>весы: с обеими чашами одно и то же</td></tr>
+  <tr><td>Ранг</td><td>число ненулевых строк ступенчатого вида</td><td>«по-настоящему разные» строки</td></tr>
+  <tr><td>Кронекер–Капелли</td><td>r ≠ r̄ → нет; r = r̄ = n → одно; r = r̄ &lt; n → ∞ (n − r свободных)</td><td>«0 = b» — противоречие</td></tr>
+  <tr><td>Однородная AX = 0</td><td>всегда есть X = 0; ненулевые ⇔ r &lt; n</td><td>0 = 0 в каждой строке</td></tr></table></div>
+ <div class="row"><button class="btn" onclick="window.print()">Распечатать</button><button class="btn ghost" id="reset">Сбросить весь прогресс</button></div>
+</section>
+</main>
+
+<script>'use strict';
+/* ===== утилиты ===== */
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const rnd=(a,b)=>a+Math.floor(Math.random()*(b-a+1));
+const rndNZ=(a,b)=>{let x;do x=rnd(a,b);while(x===0);return x};
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+function gcd(a,b){a=Math.abs(a);b=Math.abs(b);while(b){[a,b]=[b,a%b]}return a}
+const SUB='₀₁₂₃₄₅₆₇₈₉';
+const sb=s=>String(s).replace(/\d/g,d=>SUB[d]);
+const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+
+/* ===== дроби ===== */
+class Q{
+  constructor(n,d=1){ if(d===0) throw new Error('Деление на ноль'); if(d<0){n=-n;d=-d}
+    const g=gcd(n,d)||1; this.n=n/g; this.d=d/g; if(this.n===0){this.n=0;this.d=1} }
+  static of(x){return x instanceof Q?x:new Q(x,1)}
+  add(o){o=Q.of(o);return new Q(this.n*o.d+o.n*this.d,this.d*o.d)}
+  sub(o){o=Q.of(o);return new Q(this.n*o.d-o.n*this.d,this.d*o.d)}
+  mul(o){o=Q.of(o);return new Q(this.n*o.n,this.d*o.d)}
+  div(o){o=Q.of(o);return new Q(this.n*o.d,this.d*o.n)}
+  neg(){return new Q(-this.n,this.d)}
+  get z(){return this.n===0} get isInt(){return this.d===1}
+  eq(o){o=Q.of(o);return this.n===o.n&&this.d===o.d}
+  sign(){return Math.sign(this.n)}
+  toString(){const a=Math.abs(this.n);return (this.n<0?'−':'')+(this.d===1?a:a+'/'+this.d)}
+}
+const q=x=>Q.of(x);
+const f=x=>(typeof x==='string')?x:q(x).toString();          // −3, 7/2
+const fp=x=>{if(typeof x==='string')return x;x=q(x);return x.n<0?'('+f(x)+')':f(x)}; // (−3)
+function fh(x){ if(typeof x==='string') return x; x=q(x); if(x.isInt) return f(x);
+  return (x.n<0?'−':'')+`<span class="fr"><i>${Math.abs(x.n)}</i><i>${x.d}</i></span>`; }
+function parseQ(s){
+  if(s==null) return null; s=String(s).trim().replace(/[−–—]/g,'-').replace(/\s+/g,'').replace(',', '.');
+  if(s==='') return null;
+  let m=s.match(/^([+-]?)(\d+)\/(\d+)$/); if(m){ if(+m[3]===0) return null; return new Q((m[1]==='-'?-1:1)*+m[2],+m[3]); }
+  m=s.match(/^([+-]?)(\d*)\.?(\d*)$/); if(m&&(m[2]||m[3])){ const den=10**m[3].length; return new Q((m[1]==='-'?-1:1)*(+(m[2]||0)*den+ +(m[3]||0)),den); }
+  return null;
+}
+/* ===== матрицы ===== */
+const MQ=A=>A.map(r=>r.map(q));
+const mT=A=>A[0].map((_,j)=>A.map(r=>r[j]));
+const mmul=(A,B)=>A.map(r=>B[0].map((_,j)=>r.reduce((s,x,k)=>s.add(q(x).mul(B[k][j])),q(0))));
+const madd=(A,B)=>A.map((r,i)=>r.map((x,j)=>q(x).add(B[i][j])));
+const mscale=(k,A)=>A.map(r=>r.map(x=>q(x).mul(k)));
+const minorM=(A,i,j)=>A.filter((_,r)=>r!==i).map(r=>r.filter((_,c)=>c!==j));
+function det(A){A=MQ(A);const n=A.length;if(n===1)return A[0][0];if(n===2)return A[0][0].mul(A[1][1]).sub(A[0][1].mul(A[1][0]));
+  let s=q(0);for(let j=0;j<n;j++){if(A[0][j].z)continue;const t=A[0][j].mul(det(minorM(A,0,j)));s=j%2?s.sub(t):s.add(t)}return s}
+const cof=(A,i,j)=>{const m=det(minorM(A,i,j));return (i+j)%2?m.neg():m};
+const adj=A=>mT(A.map((r,i)=>r.map((_,j)=>cof(A,i,j))));
+function inv(A){const d=det(A);if(d.z)return null;return mscale(q(1).div(d),adj(A))}
+const meq=(A,B)=>A.length===B.length&&A.every((r,i)=>r.length===B[i].length&&r.every((x,j)=>q(x).eq(B[i][j])));
+const eye=n=>Array.from({length:n},(_,i)=>Array.from({length:n},(_,j)=>q(i===j?1:0)));
+const rndM=(r,c,a,b)=>Array.from({length:r},()=>Array.from({length:c},()=>q(rnd(a,b))));
+
+/* ===== отрисовка ===== */
+// hl: (i,j)=>'b'|'g'|'r'|'y'|'v'|'x'|'' ; type: p (скобки) | d (определитель) | b
+function mat(A,o={}){
+  const r=A.length,c=A[0].length,type=o.type||'p';let cells='';
+  for(let i=0;i<r;i++)for(let j=0;j<c;j++){
+    let cls='c'; const h=o.hl?o.hl(i,j):''; if(h) cls+=' '+h; if(o.aug!=null&&j===o.aug) cls+=' aug';
+    const v=A[i][j]; cells+=`<span class="${cls}">${v==null?'':(o.raw?v:fh(v))}</span>`;
+  }
+  return `<span class="mx">${o.name?`<span class="mname">${o.name}</span>`:''}<span class="m m-${type}"><span class="mg" style="grid-template-columns:repeat(${c},auto)">${cells}</span></span>${o.label?`<span class="mlab">${o.label}</span>`:''}</span>`;
+}
+// конструкторы подсветки
+const H=(...fs)=>(i,j)=>fs.map(fn=>fn(i,j)).filter(Boolean).join(' ');
+const hRow=(r,c)=>(i,j)=>i===r?c:'';
+const hCol=(k,c)=>(i,j)=>j===k?c:'';
+const hCells=(list,c)=>(i,j)=>list.some(([a,b])=>a===i&&b===j)?c:'';
+const hCross=(r,k)=>(i,j)=>(i===r&&j===k)?'r':(i===r||j===k)?'x':'';
+const hDiag=c=>(i,j)=>i===j?c:'';
+const row=(...xs)=>`<div class="row">${xs.join('')}</div>`;
+const op=s=>`<span class="op">${s}</span>`;
+const pill=(s,c='')=>`<span class="pill ${c}">${s}</span>`;
+const big=s=>`<span class="bigres">${s}</span>`;
+const aij=(i,j,l='a')=>`${l}<sub>${i}${j}</sub>`;
+// SVG для правила треугольников
+const TERMS=[{p:[[0,0],[1,1],[2,2]],s:1,n:'главная диагональ'},{p:[[0,1],[1,2],[2,0]],s:1,n:'треугольник ↘ (основание ∥ главной)'},{p:[[0,2],[1,0],[2,1]],s:1,n:'треугольник ↖ (основание ∥ главной)'},
+  {p:[[0,2],[1,1],[2,0]],s:-1,n:'побочная диагональ'},{p:[[0,0],[1,2],[2,1]],s:-1,n:'треугольник (основание ∥ побочной)'},{p:[[0,1],[1,0],[2,2]],s:-1,n:'треугольник (основание ∥ побочной)'}];
+function triSvg(A,t,o={}){
+  const W=230,Hh=150,X=j=>55+j*60,Y=i=>32+i*43; const term=t==null?null:TERMS[t];
+  const col=term?(term.s>0?'var(--green)':'var(--red)'):'var(--fg2)';
+  let s=`<svg class="tri" viewBox="0 0 ${W} ${Hh}" width="${o.w||W}" height="${(o.w||W)*Hh/W}">`;
+  s+=`<line x1="18" y1="8" x2="18" y2="${Hh-12}" class="bar"/><line x1="${W-18}" y1="8" x2="${W-18}" y2="${Hh-12}" class="bar"/>`;
+  if(term){const pts=term.p.map(([i,j])=>`${X(j)},${Y(i)}`).join(' ');
+    if(t===0||t===3) s+=`<polyline points="${pts}" fill="none" stroke="${col}" stroke-width="3" stroke-linecap="round"/>`;
+    else s+=`<polygon points="${pts}" fill="${col}" fill-opacity=".16" stroke="${col}" stroke-width="2.6" stroke-linejoin="round"/>`;
+    term.p.forEach(([i,j])=>s+=`<circle cx="${X(j)}" cy="${Y(i)}" r="16" fill="var(--bg)" stroke="${col}" stroke-width="2.4"/>`);}
+  for(let i=0;i<3;i++)for(let j=0;j<3;j++){const on=!term||term.p.some(([a,b])=>a===i&&b===j);
+    s+=`<text x="${X(j)}" y="${Y(i)+5}" text-anchor="middle" class="${on?'on':'off'}">${A?f(A[i][j]):`a<tspan baseline-shift="sub" font-size="11">${i+1}${j+1}</tspan>`}</text>`;}
+  return s+'</svg>';
+}
+function sarrusSvg(A){
+  const X=j=>40+j*52,Y=i=>32+i*42,W=300,Hh=150; let s=`<svg class="tri" viewBox="0 0 ${W} ${Hh}" width="${W}" height="${Hh}">`;
+  s+=`<rect x="${X(3)-24}" y="8" width="${2*52+0}" height="${Hh-20}" rx="8" class="ghost"/>`;
+  for(let k=0;k<3;k++){s+=`<line x1="${X(k)}" y1="${Y(0)}" x2="${X(k+2)}" y2="${Y(2)}" stroke="var(--green)" stroke-width="2.5" opacity=".8"/>`;
+    s+=`<line x1="${X(k+2)}" y1="${Y(0)}" x2="${X(k)}" y2="${Y(2)}" stroke="var(--red)" stroke-width="2.5" stroke-dasharray="6 4" opacity=".8"/>`;}
+  for(let i=0;i<3;i++)for(let j=0;j<5;j++)s+=`<text x="${X(j)}" y="${Y(i)+5}" text-anchor="middle" class="${j>2?'off2':'on'}">${A?f(A[i][j%3]):`a<tspan baseline-shift="sub" font-size="11">${i+1}${j%3+1}</tspan>`}</text>`;
+  return s+'</svg>';
+}
+
+/* ===== пошаговый разбор (stepper) ===== */
+// step: {t:заголовок, v:визуал, e:объяснение, why, alt, ask:{q,a}}
+const STORE={get(k,d){try{return JSON.parse(localStorage.getItem('mx_'+k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem('mx_'+k,JSON.stringify(v))}catch(e){}}};
+function stepper(steps,o={}){
+  const el=document.createElement('div'); el.className='stepper'; el.tabIndex=0;
+  let k=0, all=false, guess=o.guess??STORE.get('guess',false), timer=null; const open=new Set();
+  function body(i){const s=steps[i]; const hide=guess&&s.ask&&!open.has(i);
+    let h=`<div class="st-t"><span class="st-n">${i+1}</span>${s.t||''}</div>`;
+    if(s.v) h+=`<div class="st-v">${hide&&s.v0!=null?s.v0:s.v}</div>`;
+    if(hide){h+=`<div class="ask"><span>${s.ask.q}</span><input class="ask-in" inputmode="text" placeholder="твой ответ" autocomplete="off"><button class="btn sm ask-ok">Проверить</button><button class="btn sm ghost ask-show">Показать</button><span class="ask-msg"></span></div>`;}
+    else{ if(s.e) h+=`<div class="st-e">${s.e}</div>`;
+      if(s.why) h+=`<details class="why"><summary>Почему так?</summary><div>${s.why}</div></details>`;
+      if(s.alt) h+=`<details class="alt"><summary>А если сделать по-другому?</summary><div>${s.alt}</div></details>`; }
+    return `<div class="st-body" data-i="${i}">${h}</div>`;}
+  function render(){
+    const n=steps.length;
+    let bar=''; for(let i=0;i<n;i++) bar+=`<span class="seg ${i<k?'done':''} ${i===k?'cur':''}" data-k="${i}"></span>`;
+    el.innerHTML=`<div class="st-ctrl"><button class="btn icon st-reset" title="С начала">↺</button><button class="btn icon st-prev" title="Назад (←)">←</button>
+      <span class="st-count">${all?'все '+n:(k+1)+' / '+n}</span><button class="btn pri st-next">${k===n-1&&!all?'Готово ✓':'Дальше →'}</button>
+      <button class="btn icon st-play" title="Автопросмотр">${timer?'❚❚':'▶'}</button><div class="segs">${bar}</div>
+      <label class="tog" title="Перед ключевым числом спросит ответ — так запоминается лучше"><input type="checkbox" class="st-guess" ${guess?'checked':''}> угадывать</label>
+      <button class="btn sm ghost st-all">${all?'по шагам':'все шаги'}</button></div>
+      <div class="st-wrap">${all?steps.map((_,i)=>body(i)).join(''):body(k)}</div>`;
+  }
+  function go(x){k=Math.max(0,Math.min(steps.length-1,x));render()}
+  el.addEventListener('click',e=>{const t=e.target;
+    if(t.closest('.st-next')){ if(all){all=false;render();return}
+      const s=steps[k]; if(guess&&s.ask&&!open.has(k)){open.add(k);render();return} if(k<steps.length-1)go(k+1); else {el.classList.add('flash');setTimeout(()=>el.classList.remove('flash'),500);o.onDone&&o.onDone()} }
+    else if(t.closest('.st-prev')) go(k-1);
+    else if(t.closest('.st-reset')){open.clear();go(0)}
+    else if(t.closest('.seg')) go(+t.closest('.seg').dataset.k);
+    else if(t.closest('.st-all')){all=!all;render()}
+    else if(t.closest('.st-play')){ if(timer){clearInterval(timer);timer=null;render()} else {timer=setInterval(()=>{ if(!document.body.contains(el)||k>=steps.length-1){clearInterval(timer);timer=null;render();return} open.add(k);go(k+1)},3200);render()} }
+    else if(t.closest('.ask-show')){const i=+t.closest('.st-body').dataset.i;open.add(i);render()}
+    else if(t.closest('.ask-ok')) checkAsk(t.closest('.st-body'));
+  });
+  el.addEventListener('change',e=>{if(e.target.classList.contains('st-guess')){guess=e.target.checked;STORE.set('guess',guess);render()}});
+  el.addEventListener('keydown',e=>{ if(e.target.tagName==='INPUT'){ if(e.key==='Enter'&&e.target.classList.contains('ask-in')) checkAsk(e.target.closest('.st-body')); return}
+    if(e.key==='ArrowRight'){e.preventDefault();$('.st-next',el).click()} if(e.key==='ArrowLeft'){e.preventDefault();go(k-1)} });
+  function checkAsk(b){const i=+b.dataset.i,s=steps[i],v=parseQ($('.ask-in',b).value),msg=$('.ask-msg',b);
+    if(!v){msg.textContent='Введи число, например −3 или 7/2';msg.className='ask-msg bad';return}
+    if(v.eq(s.ask.a)){msg.textContent='✓ Верно!';msg.className='ask-msg ok';Stats.guess(true);setTimeout(()=>{open.add(i);render()},650)}
+    else{msg.textContent='✗ Не совсем. Попробуй ещё или нажми «Показать»';msg.className='ask-msg bad';Stats.guess(false)} }
+  render(); return el;
+}
+
+/* ===== общие построители шагов ===== */
+const opName=(r,k,c)=>{k=q(k);return `С${sb(r+1)} → С${sb(r+1)} ${k.sign()>0?'−':'+'} ${k.n===1&&k.d===1||k.n===-1&&k.d===1?'':f(k.sign()<0?k.neg():k)+'·'}С${sb(c+1)}`};
+const sumStr=xs=>xs.map((x,i)=>i===0?f(x):(q(x).sign()<0?' − '+f(q(x).neg()):' + '+f(x))).join('');
+function det2Str(M){const a=M[0][0],b=M[0][1],c=M[1][0],d=M[1][1];const p1=q(a).mul(d),p2=q(b).mul(c);
+  return `${fp(a)}·${fp(d)} − ${fp(b)}·${fp(c)} = ${f(p1)} − ${fp(p2)} = ${f(p1.sub(p2))}`}
+function mulSteps(A,B,nA='A',nB='B'){
+  const m=A.length,n=A[0].length,p=B[0].length,C=mmul(A,B),steps=[];
+  steps.push({t:'Шаг 0. Можно ли умножать? Какой будет размер?',v:`<div class="sizes">${nA}: ${m}×<b class="hl-b">${n}</b> &nbsp;·&nbsp; ${nB}: <b class="hl-b">${B.length}</b>×${p} &nbsp;→&nbsp; ответ <b class="hl-y">${m}×${p}</b></div>`,
+    e:`Внутренние числа совпали (${n} = ${B.length}) — умножать можно. Внешние числа дают размер ответа: <b>${m}×${p}</b>.`,
+    why:`Каждое число строки ${nA} должно найти себе <b>пару</b> в столбце ${nB}: 1-е с 1-м, 2-е со 2-м… Длина строки ${nA} = число столбцов ${nA} = ${n}, высота столбца ${nB} = число строк ${nB} = ${B.length}. Если бы они не совпали, кому-то не хватило бы пары.`});
+  for(let i=0;i<m;i++)for(let j=0;j<p;j++){
+    const part=(show)=>C.map((r,a)=>r.map((x,b)=>(a<i||a===i&&b<j)?fh(x):(a===i&&b===j?(show?fh(x):'?'):'·')));
+    const parts=A[i].map((x,k)=>`${fp(x)}·${fp(B[k][j])}`).join(' + '),vals=A[i].map((x,k)=>q(x).mul(B[k][j]));
+    const V=s=>row(mat(A,{name:nA,hl:hRow(i,'b')}),op('·'),mat(B,{name:nB,hl:hCol(j,'g')}),op('='),mat(part(s),{raw:true,hl:hCells([[i,j]],'y')}));
+    steps.push({t:`c${sb(i+1)}${sb(j+1)} = <span class="hl-b">строка ${i+1}</span> × <span class="hl-g">столбец ${j+1}</span>`,v:V(true),v0:V(false),
+      e:`Идём по строке и по столбцу одновременно, перемножаем пары и складываем:<br><b>c${sb(i+1)}${sb(j+1)}</b> = ${parts} = ${sumStr(vals)} = <b>${f(C[i][j])}</b>`,
+      why:i+j===0?`Почему «строка × столбец»? Пример из жизни: строка — сколько чего купил (2 кофе, 1 булка), столбец — цены (100 ₽, 40 ₽). Итог = 2·100 + 1·40. Это и есть «перемножь пары и сложи». Матрица просто делает много таких подсчётов сразу.`:'',
+      ask:{q:`c${sb(i+1)}${sb(j+1)} = ${parts} = ?`,a:C[i][j]}});
+  }
+  steps.push({t:'Готово',v:row(mat(A,{name:nA}),op('·'),mat(B,{name:nB}),op('='),mat(C,{hl:()=>'y'})),e:`Номер строки ответа — от строки ${nA}, номер столбца — от столбца ${nB}.`});
+  return {steps,C};
+}
+function triParts(A){A=MQ(A);const pr=TERMS.map(t=>t.p.reduce((s,[i,j])=>s.mul(A[i][j]),q(1)));
+  const P=pr.slice(0,3).reduce((s,x)=>s.add(x),q(0)),M=pr.slice(3).reduce((s,x)=>s.add(x),q(0));return {pr,P,M,D:P.sub(M)}}
+function det3Steps(A){
+  A=MQ(A);const {pr,P,M,D}=triParts(A),steps=[];
+  steps.push({t:'Карта: 6 произведений',v:`<div class="row">${TERMS.map((_,t)=>`<div class="mini ${t<3?'plus':'minus'}">${triSvg(A,t,{w:120})}</div>`).join('')}</div>`,
+    e:`Три <span class="hl-g">«плюсовых»</span> (со знаком +) и три <span class="hl-r">«минусовых»</span> (со знаком −). В каждом произведении ровно <b>одно число из каждой строки и одно из каждого столбца</b> — это главная проверка, что ты взял тройку правильно.`,
+    why:`Если разложить 3×3 по первой строке и раскрыть все 2×2, получится ровно эти 6 слагаемых. Правило треугольников — просто картинка-подсказка, чтобы не раскрывать скобки каждый раз.`});
+  TERMS.forEach((t,k)=>{const nums=t.p.map(([i,j])=>A[i][j]);
+    steps.push({t:`${k<3?'<span class="hl-g">+</span>':'<span class="hl-r">−</span>'} Произведение ${k%3+1} из 3: ${t.n}`,v:triSvg(A,k),
+      e:`${t.p.map(([i,j])=>aij(i+1,j+1)).join('·')} = ${nums.map(fp).join('·')} = <b>${f(pr[k])}</b>`,
+      why:k===1?'Как найти треугольник: одна сторона параллельна главной диагонали (две клетки чуть выше неё: a₁₂ и a₂₃), третья вершина — в противоположном углу (a₃₁).':k===2?'Зеркально предыдущему: две клетки ниже диагонали (a₂₁ и a₃₂) + противоположный угол a₁₃.':k===4?'Для «минусовых» всё то же, только относительно побочной диагонали: a₁₁ и a₃₂… проверка — по одному числу из каждой строки и столбца.':'',
+      ask:{q:`${nums.map(fp).join('·')} = ?`,a:pr[k]}});});
+  steps.push({t:'Складываем плюсы и минусы отдельно',v:`<div class="calc"><div class="hl-g">плюсы: ${sumStr(pr.slice(0,3))} = <b>${f(P)}</b></div><div class="hl-r">минусы: ${sumStr(pr.slice(3))} = <b>${f(M)}</b></div></div>`,
+    e:'Сначала просто суммы, без знака «минус» между группами — так меньше путаницы.',ask:{q:`Сумма «минусовых»: ${sumStr(pr.slice(3))} = ?`,a:M}});
+  steps.push({t:'Ответ: (плюсы) − (минусы)',v:`<div class="calc">Δ = ${fp(P)} − ${fp(M)} = <b class="bigres">${f(D)}</b></div>`,
+    e:`Δ = ${f(P)} − ${fp(M)} = <b>${f(D)}</b>`,why:`Минус стоит перед <b>всей</b> «минусовой» скобкой. Поэтому ${f(P)} − ${fp(M)}: если M отрицательное, минус на минус даёт плюс. Это ошибка №1 на контрольных.`,ask:{q:`${fp(P)} − ${fp(M)} = ?`,a:D}});
+  return {steps,D};
+}
+function elimDet(A0,o={}){
+  let A=MQ(A0).map(r=>r.slice());const n=A.length;let sign=1;const steps=[];const T='d';
+  steps.push({t:'Цель — «лесенка» из нулей под диагональю',v:mat(A,{type:T,hl:(i,j)=>i>j?'r':''}),
+    e:'Клетки в пунктирной рамке (под главной диагональю) нужно превратить в нули. Тогда определитель = произведение чисел на диагонали.',
+    why:'Если под диагональю нули, раскладываем по 1-му столбцу: там одно ненулевое число a₁₁ → a₁₁·(определитель поменьше), и так далее. Остаётся только произведение диагонали.',
+    alt:'Можно и раскладывать сразу по строке, но для 4×4 это 4 определителя 3×3 — долго и легко ошибиться. Нули делают работу короче.'});
+  for(let c=0;c<n-1;c++){
+    if(A[c][c].z){let r=c+1;while(r<n&&A[r][c].z)r++;
+      if(r===n){steps.push({t:'Весь столбец под диагональю — нули',v:mat(A,{type:T,hl:hCol(c,'r')}),e:'Диагональный элемент 0, и ниже тоже нули → определитель = 0.'});return {steps,D:q(0)}}
+      const old=A.map(x=>x.slice());[A[c],A[r]]=[A[r],A[c]];sign=-sign;
+      steps.push({t:`Меняем местами С${sb(c+1)} ↔ С${sb(r+1)}`,v:row(mat(old,{type:T,hl:(i,j)=>(i===c||i===r)?'v':''}),op('→'),op('−'),mat(A,{type:T,hl:(i,j)=>(i===c||i===r)?'v':''})),
+        e:`На диагонали стоял 0 — им нельзя «убить» числа под ним (пришлось бы делить на 0). Меняем строки — и <b>знак определителя меняется</b> (свойство 2). Запоминаем: перед ответом «−».`});}
+    for(let r=c+1;r<n;r++){if(A[r][c].z)continue;const k=A[r][c].div(A[c][c]),old=A[r].slice(),prev=A.map(x=>x.slice());
+      A[r]=A[r].map((x,j)=>x.sub(k.mul(A[c][j])));
+      const lines=old.map((x,j)=>j<c?null:`${f(x)} − ${fp(k)}·${fp(A[c][j])} = <b>${f(A[r][j])}</b>`).filter(Boolean).join('<br>');
+      const ask=c+1<n?{q:`Новое число в строке ${r+1}, столбце ${c+2}: ${f(old[c+1])} − ${fp(k)}·${fp(A[c][c+1])} = ?`,a:A[r][c+1]}:null;
+      steps.push({t:opName(r,k,c),v:row(mat(prev,{type:T,hl:(i,j)=>i===c?(j===c?'y':'b'):i===r?(j===c?'r':'g'):''}),op('→'),mat(A,{type:T,hl:(i,j)=>i===r?(j===c?'y':'g'):''})),
+        e:`Хотим 0 вместо <b>${f(old[c])}</b>. Множитель k = ${f(old[c])} / ${fp(A[c][c])} = <b>${f(k)}</b> («убиваемое / ступенька»). Из строки ${r+1} вычитаем строку ${c+1}, умноженную на k:<div class="calc">${lines}</div>`,
+        why:'Свойство 6: если к строке прибавить другую строку, умноженную на число, определитель <b>не меняется</b>. Поэтому так можно делать сколько угодно раз.',
+        alt:k.isInt?'':'Дробный множитель — нормально, просто аккуратнее. Можно было бы сначала переставить строки, чтобы на диагонали стояла 1 или −1 — тогда множители целые.',ask});}
+  }
+  let D=A.reduce((s,r,i)=>s.mul(r[i]),q(1));const diag=A.map((r,i)=>fp(r[i])).join('·');if(sign<0)D=D.neg();
+  steps.push({t:'Перемножаем диагональ',v:mat(A,{type:T,hl:hDiag('y')}),e:`Δ = ${sign<0?'−':''}${diag} = <b>${f(D)}</b>${sign<0?' (минус — из-за перестановки строк)':''}`,ask:{q:`${sign<0?'−':''}${diag} = ?`,a:D}});
+  return {steps,D};
+}
+
+/* ===== ГЕНЕРАТОРЫ: матрицы ===== */
+const G={};
+G.addr=(L=2,d={})=>{const A=d.A?MQ(d.A):rndM(3,4,-9,9),i=d.i??rnd(0,2),j=d.j??rnd(0,3);
+  const steps=[{t:`Первая цифра индекса — строка (${i+1})`,v:mat(A,{hl:hRow(i,'b')}),e:`a<sub><b class="hl-b">${i+1}</b>${j+1}</sub>: идём в <b>${i+1}-ю строку</b> (считаем сверху вниз).`,why:'Как в кинотеатре: «ряд 2, место 3». Сначала ряд (строка), потом место (столбец). Тот же порядок и в размере m×n: строки × столбцы.'},
+    {t:`Вторая цифра — столбец (${j+1})`,v:mat(A,{hl:H(hRow(i,'b'),hCol(j,'g'))}),e:`a<sub>${i+1}<b class="hl-g">${j+1}</b></sub>: в этой строке берём <b>${j+1}-й столбец</b> (слева направо).`},
+    {t:'Пересечение — это и есть элемент',v:mat(A,{hl:hCells([[i,j]],'y')}),e:`a<sub>${i+1}${j+1}</sub> = <b>${f(A[i][j])}</b>`,ask:{q:`a${sb(i+1)}${sb(j+1)} = ?`,a:A[i][j]}}];
+  const traps=j<3&&i!==j?[{a:A[j]?.[i],msg:'Ты перепутал порядок: взял строку j и столбец i. Первая цифра — СТРОКА.'}]:[];
+  return {A,title:`Адрес элемента a${sb(i+1)}${sb(j+1)}`,q:`Найди элемент <b>a<sub>${i+1}${j+1}</sub></b> матрицы ${mat(A,{name:'A ='})}`,kind:'num',a:A[i][j],steps,traps:traps.filter(t=>t.a!=null)}};
+G.size=(L=2,d={})=>{const m=rnd(1,4),n=rnd(1,4),ok=Math.random()<.6,p=ok?n:pick([1,2,3,4].filter(x=>x!==n)),qq=rnd(1,4);
+  const ans=ok?`${m}×${qq}`:'нельзя умножить';const opts=shuffle([...new Set([ans,`${m}×${qq}`,`${n}×${p}`,`${qq}×${m}`,'нельзя умножить'])]).slice(0,4);if(!opts.includes(ans))opts[0]=ans;
+  const steps=[{t:'Пишем размеры рядом',v:`<div class="sizes">${m}×<b class="hl-b">${n}</b> · <b class="hl-b">${p}</b>×${qq}</div>`,e:'Смотрим на <b>внутренние</b> числа: столбцы первой и строки второй.',why:'Строка A имеет длину n (столько столбцов у A). Столбец B имеет высоту p (столько строк у B). Чтобы перемножить «пары», длины должны совпасть.'},
+    {t:ok?'Внутренние совпали → можно':'Внутренние разные → нельзя',v:`<div class="sizes">${m}×<b class="${ok?'hl-g':'hl-r'}">${n}</b> · <b class="${ok?'hl-g':'hl-r'}">${p}</b>×${qq} → <b>${ans}</b></div>`,e:ok?`Внешние числа ${m} и ${qq} дают размер ответа: <b>${m}×${qq}</b>.`:`${n} ≠ ${p}: у части чисел строки не будет пары в столбце. Произведение <b>не определено</b>.`}];
+  return {title:'Размер произведения',q:`A имеет размер <b>${m}×${n}</b>, B — <b>${p}×${qq}</b>. Какой размер у A·B?`,kind:'choice',opts,a:ans,steps}};
+G.trans=(L=2,d={})=>{const r=d.A?d.A.length:(L===1?2:pick([2,3])),c=d.A?d.A[0].length:(L===1?3:pick([2,3,4]).valueOf());const A=d.A?MQ(d.A):rndM(r,c===r&&L>1?c+1:c,-9,9),T=mT(A);
+  const steps=[];for(let i=0;i<A.length;i++){const part=T.map((rr,a)=>rr.map((x,b)=>b<=i?fh(x):'·'));
+    steps.push({t:`Строка ${i+1} → столбец ${i+1}`,v:row(mat(A,{hl:hRow(i,'b')}),op('→'),mat(part,{raw:true,hl:hCol(i,'b')})),e:`Читаем ${i+1}-ю строку слева направо и записываем её <b>сверху вниз</b> в ${i+1}-й столбец.`,why:i===0?'Элемент с адресом (i, j) переезжает на адрес (j, i). Поэтому строки становятся столбцами, а размер m×n превращается в n×m.':''});}
+  steps.push({t:'Готово',v:row(mat(A,{name:'A ='}),op('→'),mat(T,{name:'Aᵀ =',hl:()=>'y'})),e:`Было ${A.length}×${A[0].length}, стало ${T.length}×${T[0].length}.`});
+  return {A,title:'Транспонирование',q:`Найди <b>Aᵀ</b>, если ${mat(A,{name:'A ='})}`,kind:'mat',a:T,steps,traps:[]}};
+G.lin=(L=2,d={})=>{const r=2,c=L===1?2:pick([2,3]);const A=d.A?MQ(d.A):rndM(r,c,-5,6),B=d.B?MQ(d.B):rndM(r,c,-5,6);
+  const k=d.k??pick(L===1?[1,2,3]:[2,3,-2,4]),m=d.m??pick([1,2,3,-1,-2]),sg=d.sg??pick([1,-1]);const mm=m*sg;
+  const kA=mscale(k,A),mB=mscale(mm,B),R=madd(kA,mB);const expr=`${k===1?'':f(k)}A ${mm<0?'−':'+'} ${Math.abs(mm)===1?'':Math.abs(mm)}B`;
+  const steps=[];
+  if(k!==1)steps.push({t:`Считаем ${f(k)}A — умножаем КАЖДЫЙ элемент`,v:row(op(f(k)+'·'),mat(A),op('='),mat(kA,{hl:()=>'b'})),e:`Каждое число A умножили на ${f(k)}. Например, ${fp(A[0][0])}·${fp(k)} = ${f(kA[0][0])}.`,why:'Матрица на число — это «всё в k раз больше»: каждый элемент. (Не путай с определителем: там на число умножается только одна строка!)',ask:{q:`Первый элемент ${f(k)}A: ${fp(k)}·${fp(A[0][0])} = ?`,a:kA[0][0]}});
+  steps.push({t:`Считаем ${f(mm)}B (знак берём вместе с числом)`,v:row(op(fp(mm)+'·'),mat(B),op('='),mat(mB,{hl:()=>'g'})),e:`Удобный приём: вычитание «−${Math.abs(mm)}B» = прибавление «${f(mm)}·B». Тогда дальше только складываем. Пример: ${fp(mm)}·${fp(B[0][0])} = ${f(mB[0][0])}.`,ask:{q:`Первый элемент: ${fp(mm)}·${fp(B[0][0])} = ?`,a:mB[0][0]}});
+  const lines=R.map((rr,i)=>rr.map((x,j)=>`c${sb(i+1)}${sb(j+1)}: ${f(kA[i][j])} + ${fp(mB[i][j])} = <b>${f(x)}</b>`).join('<br>')).join('<br>');
+  steps.push({t:'Складываем клетку с клеткой',v:row(mat(kA,{hl:()=>'b'}),op('+'),mat(mB,{hl:()=>'g'}),op('='),mat(R,{hl:()=>'y'})),e:`<div class="calc">${lines}</div>`,why:'Складывать можно только матрицы одного размера: у каждой клетки должна быть «пара» на том же месте.'});
+  const traps=[{a:madd(kA,mscale(sg,B)),msg:`Похоже, ты забыл умножить B на ${Math.abs(mm)}.`},{a:madd(A,mB),msg:`Похоже, ты забыл умножить A на ${k}.`},{a:madd(kA,mscale(-mm,B)),msg:'Знак перед B перепутан.'}].filter(t=>!meq(t.a,R));
+  return {A,title:`Линейная комбинация ${expr}`,q:`Найди <b>${expr}</b>, если ${mat(A,{name:'A ='})} &nbsp; ${mat(B,{name:'B ='})}`,kind:'mat',a:R,steps,traps}};
+G.mul=(L=2,d={})=>{let A,B;if(d.A){A=MQ(d.A);B=MQ(d.B)}else{const sh=L===1?[[2,2],[2,2]]:L===2?pick([[[2,2],[2,2]],[[2,3],[3,2]],[[3,2],[2,2]]]):pick([[[3,3],[3,3]],[[2,3],[3,3]],[[3,2],[2,3]]]);
+    A=rndM(...sh[0],-3,5);B=rndM(...sh[1],-3,5);}
+  const {steps,C}=mulSteps(A,B);const traps=[];if(A.length===B.length&&A[0].length===B[0].length)traps.push({a:A.map((r,i)=>r.map((x,j)=>x.mul(B[i][j]))),msg:'Ты перемножил клетки «на тех же местах». Так нельзя: каждая клетка ответа = строка A × столбец B.'});
+  if(A.length===A[0].length&&B.length===B[0].length&&A.length===B.length){const BA=mmul(B,A);if(!meq(BA,C))traps.push({a:BA,msg:'Это B·A, а нужно A·B. Порядок важен: AB ≠ BA.'})}
+  return {A,B,title:'Умножение матриц',q:`Найди <b>A·B</b>, если ${mat(A,{name:'A ='})} &nbsp; ${mat(B,{name:'B ='})}`,kind:'mat',a:C,steps,traps}};
+G.pow=(L=2,d={})=>{const A=d.A?MQ(d.A):rndM(2,2,-3,4);const {steps,C}=mulSteps(A,A,'A','A');
+  steps.unshift({t:'A² — это A·A, а не «каждый элемент в квадрат»',v:row(mat(A,{name:'A² ='}),op('·'),mat(A)),e:'Степень матрицы — это умножение по правилу «строка × столбец».',why:'A² по определению = A·A. А умножаются матрицы только «строка × столбец». Если просто возвести клетки в квадрат, получится другая (неверная) матрица — проверь на примере.'});
+  return {A,title:'Квадрат матрицы A²',q:`Найди <b>A²</b>, если ${mat(A,{name:'A ='})}`,kind:'mat',a:C,steps,traps:[{a:A.map(r=>r.map(x=>x.mul(x))),msg:'Ты возвёл каждый элемент в квадрат. A² = A·A — умножай «строка × столбец».'}]}};
+
+/* ===== определители ===== */
+G.det2=(L=2,d={})=>{const A=d.A?MQ(d.A):rndM(2,2,L===1?0:-9,9);const [[a,b],[c,dd]]=A,p1=a.mul(dd),p2=b.mul(c),D=p1.sub(p2);
+  const steps=[{t:'Главная диагональ ↘ (знак +)',v:mat(A,{type:'d',hl:hDiag('g')}),e:`${fp(a)}·${fp(dd)} = <b>${f(p1)}</b>`,ask:{q:`${fp(a)}·${fp(dd)} = ?`,a:p1},why:'Главная диагональ — из левого верхнего угла в правый нижний (как читаем текст: сверху-слева вниз-вправо).'},
+    {t:'Побочная диагональ ↙ (знак −)',v:mat(A,{type:'d',hl:(i,j)=>i+j===1?'r':''}),e:`${fp(b)}·${fp(c)} = <b>${f(p2)}</b>`,ask:{q:`${fp(b)}·${fp(c)} = ?`,a:p2}},
+    {t:'Главная минус побочная',v:`<div class="calc">Δ = ${fp(p1)} − ${fp(p2)} = <b class="bigres">${f(D)}</b></div>`,e:`Δ = ${f(p1)} − ${fp(p2)} = <b>${f(D)}</b>`,ask:{q:`${fp(p1)} − ${fp(p2)} = ?`,a:D},
+      why:'Откуда минус? Определитель — это «площадь со знаком» параллелограмма, натянутого на строки. Если строки поменять местами, фигура «переворачивается» — знак меняется. Формула ad − bc как раз так устроена: поменяй строки — получишь cb − da = −(ad − bc).',
+      alt:`Если сложить (ad + bc), то у матрицы с одинаковыми строками получилось бы не 0 — а должно быть 0 (две одинаковые стрелки не дают площади). Проверь: |2 3; 2 3| = 6 − 6 = 0 ✓, а 6 + 6 = 12 ✗.`}];
+  return {A,title:'Определитель 2×2',q:`Вычисли ${mat(A,{type:'d'})}`,kind:'num',a:D,steps,traps:[{a:p1.add(p2),msg:'Ты сложил произведения. Нужно: главная МИНУС побочная.'},{a:p2.sub(p1),msg:'Вычел наоборот: сначала главная диагональ (↘), потом минус побочная.'}].filter(t=>!t.a.eq(D))}};
+G.det3t=(L=2,d={})=>{const A=d.A?MQ(d.A):rndM(3,3,L===1?0:-4,L===1?4:5);const {steps,D}=det3Steps(A);const {P,M}=triParts(A);
+  return {A,title:'Определитель 3×3 — правило треугольников',q:`Вычисли по правилу треугольников ${mat(A,{type:'d'})}`,kind:'num',a:D,steps,traps:[{a:P.add(M),msg:'Похоже, ты сложил плюсы и минусы. Правильно: (сумма «плюсовых») − (сумма «минусовых»).'},{a:M.sub(P),msg:'Вычел наоборот: («плюсовые») − («минусовые»).'}].filter(t=>!t.a.eq(D))}};
+G.minor=(L=2,d={})=>{const n=L===3?pick([3,4]):3;const A=d.A?MQ(d.A):rndM(n,n,-4,6),i=d.i??rnd(0,n-1),j=d.j??rnd(0,n-1);
+  const Mm=minorM(A,i,j),Mv=det(Mm),s=(i+j)%2?-1:1,Av=s<0?Mv.neg():Mv;
+  const chess=Array.from({length:n},(_,a)=>Array.from({length:n},(_,b)=>(a+b)%2?'−':'+'));
+  const steps=[{t:`Вычёркиваем строку ${i+1} и столбец ${j+1}`,v:row(mat(A,{type:'d',hl:hCross(i,j)}),op('→'),mat(Mm,{type:'d',hl:()=>'b'})),e:`Элемент a<sub>${i+1}${j+1}</sub> = ${f(A[i][j])} «забирает» с собой свою строку и свой столбец. Остаётся определитель ${n-1}×${n-1}.`,why:'Минор — это «что остаётся вокруг», когда убрали всё, что связано с элементом. Позже на этот минор умножится сам элемент.'},
+    {t:`Считаем минор M${sb(i+1)}${sb(j+1)}`,v:mat(Mm,{type:'d'}),e:`M<sub>${i+1}${j+1}</sub> = ${n===3?det2Str(Mm):'(считаем 3×3 треугольниками) = '+f(Mv)}`,ask:{q:`M${sb(i+1)}${sb(j+1)} = ?`,a:Mv}},
+    {t:'Знак по шахматке',v:mat(chess,{raw:true,hl:hCells([[i,j]],s>0?'g':'r')}),e:`${i+1} + ${j+1} = ${i+j+2} — ${s>0?'чётное → знак <b>+</b>':'нечётное → знак <b>−</b>'}. A<sub>${i+1}${j+1}</sub> = ${s>0?'+':'−'}(${f(Mv)}) = <b>${f(Av)}</b>`,
+      why:'(−1)<sup>i+j</sup>: минус один в чётной степени = +1, в нечётной = −1. Шахматка — то же самое картинкой: в левом верхнем углу всегда «+», дальше чередуется.',ask:{q:`A${sb(i+1)}${sb(j+1)} = ?`,a:Av}}];
+  const fields=[{l:`M${sb(i+1)}${sb(j+1)}`,a:Mv},{l:`A${sb(i+1)}${sb(j+1)}`,a:Av}];
+  return {A,title:`Минор и алгебраическое дополнение (${i+1},${j+1})`,q:`Найди минор <b>M<sub>${i+1}${j+1}</sub></b> и алгебраическое дополнение <b>A<sub>${i+1}${j+1}</sub></b> для ${mat(A,{type:'d'})}`,kind:'fields',fields,steps,
+    traps:s<0&&!Mv.z?[{a:[Mv,Mv],msg:`A${sb(i+1)}${sb(j+1)} ≠ M${sb(i+1)}${sb(j+1)}: сумма индексов нечётная, значит знак меняется.`}]:[]}};
+G.expand=(L=2,d={})=>{let A,line;
+  if(d.A){A=MQ(d.A);line=d.line}else{A=rndM(3,3,-4,5);const isCol=Math.random()<.5,k=rnd(0,2),z=rnd(0,2);
+    for(let t=0;t<3;t++){if(t===z){isCol?A[t][k]=q(0):A[k][t]=q(0)}else if(isCol&&A[t][k].z)A[t][k]=q(rndNZ(-3,4));else if(!isCol&&A[k][t].z)A[k][t]=q(rndNZ(-3,4))}
+    line={col:isCol,k};}
+  const el=t=>line.col?[t,line.k]:[line.k,t];const name=line.col?`${line.k+1}-му столбцу`:`${line.k+1}-й строке`;
+  const signs=[0,1,2].map(t=>{const [i,j]=el(t);return (i+j)%2?-1:1});
+  const steps=[{t:`Раскладываем по ${name}`,v:mat(A,{type:'d',hl:(i,j)=>(line.col?j===line.k:i===line.k)?((A[i][j].z)?'v':'b'):''}),e:`Знаки этой линии по шахматке: <b>${signs.map(s=>s>0?'+':'−').join(' ')}</b>. Определитель = сумма «элемент × знак × минор».`,
+    why:'Можно раскладывать по любой строке или столбцу — ответ всегда одинаковый (свойство 7). Выбираем ту, где есть ноль: слагаемое с нулём сразу исчезает, его минор даже считать не надо.'}];
+  const terms=[];
+  [0,1,2].forEach(t=>{const [i,j]=el(t),a=A[i][j],s=signs[t];
+    if(a.z){steps.push({t:`Элемент ${aij(i+1,j+1)} = 0`,v:mat(A,{type:'d',hl:hCross(i,j)}),e:'Ноль умножить на что угодно = 0. Это слагаемое пропускаем '});terms.push(q(0));return}
+    const Mm=minorM(A,i,j),Mv=det(Mm),term=q(s).mul(a).mul(Mv);terms.push(term);
+    steps.push({t:`${s>0?'+':'−'} ${aij(i+1,j+1)} · M${sb(i+1)}${sb(j+1)}`,v:row(mat(A,{type:'d',hl:hCross(i,j)}),op('→'),mat(Mm,{type:'d',hl:()=>'b'})),
+      e:`M<sub>${i+1}${j+1}</sub> = ${det2Str(Mm)}<br>Слагаемое: ${s>0?'+':'−'}${fp(a)}·${fp(Mv)} = <b>${f(term)}</b>`,ask:{q:`${s>0?'+':'−'}${fp(a)}·${fp(Mv)} = ?`,a:term}});});
+  const D=terms.reduce((x,y)=>x.add(y),q(0));
+  steps.push({t:'Складываем',v:`<div class="calc">Δ = ${sumStr(terms)} = <b class="bigres">${f(D)}</b></div>`,e:`Проверка другим способом (треугольниками) даст то же число: ${f(det(A))}.`,ask:{q:`${sumStr(terms)} = ?`,a:D}});
+  const noSign=[0,1,2].reduce((s,t)=>{const [i,j]=el(t);return A[i][j].z?s:s.add(A[i][j].mul(det(minorM(A,i,j))))},q(0));
+  return {A,title:'Разложение по строке/столбцу',q:`Вычисли разложением по <b>${name}</b>: ${mat(A,{type:'d'})}`,kind:'num',a:D,steps,traps:noSign.eq(D)?[]:[{a:noSign,msg:'Ты не поставил знаки по шахматке (+ − + / − + −).'}]}};
+G.props=(L=2,d={})=>{const D=rndNZ(-6,7),n=pick([2,3,4]),k=pick([2,3,-1,-2]),E=rndNZ(-4,5);
+  const V=[
+    {q:`Поменяли местами две строки определителя Δ = ${D}. Чему он теперь равен?`,a:q(-D),e:`Перестановка строк меняет знак: ${f(-D)}.`,why:'Определитель — «площадь/объём со знаком». Поменять строки = перевернуть фигуру, площадь та же, ориентация обратная.'},
+    {q:`Одну строку определителя Δ = ${D} умножили на ${k}. Чему он стал равен?`,a:q(D*k),e:`Множитель одной строки выносится: ${k}·${fp(D)} = ${f(D*k)}.`,why:'Растянули одну сторону фигуры в k раз → площадь выросла в k раз.'},
+    {q:`|A| = ${D}, A — матрица ${n}×${n}. Найди |${k}A|.`,a:q(D*k**n),e:`В матрице ${k}A на ${k} умножена <b>каждая</b> из ${n} строк, из каждой выносим ${k}: ${fp(k)}<sup>${n}</sup>·${fp(D)} = ${f(D*k**n)}.`,why:'Это ловушка: матрица на число — умножаются ВСЕ строки, определитель на число — только ОДНА.',trap:{a:q(D*k),msg:`Не ${k}·|A|! Из каждой из ${n} строк выносится ${k}, поэтому ${k}^${n}.`}},
+    {q:`|A| = ${D}. Найди |Aᵀ|.`,a:q(D),e:'Транспонирование определитель не меняет.',why:'Разложение по строке = разложение по столбцу, поэтому всё, что верно для строк, верно и для столбцов.'},
+    {q:`|A| = ${D}. Ко второй строке прибавили первую, умноженную на ${k}. Найди новый определитель.`,a:q(D),e:'Не изменился (свойство 6).',why:'Определитель разбивается на сумму: исходный + k·(определитель с двумя одинаковыми строками = 0).'},
+    {q:`|A| = ${D}, |B| = ${E}. Найди |A·B|.`,a:q(D*E),e:`|AB| = |A|·|B| = ${fp(D)}·${fp(E)} = ${f(D*E)}.`,why:'Растяжение площадей перемножается: сначала растянули в |B| раз, потом ещё в |A| раз.'},
+    {q:`|A| = ${D}. Найди |A⁻¹|.`,a:new Q(1,D),e:`|A⁻¹| = 1/|A| = ${f(new Q(1,D))}.`,why:'A·A⁻¹ = E, |E| = 1, значит |A|·|A⁻¹| = 1.'},
+    {q:`В определителе 3×3 вторая строка равна первой, умноженной на ${k}. Чему он равен?`,a:q(0),e:'0: строки пропорциональны.',why:`Выносим ${k} из второй строки — получаем две одинаковые строки, а такой определитель равен 0.`}];
+  const v=d.v!=null?V[d.v]:pick(V);
+  return {title:'Свойства определителя',q:v.q,kind:'num',a:v.a,steps:[{t:'Какое свойство работает?',e:v.e,why:v.why,ask:{q:'Ответ?',a:v.a}}],traps:v.trap?[v.trap]:[]}};
+function luMatrix(n,L){ // A = Lw·U с целыми множителями
+  for(;;){const U=Array.from({length:n},(_,i)=>Array.from({length:n},(_,j)=>q(j<i?0:j===i?(i===0&&L<3?pick([1,1,-1,2]):pick([1,-1,2,-2,3])):rnd(-3,3))));
+    const Lw=Array.from({length:n},(_,i)=>Array.from({length:n},(_,j)=>q(j>i?0:j===i?1:rnd(-2,3))));
+    const A=mmul(Lw,U);if(A.flat().every(x=>Math.abs(x.n)<=15))return A;}}
+G.tri=(L=2,d={})=>{let A=d.A?MQ(d.A):luMatrix(3,L);if(!d.A&&L>=2&&Math.random()<.35){const r=rnd(1,2);[A[0],A[r]]=[A[r],A[0]]}
+  const {steps,D}=elimDet(A);return {A,title:'Треугольный вид (3×3)',q:`Вычисли приведением к треугольному виду: ${mat(A,{type:'d'})}`,kind:'num',a:D,steps,traps:[{a:D.neg(),msg:'Знак! Если переставлял строки — каждая перестановка меняет знак.'}].filter(t=>!t.a.eq(D))}};
+G.det4=(L=2,d={})=>{let A=d.A?MQ(d.A):luMatrix(4,L);if(!d.A&&Math.random()<.4){const r=rnd(1,3);[A[0],A[r]]=[A[r],A[0]]}
+  const {steps,D}=elimDet(A);return {A,title:'Определитель 4×4',q:`Вычисли определитель 4-го порядка: ${mat(A,{type:'d'})}`,kind:'num',a:D,steps,traps:[{a:D.neg(),msg:'Почти! Проверь знак: перестановка строк меняет знак определителя.'}].filter(t=>!t.a.eq(D))}};
+
+/* ===== обратная матрица ===== */
+function inv2Steps(A,name='A'){
+  const [[a,b],[c,dd]]=A,D=det(A),As=[[dd,b.neg()],[c.neg(),a]],R=mscale(q(1).div(D),As),steps=[];
+  steps.push({t:'Шаг 1. Определитель: есть ли вообще обратная?',v:mat(A,{type:'d',hl:(i,j)=>i===j?'g':'r'}),e:`|${name}| = ${det2Str(A)}. ${D.z?'Ноль → обратной нет!':'Не ноль → обратная существует.'}`,
+    why:'Мы будем делить на |A|. Делить на 0 нельзя. Смысл: матрица с |A| = 0 «сплющивает» плоскость в линию, и вернуть всё обратно невозможно.',ask:{q:`|${name}| = ?`,a:D}});
+  const cr=(i,j,val,s)=>`<div class="minicard">${mat(A,{type:'d',hl:hCross(i,j)})}<div>A<sub>${i+1}${j+1}</sub> = <span class="${s>0?'hl-g':'hl-r'}">${s>0?'+':'−'}</span>${fp(val)} = <b>${f(s>0?val:q(val).neg())}</b></div></div>`;
+  steps.push({t:'Шаг 2. Алгебраические дополнения: вычеркни — останется одно число',v:`<div class="row">${cr(0,0,dd,1)}${cr(0,1,c,-1)}${cr(1,0,b,-1)}${cr(1,1,a,1)}</div>`,
+    e:`У 2×2 после вычёркивания строки и столбца остаётся <b>ровно одно число — из противоположного угла</b>. У ${fp(a)} напротив ${fp(dd)}, у ${fp(b)} напротив ${fp(c)}. Знак — по шахматке <span class="hl-g">+</span> <span class="hl-r">−</span> / <span class="hl-r">−</span> <span class="hl-g">+</span>.`,
+    why:'Это та же общая формула, что и для 3×3: A⁻¹ = (1/|A|)·A*, где A* — транспонированная таблица алгебраических дополнений. Для 2×2 она просто очень короткая — поэтому и есть «быстрое правило».'});
+  const Cof=[[dd,c.neg()],[b.neg(),a]];
+  steps.push({t:'Шаг 3. Таблица дополнений → транспонируем → A*',v:row(mat(Cof,{label:'дополнения на своих местах',hl:(i,j)=>i===j?'b':'r'}),op('ᵀ →'),mat(As,{name:'A* =',hl:(i,j)=>i===j?'b':'r'}),op('сравни с'),mat(A,{name:name+' =',hl:(i,j)=>i===j?'b':'r'})),
+    e:`Вот откуда «быстрое правило»: <b class="hl-b">${fp(a)} и ${fp(dd)} поменялись местами</b> (каждый взял число из противоположного угла), а <b class="hl-r">${fp(b)} и ${fp(c)} остались на месте, но с минусом</b> (транспонирование вернуло их на свои места, а минус пришёл из шахматки).`,
+    why:'Почему транспонируем? Так клетка (i, j) ответа получает дополнение из клетки (j, i). Только при такой расстановке при умножении A·A* «правильные» пары дают |A| на диагонали, а «чужие» взаимно уничтожаются (дают 0).',
+    alt:`Проверь сам: без минусов A·(${f(dd)} ${f(b)}; ${f(c)} ${f(a)}) даст вне диагонали ${f(a.mul(b).add(b.mul(a)))}, а не 0. Без перестановки — на диагонали не будет одинаковых чисел. Только «поменять + минус» даёт ${f(D)}·E.`,ask:{q:'Что встанет в левый верхний угол A*?',a:dd}});
+  steps.push({t:'Шаг 4. Делим каждый элемент на |A|',v:row(op(`1/${fp(D)} ·`),mat(As),op('='),mat(R,{name:name+'⁻¹ =',hl:()=>'y'})),e:`Каждое число A* делим на ${f(D)}.`,why:`A·A* = ${f(D)}·E (на диагонали ${f(D)}, вне — нули). Чтобы получилось E, делим на ${f(D)}. Как с числами: 5 · (1/5) = 1.`,ask:{q:`${f(As[0][0])} / ${fp(D)} = ?`,a:R[0][0]}});
+  const P=mmul(A,R);
+  steps.push({t:'Шаг 5. Проверка: A·A⁻¹ = E',v:row(mat(A),op('·'),mat(R),op('='),mat(P,{hl:hDiag('g')})),e:`c₁₁ = ${fp(a)}·${fp(R[0][0])} + ${fp(b)}·${fp(R[1][0])} = ${f(P[0][0])};  c₁₂ = ${fp(a)}·${fp(R[0][1])} + ${fp(b)}·${fp(R[1][1])} = ${f(P[0][1])}. Единицы на диагонали, нули вокруг — всё верно ✓`,why:'Проверка занимает минуту и ловит почти все ошибки в знаках.'});
+  return {steps,R,As};
+}
+G.inv2=(L=2,d={})=>{let A;if(d.A)A=MQ(d.A);else for(;;){A=rndM(2,2,-5,7);const D=det(A);if(!D.z&&(L===1?Math.abs(D.n)===1:L===2?Math.abs(D.n)<=6:Math.abs(D.n)<=12))break}
+  const {steps,R,As}=inv2Steps(A);const D=det(A),[[a,b],[c,dd]]=A;
+  const traps=[{a:mscale(q(1).div(D),[[dd,b],[c,a]]),msg:'Забыл минусы у побочной диагонали (b и c).'},{a:mscale(q(1).div(D),[[a,b.neg()],[c.neg(),dd]]),msg:'Забыл поменять местами a и d на главной диагонали.'},
+    {a:As,msg:`Почти! Осталось разделить всё на |A| = ${f(D)}.`},{a:mscale(q(1).div(D),[[dd,c.neg()],[b.neg(),a]]),msg:'Не транспонировал таблицу дополнений: −b и −c стоят не на своих местах.'},{a:mscale(q(-1).div(D),As),msg:'Знак |A| потерян: проверь ad − bc.'}].filter(t=>!meq(t.a,R));
+  return {A,title:'Обратная матрица 2×2',q:`Найди <b>A⁻¹</b>, если ${mat(A,{name:'A ='})}<div class="hint">Дроби вводи как 3/2 или −1/2.</div>`,kind:'mat',a:R,steps,traps}};
+function inv3Steps(A){
+  const D=det(A),steps=[],{P,M}=triParts(A);
+  steps.push({t:'Шаг 1. |A| (треугольниками)',v:mat(A,{type:'d'}),e:`плюсы: ${f(P)}, минусы: ${f(M)} → |A| = ${f(P)} − ${fp(M)} = <b>${f(D)}</b>. ${D.z?'Ноль → обратной нет.':'Не ноль → обратная есть.'}`,ask:{q:'|A| = ?',a:D}});
+  if(D.z)return {steps,R:null};
+  const C=A.map((r,i)=>r.map((_,j)=>cof(A,i,j)));
+  for(let i=0;i<3;i++)for(let j=0;j<3;j++){const Mm=minorM(A,i,j),Mv=det(Mm),s=(i+j)%2?-1:1;
+    const part=C.map((r,a)=>r.map((x,b)=>a*3+b<i*3+j?fh(x):a*3+b===i*3+j?'?':'·'));
+    steps.push({t:`A${sb(i+1)}${sb(j+1)}: вычёркиваем строку ${i+1}, столбец ${j+1}`,v:row(mat(A,{type:'d',hl:hCross(i,j)}),op('→'),mat(Mm,{type:'d',hl:()=>'b'}),op('таблица:'),mat(part,{raw:true,hl:hCells([[i,j]],s>0?'g':'r')})),
+      e:`M = ${det2Str(Mm)}; знак ${s>0?'<span class="hl-g">+</span>':'<span class="hl-r">−</span>'} (${i+1}+${j+1} = ${i+j+2}) → A<sub>${i+1}${j+1}</sub> = <b>${f(C[i][j])}</b>`,ask:{q:`A${sb(i+1)}${sb(j+1)} = ?`,a:C[i][j]}});}
+  const As=mT(C),R=mscale(q(1).div(D),As);
+  steps.push({t:'Транспонируем таблицу → A*',v:row(mat(C,{hl:hRow(0,'b')}),op('ᵀ →'),mat(As,{name:'A* =',hl:hCol(0,'b')})),e:'1-я строка таблицы становится 1-м столбцом и т.д. Дополнение A<sub>ij</sub> встаёт на место (j, i).',
+    why:'Тогда в A·A* каждая строка A умножается на «свои» дополнения → получается |A| (разложение по строке, свойство 7), а на «чужие» → 0 (свойство 8). Итог: A·A* = |A|·E.',alt:'Без транспонирования строка умножилась бы на дополнения другой строки — вне диагонали не получились бы нули (кроме случайных симметричных матриц).'});
+  steps.push({t:'Делим на |A|',v:row(op(`1/${fp(D)} ·`),mat(As),op('='),mat(R,{name:'A⁻¹ =',hl:()=>'y'})),e:`Каждый элемент A* делим на ${f(D)}.`});
+  steps.push({t:'Проверка A·A⁻¹ = E',v:row(mat(A),op('·'),mat(R),op('='),mat(mmul(A,R),{hl:hDiag('g')})),e:'Единичная матрица — значит, всё верно ✓'});
+  return {steps,R,C,As,D};
+}
+G.inv3=(L=2,d={})=>{let A;if(d.A)A=MQ(d.A);else for(;;){A=rndM(3,3,-2,3);const D=det(A);if(!D.z&&(L===1?Math.abs(D.n)===1:Math.abs(D.n)<=(L===2?4:8)))break}
+  const {steps,R,C,As,D}=inv3Steps(A);
+  return {A,title:'Обратная матрица 3×3',q:`Найди <b>A⁻¹</b>, если ${mat(A,{name:'A ='})}<div class="hint">Дроби вводи как 2/3.</div>`,kind:'mat',a:R,steps,
+    traps:[{a:mscale(q(1).div(D),C),msg:'Ты не транспонировал таблицу дополнений (A* = таблица, перевёрнутая строки ↔ столбцы).'},{a:As,msg:`Почти! Осталось разделить на |A| = ${f(D)}.`},{a:mscale(q(1).div(D),mT(A.map((r,i)=>r.map((_,j)=>det(minorM(A,i,j)))))),msg:'Забыл знаки шахматки: дополнение = (−1)^(i+j)·минор.'}].filter(t=>!meq(t.a,R))}};
+G.sing=(L=2,d={})=>{const form=d.form??(L===1?0:pick([0,1,2]));let A,steps=[],ans,traps=[];
+  if(form===0){const r=rnd(1,6),u=pick([1,2,3].filter(x=>(r*r)%x===0)),a=r*r/u,b=u;A=[['x',f(a)],[f(b),'x']];ans=[q(r),q(-r)];
+    steps=[{t:'Обратной нет ⇔ определитель = 0',v:mat(A,{type:'d',raw:true}),e:`|A| = x·x − ${a}·${b} = x² − ${a*b}`,why:'Обратная матрица = (1/|A|)·A*. Если |A| = 0, делить нельзя → обратной нет. Такая матрица называется вырожденной.'},
+      {t:'Решаем уравнение',e:`x² − ${a*b} = 0 → x² = ${a*b} → x = ±${r}`,alt:`Частая ошибка — забыть отрицательный корень: (−${r})² тоже ${a*b}.`,ask:{q:'Положительный корень x = ?',a:q(r)}}];traps=[{a:[q(r)],msg:`Не хватает корня: x = −${r} тоже подходит.`}];}
+  else if(form===1){const r1=rnd(-5,5),r2=rnd(-5,5),c=-(r1+r2),ab=-r1*r2;let a=pick([1,2,3,-1].filter(x=>ab%x===0)),b=ab/a;A=[['x',f(a)],[f(b),`x ${c<0?'−':'+'} ${Math.abs(c)}`]];
+    if(c===0)A[1][1]='x';ans=[...new Set([r1,r2])].map(q);
+    steps=[{t:'Обратной нет ⇔ |A| = 0',v:mat(A,{type:'d',raw:true}),e:`|A| = x·(${A[1][1]}) − ${fp(a)}·${fp(b)} = x² ${c<0?'−':'+'} ${Math.abs(c)}x ${-ab<0?'−':'+'} ${Math.abs(ab)}`,why:'Вырожденная матрица (|A| = 0) не имеет обратной.'},
+      {t:'Решаем квадратное уравнение',e:`Корни: x = ${f(r1)}${r1!==r2?' и x = '+f(r2):''} (проверь по теореме Виета: сумма ${f(r1+r2)}, произведение ${f(r1*r2)}).`,ask:{q:'Меньший корень x = ?',a:q(Math.min(r1,r2))}}];}
+  else{const p=pick([1,2,3]),qq=rnd(1,4),r=pick([2,3,6,4]).valueOf();const k=p*rnd(1,4);const r0=k;A=[[f(p),`${qq}x`],[f(r0),'x²']];const root=new Q(qq*r0,p);ans=[q(0),root];
+    steps=[{t:'|A| = 0',v:mat(A,{type:'d',raw:true}),e:`|A| = ${p}·x² − ${qq}x·${r0} = ${p}x² − ${qq*r0}x`},
+      {t:'Выносим x за скобку — НЕ делим на x!',e:`${p}x² − ${qq*r0}x = x·(${p}x − ${qq*r0}) = 0 → <b>x = 0</b> или <b>x = ${f(root)}</b>`,why:'Произведение равно нулю, когда хотя бы один множитель равен нулю. Если поделить на x, корень x = 0 потеряется (делить на x можно только если x ≠ 0).',ask:{q:'Ненулевой корень x = ?',a:root}}];
+    traps=[{a:[root],msg:'Потерян корень x = 0 — ты, похоже, поделил на x.'}];}
+  return {A,title:'При каком x обратной матрицы нет?',q:`При каких x у матрицы ${mat(A,{raw:true,name:'A ='})} <b>нет обратной</b>?<div class="hint">Если корней несколько — через точку с запятой: 2; −3</div>`,kind:'set',a:ans,steps,traps}};
+G.mateq=(L=2,d={})=>{let A;const side=d.side??pick(['L','R']);if(d.A)A=MQ(d.A);else for(;;){A=rndM(2,2,-4,5);const D=det(A);if(!D.z&&(L<3?Math.abs(D.n)===1:Math.abs(D.n)<=4))break}
+  const B=d.B?MQ(d.B):rndM(2,2,-4,5),{steps:s1,R:Ai}=inv2Steps(A),X=side==='L'?mmul(Ai,B):mmul(B,Ai);
+  const steps=[{t:side==='L'?'A стоит СЛЕВА от X → и A⁻¹ ставим слева':'A стоит СПРАВА от X → и A⁻¹ ставим справа',v:`<div class="calc">${side==='L'?'A·X = B &nbsp;|&nbsp; умножаем слева на A⁻¹<br><span class="hl-b">A⁻¹·A</span>·X = A⁻¹·B<br>E·X = A⁻¹·B<br><b>X = A⁻¹·B</b>':'X·A = B &nbsp;|&nbsp; умножаем справа на A⁻¹<br>X·<span class="hl-b">A·A⁻¹</span> = B·A⁻¹<br>X·E = B·A⁻¹<br><b>X = B·A⁻¹</b>'}</div>`,
+    e:'Делить матрицы нельзя. Вместо деления умножаем на обратную — <b>с той же стороны</b>, где стоит A.',why:'A⁻¹ «уничтожает» A, только если они стоят вплотную друг к другу: A⁻¹·A = E. Если поставить A⁻¹ с другой стороны, получится A⁻¹·X·A — ничего не сократится, ведь AB ≠ BA.',alt:'Если перепутать порядок (B·A⁻¹ вместо A⁻¹·B), ответ почти всегда будет неверным. Проверка подстановкой это сразу покажет.'},
+    ...s1.slice(0,4).map(s=>({...s,t:'A⁻¹ · '+s.t}))];
+  const {steps:s2}=side==='L'?mulSteps(Ai,B,'A⁻¹','B'):mulSteps(B,Ai,'B','A⁻¹');steps.push(...s2.slice(1));
+  const chk=side==='L'?mmul(A,X):mmul(X,A);steps.push({t:'Проверка подстановкой',v:row(side==='L'?mat(A):mat(X),op('·'),side==='L'?mat(X):mat(A),op('='),mat(chk,{hl:()=>'g'})),e:'Получилось B — ответ верный ✓'});
+  const wrong=side==='L'?mmul(B,Ai):mmul(Ai,B);
+  return {A,B,side,title:side==='L'?'Матричное уравнение A·X = B':'Матричное уравнение X·A = B',q:`Реши уравнение <b>${side==='L'?'A·X = B':'X·A = B'}</b>, где ${mat(A,{name:'A ='})} ${mat(B,{name:'B ='})}`,kind:'mat',a:X,steps,traps:meq(wrong,X)?[]:[{a:wrong,msg:`Порядок множителей перепутан: при ${side==='L'?'A·X = B нужно X = A⁻¹·B':'X·A = B нужно X = B·A⁻¹'}.`}]}};
+
+/* ===== системы ===== */
+const VN=['x','y','z','t'];
+function sysHtml(A,b,names){return `<div class="sys">${A.map((r,i)=>`<div>${r.map((x,j)=>{x=q(x);if(x.z)return '';const s=x.sign()<0?' − ':' + ',ab=x.sign()<0?x.neg():x;return `<span class="t">${s}${ab.eq(1)?'':f(ab)}${names[j]}</span>`}).join('').replace(/^<span class="t"> \+ /,'<span class="t">').replace(/^<span class="t"> − /,'<span class="t">−')} = ${f(b[i])}</div>`).join('')}</div>`}
+G.cramer=(L=2,d={})=>{const n=d.A?d.A.length:(L===1?2:L===2?pick([2,3]):3);let A;if(d.A)A=MQ(d.A);else for(;;){A=rndM(n,n,-4,5);const D=det(A);if(!D.z&&Math.abs(D.n)<=12)break}
+  const X=d.X?d.X.map(q):Array.from({length:n},()=>q(rnd(-4,5))),b=d.b?d.b.map(q):A.map(r=>r.reduce((s,x,j)=>s.add(x.mul(X[j])),q(0)));
+  const D=det(A),names=VN.slice(0,n),steps=[],Xs=[];
+  const dstr=M=>n===2?det2Str(M):(()=>{const t=triParts(M);return `(${f(t.P)}) − (${f(t.M)}) = ${f(t.D)}`})();
+  steps.push({t:'Δ — главный определитель (из коэффициентов)',v:row(sysHtml(A,b,names),op('→'),mat(A,{type:'d',name:'Δ ='})),e:`Δ = ${dstr(A)}. ${D.z?'Δ = 0 → Крамер не работает.':'Δ ≠ 0 → решение одно, Крамер работает.'}`,ask:{q:'Δ = ?',a:D}});
+  for(let k=0;k<n;k++){const Ak=A.map((r,i)=>r.map((x,j)=>j===k?b[i]:x)),Dk=det(Ak);Xs.push(Dk.div(D));
+    steps.push({t:`Δ${names[k]}: столбец «${names[k]}» заменяем на правые части`,v:mat(Ak,{type:'d',name:`Δ${names[k]} =`,hl:hCol(k,'y')}),e:`Δ<sub>${names[k]}</sub> = ${dstr(Ak)}`,ask:{q:`Δ${names[k]} = ?`,a:Dk},
+      why:k===0?`Почему это работает? Столбец правых частей = ${names.map((v,j)=>v+'·(столбец '+(j+1)+')').join(' + ')}. По свойству 6 из него можно вычесть все остальные столбцы с их множителями — останется ${names[0]}·(столбец 1). Выносим ${names[0]} — получаем ${names[0]}·Δ. Значит Δ<sub>${names[0]}</sub> = ${names[0]}·Δ, и ${names[0]} = Δ<sub>${names[0]}</sub>/Δ.`:''});}
+  steps.push({t:'Делим',v:`<div class="calc">${names.map((v,k)=>`${v} = Δ<sub>${v}</sub>/Δ = ${f(Xs[k].mul(D))}/${fp(D)} = <b>${f(Xs[k])}</b>`).join('<br>')}</div>`,e:'Проверь подстановкой в любое уравнение.',ask:{q:`${names[0]} = ?`,a:Xs[0]}});
+  return {A,b,title:`Метод Крамера (${n}×${n})`,q:`Реши систему методом Крамера:${sysHtml(A,b,names)}`,kind:'fields',fields:names.map((v,k)=>({l:v,a:Xs[k]})),steps,traps:[]}};
+function gaussSteps(A0,b0,names){
+  const n=A0.length;let M=A0.map((r,i)=>[...r.map(q),q(b0[i])]);const steps=[];const T={aug:n};
+  steps.push({t:'Записываем расширенную матрицу',v:row(sysHtml(A0,b0,names),op('→'),mat(M,T)),e:'Слева — коэффициенты (каждый столбец = одна переменная), за чертой — правые части. Нет переменной в уравнении → пишем 0.',why:'Пока мы преобразуем уравнения, буквы и «=» просто переписываются без изменений. Поэтому их убирают и работают только с числами — так быстрее и меньше ошибок.'});
+  for(let c=0;c<n;c++){
+    if(M[c][c].z){let r=c+1;while(r<n&&M[r][c].z)r++;if(r===n)return {steps,X:null,M};const old=M.map(x=>x.slice());[M[c],M[r]]=[M[r],M[c]];
+      steps.push({t:`Меняем местами С${sb(c+1)} ↔ С${sb(r+1)}`,v:row(mat(old,{...T,hl:(i)=>i===c||i===r?'v':''}),op('→'),mat(M,{...T,hl:(i)=>i===c||i===r?'v':''})),e:'На месте ступеньки стоял 0 — им нельзя обнулить числа ниже. Перестановка уравнений решения не меняет.'});}
+    for(let r=c+1;r<n;r++){if(M[r][c].z)continue;const k=M[r][c].div(M[c][c]),old=M[r].slice(),prev=M.map(x=>x.slice());M[r]=M[r].map((x,j)=>x.sub(k.mul(M[c][j])));
+      steps.push({t:'Прямой ход: '+opName(r,k,c),v:row(mat(prev,{...T,hl:(i,j)=>i===c?(j===c?'y':'b'):i===r?(j===c?'r':''):''}),op('→'),mat(M,{...T,hl:(i,j)=>i===r?(j===c?'y':'g'):''})),
+        e:`Нужен 0 вместо ${f(old[c])}: k = ${f(old[c])}/${fp(M[c][c])} = <b>${f(k)}</b>.<div class="calc">${old.map((x,j)=>j<c?null:`${f(x)} − ${fp(k)}·${fp(M[c][j])} = <b>${f(M[r][j])}</b>`).filter(Boolean).join('<br>')}</div>`,
+        why:'Прибавить к уравнению другое, умноженное на число, — разрешено: это как добавить на обе чаши весов одинаковый груз. Решения не меняются.',ask:{q:`Число за чертой: ${f(old[n])} − ${fp(k)}·${fp(M[c][n])} = ?`,a:M[r][n]}});}
+  }
+  const X=Array(n);
+  for(let i=n-1;i>=0;i--){let s=M[i][n];const parts=[];for(let j=i+1;j<n;j++){s=s.sub(M[i][j].mul(X[j]));if(!M[i][j].z)parts.push(`${fp(M[i][j])}·${fp(X[j])}`)}X[i]=s.div(M[i][i]);
+    steps.push({t:`Обратный ход: находим ${names[i]}`,v:mat(M,{...T,hl:(r,j)=>r===i?(j===i?'y':'b'):''}),e:`Строка ${i+1}: ${M[i].slice(0,n).map((x,j)=>j<i||x.z?null:`${fp(x)}·${names[j]}`).filter(Boolean).join(' + ')} = ${f(M[i][n])}<br>${parts.length?`${fp(M[i][i])}·${names[i]} = ${f(M[i][n])} − (${parts.join(' + ')}) = ${f(s)}<br>`:''}<b>${names[i]} = ${f(s)}/${fp(M[i][i])} = ${f(X[i])}</b>`,
+      why:i===n-1?'Снизу вверх: в последней строке осталась одна неизвестная. Нашли её — подставляем выше, там тоже станет одна неизвестная, и так далее (как подниматься по лестнице).':'',ask:{q:`${names[i]} = ?`,a:X[i]}});}
+  steps.push({t:'Проверка подстановкой',v:`<div class="calc">${A0.map((r,i)=>`${r.map((x,j)=>`${fp(x)}·${fp(X[j])}`).join(' + ')} = ${f(r.reduce((s,x,j)=>s.add(q(x).mul(X[j])),q(0)))} ✓ (= ${f(b0[i])})`).join('<br>')}</div>`,e:'Все уравнения выполняются — ответ верный.'});
+  return {steps,X,M};
+}
+G.gauss=(L=2,d={})=>{const n=d.A?d.A.length:(L===1?2:3);const A=d.A?MQ(d.A):luMatrix(n,L),X=Array.from({length:n},()=>q(rnd(-4,5)));
+  const b=d.b?d.b.map(q):A.map(r=>r.reduce((s,x,j)=>s.add(x.mul(X[j])),q(0)));const names=VN.slice(0,n);const {steps,X:Xs}=gaussSteps(A,b,names);
+  return {A,b,title:`Метод Гаусса (${n}×${n})`,q:`Реши систему методом Гаусса:${sysHtml(A,b,names)}`,kind:'fields',fields:names.map((v,k)=>({l:v,a:Xs[k]})),steps,traps:[]}};
+function rankSteps(A0,o={}){ // целочисленный ход (без дробей)
+  let A=MQ(A0).map(r=>r.slice());const m=A.length,nc=A[0].length,lim=o.aug??nc,steps=[],T=o.aug!=null?{aug:o.aug}:{};let pr=0;
+  steps.push({t:o.aug!=null?'Расширенная матрица':'Исходная матрица',v:mat(A,T),e:'Делаем «лесенку» (ступенчатый вид): под каждой ступенькой — нули.',why:'Элементарные преобразования (переставить строки, умножить строку на число ≠ 0, прибавить другую строку × k) не меняют ранг. Поэтому можно упрощать, пока «лишние» строки не превратятся в нули.'});
+  for(let c=0;c<lim&&pr<m;c++){let r=pr;while(r<m&&A[r][c].z)r++;if(r===m)continue;
+    if(r!==pr){const old=A.map(x=>x.slice());[A[pr],A[r]]=[A[r],A[pr]];steps.push({t:`С${sb(pr+1)} ↔ С${sb(r+1)}`,v:row(mat(old,T),op('→'),mat(A,{...T,hl:i=>i===pr||i===r?'v':''})),e:'Ставим наверх строку, где в этом столбце не ноль.'});}
+    const p=A[pr][c];
+    for(let i=pr+1;i<m;i++){const a=A[i][c];if(a.z)continue;const prev=A.map(x=>x.slice());let txt;
+      if(a.div(p).isInt){const k=a.div(p);A[i]=A[i].map((x,j)=>x.sub(k.mul(A[pr][j])));txt=`k = ${f(a)}/${fp(p)} = ${f(k)} — целое, вычитаем строку ${pr+1}·k.`;var t=opName(i,k,pr);}
+      else{A[i]=A[i].map((x,j)=>x.mul(p).sub(a.mul(A[pr][j])));t=`С${sb(i+1)} → ${f(p)}·С${sb(i+1)} − ${fp(a)}·С${sb(pr+1)}`;txt=`Чтобы не было дробей: умножаем строку ${i+1} на ступеньку ${f(p)} (≠ 0 — можно) и вычитаем строку ${pr+1}, умноженную на ${f(a)}. Получается ${f(p)}·${fp(a)} − ${fp(a)}·${fp(p)} = 0.`;}
+      const g=A[i].every(x=>x.isInt)?A[i].reduce((s,x)=>gcd(s,x.n),0):1;if(g>1){A[i]=A[i].map(x=>x.div(g));txt+=` Потом делим строку на ${g} (числа меньше — меньше ошибок).`}
+      steps.push({t,v:row(mat(prev,{...T,hl:(x,j)=>x===pr?(j===c?'y':'b'):x===i?(j===c?'r':''):''}),op('→'),mat(A,{...T,hl:(x,j)=>x===i?'g':''})),e:txt+(A[i].slice(0,lim).every(x=>x.z)?' <b>Строка обнулилась</b> — она была «лишней» (получалась из других).':'')});}
+    pr++;}
+  const rk=A.filter(r=>r.slice(0,lim).some(x=>!x.z)).length,rkA=o.aug!=null?A.filter(r=>r.some(x=>!x.z)).length:rk;
+  return {steps,A,rk,rkA,T};
+}
+G.rank=(L=2,d={})=>{let A;if(d.A)A=MQ(d.A);else{const m=L===1?3:pick([3,4]),n=L===1?3:pick([3,4]),r=rnd(1,Math.min(m,n)-(Math.random()<.7?1:0));let base;
+    for(;;){base=Array.from({length:r},()=>Array.from({length:n},()=>q(rnd(-3,4))));base[0][0]=q(pick([1,1,2,-1]));if(rankSteps(base).rk===r)break}
+    const rows=base.slice();while(rows.length<m){const cs=base.map(()=>rnd(-2,2));if(cs.every(x=>x===0))continue;rows.push(base[0].map((_,j)=>base.reduce((s,rr,i)=>s.add(rr[j].mul(cs[i])),q(0))))}
+    A=[rows[0],...shuffle(rows.slice(1))];}
+  const {steps,A:E,rk}=rankSteps(A);
+  steps.push({t:'Считаем ненулевые строки',v:mat(E,{hl:(i)=>E[i].some(x=>!x.z)?'g':'x'}),e:`Ненулевых строк: <b>${rk}</b> → rg A = ${rk}.`,why:'Каждая ненулевая строка ступенчатой матрицы — «по-настоящему новая» информация. Нулевые строки — это те, что получались из других.',ask:{q:'rg A = ?',a:q(rk)}});
+  return {A,title:'Ранг матрицы',q:`Найди ранг матрицы ${mat(A,{name:'A ='})}`,kind:'num',a:q(rk),steps,traps:[]}};
+G.kk=(L=2,d={})=>{const type=d.type??pick(['one','inf','none']),n=3;let M;
+  if(d.M)M=MQ(d.M);else{let E;for(;;){const p=()=>q(pick([1,-1,2])),r=()=>q(rnd(-3,3));
+      if(type==='one')E=[[p(),r(),r(),r()],[q(0),p(),r(),r()],[q(0),q(0),p(),r()]];
+      else if(type==='inf')E=[[p(),r(),r(),r()],[q(0),p(),r(),r()],[q(0),q(0),q(0),q(0)]];
+      else E=[[p(),r(),r(),r()],[q(0),p(),r(),r()],[q(0),q(0),q(0),q(rndNZ(-4,4))]];
+      const Lw=[[1,0,0],[rnd(-2,2),1,0],[rnd(-2,2),rnd(-2,2),1]].map(r=>r.map(q));M=L===1?E:mmul(Lw,E);if(M.flat().every(x=>Math.abs(x.n)<=12))break}}
+  const {steps,A:E,rk,rkA}=rankSteps(M,{aug:n});const ans=rk!==rkA?'нет решений':rk===n?'ровно одно решение':'бесконечно много решений';
+  steps.push({t:'Сравниваем ранги (Кронекер–Капелли)',v:mat(E,{aug:n,hl:(i,j)=>E[i].slice(0,n).every(x=>x.z)&&!E[i][n].z?'r':''}),e:`r = rg(слева от черты) = <b>${rk}</b>, r̄ = rg(со столбцом правых частей) = <b>${rkA}</b>, неизвестных n = ${n}.<br>${rk!==rkA?'r ≠ r̄: есть строка «0 = число» → <b>решений нет</b>.':rk===n?'r = r̄ = n → <b>одно решение</b>.':`r = r̄ < n → <b>бесконечно много</b> (свободных переменных: ${n-rk}).`}`,
+    why:'Строка «0 0 0 | 5» означает уравнение 0 = 5 — оно неверно при любых x, поэтому решений нет. Если противоречий нет, каждая ступенька задаёт одну переменную; если ступенек меньше, чем переменных, лишние переменные можно брать любыми.'});
+  return {M,title:'Сколько решений? (Кронекер–Капелли)',q:`Сколько решений у системы с расширенной матрицей ${mat(M,{aug:n})}`,kind:'choice',opts:['ровно одно решение','бесконечно много решений','нет решений'],a:ans,steps,traps:[]}};
+
+/* ===== реестр тем ===== */
+const PARTS=['Матрицы','Определители','Обратная матрица','Системы уравнений'];
+const TOPICS=[
+ {id:'addr',p:0,n:'Адрес элемента aᵢⱼ',sec:'t-matrix'},{id:'size',p:0,n:'Размер произведения',sec:'t-mul'},{id:'trans',p:0,n:'Транспонирование',sec:'t-trans'},
+ {id:'lin',p:0,n:'kA ± mB',sec:'t-add'},{id:'mul',p:0,n:'Умножение A·B',sec:'t-mul'},{id:'pow',p:0,n:'Степень A²',sec:'t-mul'},
+ {id:'det2',p:1,n:'Определитель 2×2',sec:'t-det2'},{id:'det3t',p:1,n:'3×3 треугольниками',sec:'t-det3'},{id:'minor',p:1,n:'Минор и дополнение',sec:'t-minor'},
+ {id:'expand',p:1,n:'Разложение по строке',sec:'t-expand'},{id:'props',p:1,n:'Свойства определителя',sec:'t-props'},{id:'tri',p:1,n:'Треугольный вид 3×3',sec:'t-tri'},{id:'det4',p:1,n:'Определитель 4×4',sec:'t-tri'},
+ {id:'inv2',p:2,n:'Обратная 2×2',sec:'t-inv2'},{id:'inv3',p:2,n:'Обратная 3×3',sec:'t-inv3'},{id:'sing',p:2,n:'Параметр: нет обратной',sec:'t-sing'},{id:'mateq',p:2,n:'A·X = B, X·A = B',sec:'t-mateq'},
+ {id:'cramer',p:3,n:'Метод Крамера',sec:'t-cramer'},{id:'gauss',p:3,n:'Метод Гаусса',sec:'t-gauss'},{id:'rank',p:3,n:'Ранг матрицы',sec:'t-rank'},{id:'kk',p:3,n:'Сколько решений',sec:'t-kk'}];
+
+/* ===== статистика ===== */
+const Stats={d:STORE.get('stats',{t:{},streak:0,best:0,total:0,ok:0,days:{},g:[0,0]}),
+  save(){STORE.set('stats',this.d)},
+  rec(id,ok){const t=this.d.t[id]||(this.d.t[id]={ok:0,bad:0});ok?t.ok++:t.bad++;this.d.total++;if(ok){this.d.ok++;this.d.streak++;this.d.best=Math.max(this.d.best,this.d.streak)}else this.d.streak=0;
+    const day=new Date().toISOString().slice(0,10);this.d.days[day]=(this.d.days[day]||0)+(ok?1:0);this.save();updateBadges()},
+  guess(ok){this.d.g[ok?0:1]++;this.save()},
+  acc(id){const t=this.d.t[id];return t&&(t.ok+t.bad)?t.ok/(t.ok+t.bad):null}};
+function toast(s){const t=document.createElement('div');t.className='toast';t.innerHTML=s;document.body.appendChild(t);setTimeout(()=>t.classList.add('show'));setTimeout(()=>{t.classList.remove('show');setTimeout(()=>t.remove(),400)},2200)}
+
+/* ===== ввод ответа ===== */
+function answerUI(p){
+  const w=document.createElement('div');w.className='answer';
+  if(p.kind==='num')w.innerHTML=`<label>Ответ: <input class="ain" data-k="0" autocomplete="off" placeholder="например −3 или 7/2"></label>`;
+  else if(p.kind==='set')w.innerHTML=`<label>Ответ: <input class="ain wide" data-k="0" autocomplete="off" placeholder="0; 9"></label>`;
+  else if(p.kind==='fields')w.innerHTML=p.fields.map((x,i)=>`<label>${x.l} = <input class="ain" data-k="${i}" autocomplete="off"></label>`).join('');
+  else if(p.kind==='mat'){const r=p.a.length,c=p.a[0].length;let cells='';for(let i=0;i<r;i++)for(let j=0;j<c;j++)cells+=`<input class="ain cell" data-k="${i*c+j}" autocomplete="off">`;
+    w.innerHTML=`<div class="arow"><span>Ответ:</span><span class="m m-p"><span class="mg" style="grid-template-columns:repeat(${c},auto)">${cells}</span></span></div>`;}
+  else if(p.kind==='choice')w.innerHTML=`<div class="choices">${p.opts.map(o=>`<button class="btn choice" data-v="${esc(o)}">${o}</button>`).join('')}</div>`;
+  return w;
+}
+function readAnswer(p,w){
+  if(p.kind==='choice'){const s=$('.choice.sel',w);return s?s.dataset.v:null}
+  const ins=$$('.ain',w);
+  if(p.kind==='set'){const parts=ins[0].value.split(/[;,\s]+/).filter(Boolean).map(parseQ);if(!parts.length||parts.some(x=>!x))return null;return parts}
+  const vals=ins.map(i=>parseQ(i.value));if(vals.some(v=>!v))return {partial:vals};
+  if(p.kind==='num')return vals[0];if(p.kind==='fields')return vals;
+  const c=p.a[0].length;return p.a.map((r,i)=>r.map((_,j)=>vals[i*c+j]));
+}
+function same(p,u,a){if(u==null)return false;
+  if(p.kind==='num')return u instanceof Q&&u.eq(a);if(p.kind==='choice')return u===a;
+  if(p.kind==='set'){const A=a.map(f).sort(),U=[...new Set(u.map(f))].sort();return A.length===U.length&&A.every((x,i)=>x===U[i])}
+  if(p.kind==='fields')return Array.isArray(u)&&u.every((x,i)=>x&&x.eq(a[i]));
+  if(p.kind==='mat')return Array.isArray(u)&&meq(u,a);return false}
+function expected(p){return p.kind==='fields'?p.fields.map(x=>x.a):p.a}
+
+/* ===== карточка задачи ===== */
+function problemCard(p,o={}){
+  const el=document.createElement('div');el.className='pcard';window._p=p;
+  el.innerHTML=`<div class="ph"><span class="tag">${TOPICS.find(t=>t.id===p.topic)?.n||''}</span><b>${p.title}</b></div><div class="pq">${p.q}</div>`;
+  const aw=answerUI(p);el.appendChild(aw);
+  const bar=document.createElement('div');bar.className='pbar';
+  bar.innerHTML=`<button class="btn pri chk">Проверить <kbd>Enter</kbd></button>${o.exam?'':`<button class="btn ladder">Решать по шагам</button><button class="btn ghost sol">Решение</button>`}${o.next?`<button class="btn nxt">Следующая →</button>`:''}`;
+  el.appendChild(bar);const fb=document.createElement('div');fb.className='fb';el.appendChild(fb);const sw=document.createElement('div');sw.className='solwrap';el.appendChild(sw);
+  let tried=false,done=false;
+  const showSol=(guess)=>{sw.innerHTML='';sw.appendChild(stepper(p.steps,{guess}));sw.firstChild.focus({preventScroll:true});sw.scrollIntoView({behavior:'smooth',block:'nearest'})};
+  function check(){const u=readAnswer(p,aw),a=expected(p);
+    if(u==null||u.partial){fb.className='fb warn';fb.innerHTML=p.kind==='choice'?'Выбери вариант.':'Заполни все поля числами (дроби — через «/», например −7/3).';return}
+    const ok=same(p,u,a);
+    if(p.kind==='mat'){const c=p.a[0].length;$$('.ain',aw).forEach((inp,k)=>{const v=u[Math.floor(k/c)][k%c];inp.classList.toggle('ok',v.eq(p.a[Math.floor(k/c)][k%c]));inp.classList.toggle('bad',!v.eq(p.a[Math.floor(k/c)][k%c]))})}
+    if(p.kind==='fields')$$('.ain',aw).forEach((inp,k)=>{inp.classList.toggle('ok',u[k].eq(a[k]));inp.classList.toggle('bad',!u[k].eq(a[k]))});
+    if(o.exam){o.onAnswer&&o.onAnswer(ok,u);return}
+    if(!tried&&!done){Stats.rec(p.topic,ok);tried=true}
+    if(ok){done=true;fb.className='fb ok';fb.innerHTML=pick(['✓ Верно! ','✓ Точно! ','✓ Отлично! ','✓ Так держать! '])+(Stats.d.streak>=3?`Серия: ${Stats.d.streak}`:'')+' <span class="muted">Посмотри разбор, если хочешь сверить ход решения.</span>';el.classList.add('solved')}
+    else{const trap=(p.traps||[]).find(t=>same(p,u,t.a));fb.className='fb bad';
+      fb.innerHTML=`✗ Пока не так. ${trap?`<b>Похоже на типичную ошибку:</b> ${trap.msg}`:p.kind==='mat'?'Клетки в пунктирной рамке — неверные. ':''} <span class="muted">Попробуй ещё раз или открой «Решать по шагам».</span>`}}
+  el.addEventListener('click',e=>{const t=e.target;
+    if(t.closest('.choice')){$$('.choice',aw).forEach(b=>b.classList.remove('sel'));t.closest('.choice').classList.add('sel');if(!o.exam)check();else check()}
+    else if(t.closest('.chk'))check();else if(t.closest('.sol'))showSol(false);else if(t.closest('.ladder'))showSol(true);else if(t.closest('.nxt'))o.next()});
+  el.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.classList.contains('ain')){e.preventDefault();if(done&&o.next)o.next();else check()}});
+  el.check=check;return el;
+}
+function makeProblem(id,L,d){const p=G[id](L,d||{});p.topic=id;return p}
+
+/* ===== тренажёр ===== */
+const Tr={sel:new Set(STORE.get('trSel',['det3t'])),L:STORE.get('trL',2),count:0};
+function trainerInit(){
+  const box=$('#tr-topics');box.innerHTML=PARTS.map((P,pi)=>`<div class="tgroup"><div class="tgh">${P} <button class="lnk" data-part="${pi}">все</button></div>${TOPICS.filter(t=>t.p===pi).map(t=>`<button class="chip ${Tr.sel.has(t.id)?'on':''}" data-id="${t.id}">${t.n}<span class="acc" data-acc="${t.id}"></span></button>`).join('')}</div>`).join('');
+  box.addEventListener('click',e=>{const c=e.target.closest('.chip'),pp=e.target.closest('[data-part]');
+    if(c){const id=c.dataset.id;Tr.sel.has(id)?Tr.sel.delete(id):Tr.sel.add(id);c.classList.toggle('on')}
+    if(pp){const ids=TOPICS.filter(t=>t.p===+pp.dataset.part).map(t=>t.id),all=ids.every(i=>Tr.sel.has(i));ids.forEach(i=>all?Tr.sel.delete(i):Tr.sel.add(i));$$('.chip',box).forEach(ch=>ch.classList.toggle('on',Tr.sel.has(ch.dataset.id)))}
+    STORE.set('trSel',[...Tr.sel]);});
+  $('#tr-all').onclick=()=>{TOPICS.forEach(t=>Tr.sel.add(t.id));$$('.chip',box).forEach(c=>c.classList.add('on'));STORE.set('trSel',[...Tr.sel]);trNext()};
+  $('#tr-weak').onclick=()=>{const w=TOPICS.filter(t=>{const a=Stats.acc(t.id);return a!==null&&a<0.75}).map(t=>t.id);if(!w.length){toast('Слабых тем пока нет — реши побольше задач ');return}Tr.sel=new Set(w);$$('.chip',box).forEach(c=>c.classList.toggle('on',Tr.sel.has(c.dataset.id)));STORE.set('trSel',w);trNext()};
+  $$('#tr-level button').forEach(b=>{b.classList.toggle('on',+b.dataset.l===Tr.L);b.onclick=()=>{Tr.L=+b.dataset.l;STORE.set('trL',Tr.L);$$('#tr-level button').forEach(x=>x.classList.toggle('on',x===b));trNext()}});
+  $('#tr-new').onclick=trNext;updateBadges();
+}
+let trLast=null;
+function trNext(){if(!Tr.sel.size){toast('Выбери хотя бы одну тему');return}let ids=[...Tr.sel];if(ids.length>1&&trLast){const f2=ids.filter(i=>i!==trLast);if(f2.length)ids=f2}const id=pick(ids);trLast=id;
+  const p=makeProblem(id,Tr.L);const w=$('#tr-card');w.innerHTML='';const c=problemCard(p,{next:trNext});w.appendChild(c);Tr.count++;$('#tr-count').textContent=Tr.count;
+  const fi=$('.ain',c);if(fi)fi.focus({preventScroll:true});}
+function trainTopic(id){Tr.sel=new Set([id]);STORE.set('trSel',[id]);go('trainer');$$('#tr-topics .chip').forEach(c=>c.classList.toggle('on',Tr.sel.has(c.dataset.id)));trNext()}
+function updateBadges(){const d=Stats.d;$$('[data-acc]').forEach(s=>{const a=Stats.acc(s.dataset.acc);s.textContent=a===null?'':Math.round(a*100)+'%';s.className='acc '+(a===null?'':a>=.8?'hi':a>=.5?'mid':'lo')});
+  $$('.st-streak').forEach(x=>x.textContent=d.streak);$$('.st-best').forEach(x=>x.textContent=d.best);$$('.st-total').forEach(x=>x.textContent=d.ok);
+  const today=new Date().toISOString().slice(0,10);$$('.st-today').forEach(x=>x.textContent=d.days[today]||0);
+  const h=$('#heat');if(h){let s='';for(let i=27;i>=0;i--){const dt=new Date(Date.now()-i*864e5).toISOString().slice(0,10),v=d.days[dt]||0;s+=`<span title="${dt}: ${v}" class="hc l${v===0?0:v<5?1:v<15?2:3}"></span>`}h.innerHTML=s}
+  const tp=$('#topic-prog');if(tp)tp.innerHTML=TOPICS.map(t=>{const a=Stats.acc(t.id),x=d.t[t.id];return `<div class="tp"><span>${t.n}</span><span class="tpb"><i style="width:${a===null?0:Math.round(a*100)}%" class="${a===null?'':a>=.8?'hi':a>=.5?'mid':'lo'}"></i></span><span class="muted">${x?x.ok+'/'+(x.ok+x.bad):'—'}</span></div>`}).join('');}
+
+/* ===== контрольная ===== */
+function examStart(){const ids=shuffle(TOPICS.map(t=>t.id)).slice(0,8),ps=ids.map(id=>makeProblem(id,2)),res=[];let k=0;const w=$('#exam-box');
+  const t0=Date.now();
+  function show(){if(k>=ps.length)return finish();w.innerHTML=`<div class="exh">Задача ${k+1} из ${ps.length} <span class="segs">${ps.map((_,i)=>`<span class="seg ${i<k?'done':''} ${i===k?'cur':''}"></span>`).join('')}</span></div>`;
+    const c=problemCard(ps[k],{exam:true,onAnswer:(ok)=>{res[k]=ok;Stats.rec(ps[k].topic,ok);k++;show()}});w.appendChild(c);
+    const sk=document.createElement('button');sk.className='btn ghost';sk.textContent='Пропустить';sk.onclick=()=>{res[k]=false;k++;show()};$('.pbar',c).appendChild(sk);const fi=$('.ain',c);if(fi)fi.focus()}
+  function finish(){const sc=res.filter(Boolean).length,min=Math.round((Date.now()-t0)/60000);
+    w.innerHTML=`<div class="exres"><div class="bigres">${sc} / ${ps.length}</div><div>${sc===8?'Идеально! ':sc>=6?'Хорошо! Разбери ошибки ниже ':sc>=4?'Неплохо, но есть над чем поработать.':'Ничего страшного: ошибки — лучший учитель. Разбери каждую '} · ${min} мин</div></div>`+
+      ps.map((p,i)=>`<div class="exitem ${res[i]?'ok':'bad'}" data-i="${i}"><span>${res[i]?'✓':'✗'}</span><span>${p.title}</span><button class="btn sm">Разбор</button></div><div class="exsol" id="exs${i}"></div>`).join('')+`<button class="btn pri" id="ex-again">Ещё одна контрольная</button>`;
+    w.onclick=e=>{const it=e.target.closest('.exitem');if(it&&e.target.closest('button')){const i=+it.dataset.i,s=$('#exs'+i);s.innerHTML=`<div class="pq">${ps[i].q}</div>`;s.appendChild(stepper(ps[i].steps))}if(e.target.id==='ex-again')examStart()}}
+  show();}
+
+/* ===== карточки (Лейтнер) ===== */
+const CARDS=[
+ ['Что значат индексы в aᵢⱼ?','i — номер строки, j — номер столбца. «Ряд, потом место».'],['Размер m×n — это…','m строк × n столбцов.'],
+ ['Когда можно сложить A и B?','Только если одинаковый размер.'],['Матрица × число k — что умножается?','Каждый элемент.'],
+ ['Определитель × число k (как действие со строкой) — что умножается?','Только одна строка (или один столбец).'],
+ ['Когда определено A·B?','Число столбцов A = числу строк B. Размер ответа: (строки A)×(столбцы B).'],['c₂₃ в произведении A·B — это…','2-я строка A × 3-й столбец B (пары перемножить и сложить).'],
+ ['AB = BA?','В общем случае нет! Порядок множителей важен.'],['(AB)ᵀ = ?','BᵀAᵀ — порядок меняется.'],['A² — это…','A·A по правилу «строка × столбец», а не квадраты элементов.'],
+ ['Определитель 2×2','ad − bc: главная диагональ минус побочная.'],['Сколько слагаемых в определителе 3×3?','6: три с «+» (главная + 2 треугольника), три с «−» (побочная + 2 треугольника).'],
+ ['Проверка тройки в правиле треугольников','В каждой тройке по одному числу из каждой строки и каждого столбца.'],['Самая частая ошибка в 3×3','Минус перед скобкой: Δ = P − M, если M < 0, то получается +.'],
+ ['Минор Mᵢⱼ','Определитель, оставшийся после вычёркивания строки i и столбца j.'],['Алгебраическое дополнение Aᵢⱼ','(−1)^(i+j)·Mᵢⱼ — минор со знаком шахматки.'],
+ ['Шахматка знаков 3×3','+ − + / − + − / + − +'],['По какой строке раскладывать?','По любой (ответ один). Лучше — где больше нулей.'],
+ ['Поменяли две строки — определитель…','меняет знак.'],['Прибавили к строке другую × k — определитель…','не меняется.'],['Две одинаковые (пропорциональные) строки — определитель…','равен 0.'],
+ ['|kA| для матрицы n×n','kⁿ·|A|.'],['|AB| = ?','|A|·|B|.'],['Определитель треугольной матрицы','Произведение чисел на главной диагонали.'],
+ ['Когда существует A⁻¹?','Только если |A| ≠ 0 (матрица невырожденная).'],['Формула A⁻¹','A⁻¹ = (1/|A|)·A*, A* — транспонированная таблица алгебраических дополнений.'],
+ ['Быстрое правило A⁻¹ для 2×2','Главную диагональ поменять местами, у побочной сменить знаки, всё разделить на |A|.'],['Откуда берётся «поменять местами» в 2×2?','У 2×2 после вычёркивания остаётся число из противоположного угла: A₁₁ = d, A₂₂ = a.'],
+ ['Откуда минус у побочной в 2×2?','Из шахматки: позиции (1,2) и (2,1) — нечётная сумма индексов → знак «−».'],['|A⁻¹| = ?','1/|A|.'],['(AB)⁻¹ = ?','B⁻¹A⁻¹ (как носки и ботинки — снимаем в обратном порядке).'],
+ ['A·X = B → X = ?','A⁻¹·B (A слева → A⁻¹ слева).'],['X·A = B → X = ?','B·A⁻¹ (A справа → A⁻¹ справа).'],['Параметр: «при каком x нет обратной»','Приравнять |A| = 0 и решить. Выносить x за скобку, не делить на x!'],
+ ['Метод Крамера: xᵢ = ?','Δᵢ/Δ, где Δᵢ — Δ с i-м столбцом, заменённым на правые части.'],['Когда Крамер не работает?','Когда Δ = 0.'],
+ ['3 разрешённых действия метода Гаусса','П-У-П: Переставить, Умножить на число ≠ 0, Прибавить другую строку × k.'],['Множитель k в методе Гаусса','k = (убиваемое число) / (ступенька).'],
+ ['Ранг матрицы','Число ненулевых строк после приведения к ступенчатому виду.'],['Кронекер–Капелли: решений нет, если…','r ≠ r̄ (есть строка 0 0 … 0 | b, b ≠ 0).'],
+ ['r = r̄ = n →','ровно одно решение.'],['r = r̄ < n →','бесконечно много решений, свободных переменных n − r.'],['Однородная система A·X = 0 всегда…','совместна: X = 0 подходит. Ненулевые решения есть ⇔ r < n.']];
+const INT=[0,1,3,7,16];
+function cardsInit(){const st=STORE.get('cards',{});const now=Date.now();const due=CARDS.map((c,i)=>i).filter(i=>{const s=st[i];return !s||s.due<=now});
+  const box=$('#cards-box');const boxes=[0,0,0,0,0];CARDS.forEach((_,i)=>boxes[st[i]?.b??0]++);
+  $('#cards-stat').innerHTML=boxes.map((n,i)=>`<span class="lbox"><b>${n}</b>коробка ${i+1}${i?` · раз в ${INT[i]} дн.`:' · каждый раз'}</span>`).join('');
+  let order=shuffle(due),k=0;
+  function show(){if(k>=order.length){box.innerHTML=`<div class="fc done">На сегодня всё! Карточек к повторению: 0.<br><span class="muted">Возвращайся завтра — так память держится дольше всего.</span><br><button class="btn" id="cards-all">Повторить все заново</button></div>`;$('#cards-all').onclick=()=>{order=shuffle(CARDS.map((_,i)=>i));k=0;show()};return}
+    const i=order[k];box.innerHTML=`<div class="fc"><div class="fcn">${k+1} / ${order.length} · коробка ${(st[i]?.b??0)+1}</div><div class="fcq">${CARDS[i][0]}</div><div class="fca hidden">${CARDS[i][1]}</div>
+      <div class="fcb"><button class="btn pri" id="fc-show">Показать ответ (пробел)</button><button class="btn bad hidden" id="fc-no">✗ Не помнил</button><button class="btn good hidden" id="fc-yes">✓ Помнил</button></div><div class="muted small">Сначала ответь мысленно или вслух — именно попытка вспомнить укрепляет память.</div></div>`;
+    $('#fc-show').onclick=()=>{$('.fca',box).classList.remove('hidden');$('#fc-show').classList.add('hidden');$('#fc-no').classList.remove('hidden');$('#fc-yes').classList.remove('hidden')};
+    const ans=ok=>{const b=ok?Math.min(4,(st[i]?.b??0)+1):0;st[i]={b,due:Date.now()+INT[b]*864e5-36e5};STORE.set('cards',st);k++;show()};
+    $('#fc-no').onclick=()=>ans(false);$('#fc-yes').onclick=()=>ans(true);}
+  show();}
+document.addEventListener('keydown',e=>{if(location.hash!=='#cards'||e.target.tagName==='INPUT')return;if(e.code==='Space'){const b=$('#fc-show');if(b&&!b.classList.contains('hidden')){e.preventDefault();b.click()}}
+  if(e.key==='1'){$('#fc-no:not(.hidden)')?.click()}if(e.key==='2'){$('#fc-yes:not(.hidden)')?.click()}});
+
+/* ===== проверялка ===== */
+function checkerInit(){const tp=$('#ck-type'),sz=$('#ck-size'),gridW=$('#ck-grid'),out=$('#ck-out');
+  const conf={det:{s:[2,3,4],sq:true},inv:{s:[2,3],sq:true},gauss:{s:[2,3],aug:true},rank:{s:[2,3,4],rect:true},mul:{s:[2,3],two:true}};
+  function build(){const c=conf[tp.value];sz.innerHTML=c.s.map(n=>`<option value="${n}">${c.aug?n+' уравнения':n+'×'+n}</option>`).join('');if(c.rect)sz.innerHTML+='<option value="3x4">3×4</option><option value="4x3">4×3</option>';grid()}
+  function inputs(r,c,id,aug){let s='';for(let i=0;i<r;i++)for(let j=0;j<c;j++)s+=`<input class="ain cell${aug&&j===c-1?' aug':''}" data-m="${id}" data-i="${i}" data-j="${j}" value="${rnd(-3,5)}">`;return `<span class="m m-p"><span class="mg" style="grid-template-columns:repeat(${c},auto)">${s}</span></span>`}
+  function grid(){const c=conf[tp.value];let r,cc;const v=sz.value;if(v.includes('x'))[r,cc]=v.split('x').map(Number);else r=cc=+v;
+    gridW.innerHTML=c.two?`A = ${inputs(r,cc,'A')} &nbsp; B = ${inputs(r,cc,'B')}`:c.aug?`${inputs(r,r+1,'A',true)}<div class="muted small">Последний столбец — правые части.</div>`:`A = ${inputs(r,cc,'A')}`;out.innerHTML=''}
+  function read(id){const ins=$$(`input[data-m="${id}"]`,gridW);const r=Math.max(...ins.map(i=>+i.dataset.i))+1,c=Math.max(...ins.map(i=>+i.dataset.j))+1;const M=Array.from({length:r},()=>Array(c));
+    for(const i of ins){const v=parseQ(i.value);if(!v){i.classList.add('bad');return null}i.classList.remove('bad');M[+i.dataset.i][+i.dataset.j]=v}return M}
+  tp.onchange=build;sz.onchange=grid;$('#ck-rand').onclick=grid;
+  $('#ck-go').onclick=()=>{const t=tp.value,A=read('A');if(!A){out.innerHTML='<div class="fb bad">Проверь клетки: нужны числа или дроби вида 3/4.</div>';return}let p,n=A.length;
+    try{if(t==='det')p=n===2?makeProblem('det2',2,{A}):n===3?makeProblem('det3t',2,{A}):makeProblem('det4',2,{A});
+      else if(t==='inv'){if(det(A).z){out.innerHTML=`<div class="fb bad">|A| = 0 → обратной матрицы нет (матрица вырожденная).</div>`;return}p=n===2?makeProblem('inv2',2,{A}):makeProblem('inv3',2,{A})}
+      else if(t==='mul'){const B=read('B');if(!B)return;p=makeProblem('mul',2,{A,B})}
+      else if(t==='rank')p=makeProblem('rank',2,{A});
+      else{const C=A.map(r=>r.slice(0,n)),b=A.map(r=>r[n]);if(det(C).z){p=makeProblem('kk',2,{M:A});p.title='Δ = 0 — разбираем, сколько решений'}else p=makeProblem('gauss',2,{A:C,b})}
+    }catch(e){out.innerHTML='<div class="fb bad">Не получилось: '+esc(e.message)+'</div>';return}
+    out.innerHTML=`<div class="pq">${p.q}</div><div class="fb ok">Ответ: ${fmtAns(p)}</div>`;out.appendChild(stepper(p.steps))};
+  build();}
+function fmtAns(p){const a=expected(p);if(p.kind==='mat')return mat(a);if(p.kind==='fields')return p.fields.map(x=>`${x.l} = ${f(x.a)}`).join(', ');if(p.kind==='set')return a.map(f).join('; ');return typeof a==='string'?a:f(a)}
+
+/* ===== мини-игра: собери треугольник ===== */
+function triGameInit(el){let order=shuffle([0,1,2,3,4,5]),k=0,pickd=[],score=0;
+  function render(){const t=order[k];const lbl=t<3?`<span class="hl-g">«+» произведение №${t+1}</span>`:`<span class="hl-r">«−» произведение №${t-2}</span>`;
+    el.innerHTML=`<div class="tg-q">Отметь 3 клетки: ${lbl} <span class="muted">(${t===0?'главная диагональ':t===3?'побочная диагональ':'треугольник'})</span></div><div class="tg-grid">${[0,1,2].map(i=>[0,1,2].map(j=>`<button class="tg-c ${pickd.some(([a,b])=>a===i&&b===j)?'on':''}" data-i="${i}" data-j="${j}">a<sub>${i+1}${j+1}</sub></button>`).join('')).join('')}</div><div class="tg-msg muted">Счёт: ${score} · подсказка: в тройке по одной клетке из каждой строки и каждого столбца</div>`}
+  el.addEventListener('click',e=>{const c=e.target.closest('.tg-c');if(!c)return;const i=+c.dataset.i,j=+c.dataset.j;const ix=pickd.findIndex(([a,b])=>a===i&&b===j);ix>=0?pickd.splice(ix,1):pickd.push([i,j]);
+    if(pickd.length<3){render();return}const t=order[k],good=TERMS[t].p.every(([a,b])=>pickd.some(([x,y])=>x===a&&y===b));render();const msg=$('.tg-msg',el);
+    if(good){score++;msg.innerHTML=`<span class="hl-g">✓ Верно!</span> ${TERMS[t].p.map(([a,b])=>aij(a+1,b+1)).join('·')}`;$$('.tg-c.on',el).forEach(x=>x.classList.add(t<3?'g':'r'))}
+    else{msg.innerHTML=`<span class="hl-r">✗ Не та тройка.</span> Правильно: ${TERMS[t].p.map(([a,b])=>aij(a+1,b+1)).join('·')}`;$$('.tg-c',el).forEach(x=>{if(TERMS[t].p.some(([a,b])=>a===+x.dataset.i&&b===+x.dataset.j))x.classList.add('ans')})}
+    setTimeout(()=>{pickd=[];k++;if(k>=6){order=shuffle([0,1,2,3,4,5]);k=0;toast(`Круг пройден: ${score} очков `)}render()},1300)});
+  render();}
+
+/* ===== лаборатория 2×2: а если по-другому? ===== */
+function invLabInit(el){
+  el.innerHTML=`<div class="lab"><div class="lab-in">A = <span class="m m-p"><span class="mg" style="grid-template-columns:repeat(2,auto)"><input class="ain cell" value="3"><input class="ain cell" value="4"><input class="ain cell" value="1"><input class="ain cell" value="2"></span></span></div>
+   <div class="lab-v"><button class="btn sm on" data-v="0">✓ поменять + минус</button><button class="btn sm" data-v="1">только поменять</button><button class="btn sm" data-v="2">только минус</button><button class="btn sm" data-v="3">ничего не менять</button></div><div class="lab-out"></div></div>`;
+  let v=0;
+  function upd(){const x=$$('.ain',el).map(i=>parseQ(i.value));if(x.some(z=>!z))return;const [a,b,c,d]=x,A=[[a,b],[c,d]];
+    const cand=[[[d,b.neg()],[c.neg(),a]],[[d,b],[c,a]],[[a,b.neg()],[c.neg(),d]],[[a,b],[c,d]]][v],P=mmul(A,cand),D=det(A);
+    const good=P[0][1].z&&P[1][0].z&&P[0][0].eq(P[1][1]);
+    $('.lab-out',el).innerHTML=row(mat(A,{name:'A ·'}),mat(cand,{hl:(i,j)=>i===j?'b':'r'}),op('='),mat(P,{hl:(i,j)=>i===j?(P[0][0].eq(P[1][1])?'g':'r'):(P[i][j].z?'g':'r')}))+
+      `<div class="fb ${good?'ok':'bad'}">${good?`✓ Получилось ${f(D)}·E: на диагонали одинаковые числа (это |A| = ${f(D)}), вне диагонали нули. Осталось разделить на ${f(D)} — и будет E. ${D.z?'Но |A| = 0 — делить нельзя, обратной нет!':''}`:
+      v===1?`✗ Вне диагонали получилось ${f(P[0][1])} и ${f(P[1][0])}, а не 0. Без минуса «чужие» произведения складываются вместо того, чтобы уничтожить друг друга: a·b + b·a = 2ab.`:
+      v===2?`✗ На диагонали ${f(P[0][0])} и ${f(P[1][1])} — разные числа, и вне диагонали не нули. Без перестановки a и d не получается ad − bc.`:'✗ Это просто A·A = A². Ничего не сократилось.'}</div>`}
+  el.addEventListener('input',upd);el.addEventListener('click',e=>{const b=e.target.closest('[data-v]');if(!b)return;v=+b.dataset.v;$$('[data-v]',el).forEach(x=>x.classList.toggle('on',x===b));upd()});upd();}
+
+/* ===== навигация ===== */
+const visited=new Set(STORE.get('visited',[]));
+function go(id){if(!document.getElementById(id))id='home';if(location.hash!=='#'+id)history.pushState(null,'','#'+id);show(id)}
+function show(id){$$('main > section').forEach(s=>s.classList.toggle('active',s.id===id));$$('#nav a').forEach(a=>a.classList.toggle('cur',a.getAttribute('href')==='#'+id));
+  visited.add(id);STORE.set('visited',[...visited]);$$('#nav a').forEach(a=>a.classList.toggle('seen',visited.has(a.getAttribute('href').slice(1))));
+  const sec=document.getElementById(id);$$('.demo:not(.ready)',sec).forEach(initDemo);
+  if(id==='trainer'&&!$('#tr-card').children.length)trNext();if(id==='cards')cardsInit();if(id==='home')updateBadges();
+  document.body.classList.remove('navopen');window.scrollTo(0,0);
+  const secs=$$('#nav a').map(a=>a.getAttribute('href').slice(1)),i=secs.indexOf(id);const pn=$('.pn',sec);
+  if(pn){const pv=secs[i-1],nx=secs[i+1];pn.innerHTML=`${pv?`<a class="btn ghost" href="#${pv}">← ${$(`#nav a[href="#${pv}"]`).dataset.t}</a>`:'<span></span>'}${nx?`<a class="btn pri" href="#${nx}">${$(`#nav a[href="#${nx}"]`).dataset.t} →</a>`:''}`}}
+function initDemo(el){el.classList.add('ready');const p=makeProblem(el.dataset.gen,2,JSON.parse(el.dataset.d||'{}'));
+  el.innerHTML=`<div class="dh">▶ Разбор${el.dataset.title?': '+el.dataset.title:''}</div><div class="pq">${p.q}</div>`;el.appendChild(stepper(p.steps));}
+window.addEventListener('popstate',()=>show(location.hash.slice(1)||'home'));
+document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(a){e.preventDefault();go(a.getAttribute('href').slice(1))}
+  const t=e.target.closest('[data-train]');if(t)trainTopic(t.dataset.train);
+  if(e.target.closest('#burger'))document.body.classList.toggle('navopen');if(e.target.closest('#theme')){document.body.classList.toggle('light');STORE.set('light',document.body.classList.contains('light'))}});
+function navInit(){$('#nav-search').addEventListener('input',e=>{const s=e.target.value.toLowerCase().trim();$$('#nav a').forEach(a=>a.style.display=!s||a.textContent.toLowerCase().includes(s)||(a.dataset.k||'').includes(s)?'':'none');$$('#nav .ng').forEach(g=>g.style.display=$$('a',g).some(a=>a.style.display!=='none')?'':'none')})}
+document.addEventListener('DOMContentLoaded',()=>{if(STORE.get('light',false))document.body.classList.add('light');navInit();trainerInit();checkerInit();$$('.trigame').forEach(triGameInit);$$('.invlab').forEach(invLabInit);
+  $('#exam-start').onclick=examStart;$('#reset').onclick=()=>{if(confirm('Сбросить весь прогресс?')){Object.keys(localStorage).filter(k=>k.startsWith('mx_')).forEach(k=>localStorage.removeItem(k));location.reload()}};
+  show(location.hash.slice(1)||'home');});
+/* ===== статические матрицы в тексте: <m-x data-a="1,2;3,4" data-t="d" data-h="r0:b;c1:g;0,0:y;d:g;all:y;x0,1"> ===== */
+function renderStatic(){
+  $$('m-x').forEach(el=>{const A=el.dataset.a.split(';').map(r=>r.split(',').map(s=>{s=s.trim();const m=s.match(/^([a-zA-Z])(\d)(\d)$/);return m?`${m[1]}<sub>${m[2]}${m[3]}</sub>`:s.replace(/^-/,'−')}));
+    const rules=(el.dataset.h||'').split(';').filter(Boolean).map(r=>{if(r[0]==='x'){const [i,j]=r.slice(1).split(',').map(Number);return hCross(i,j)}const [k,c]=r.split(':');
+      if(k==='all')return ()=>c;if(k==='d')return hDiag(c);if(k[0]==='r')return hRow(+k.slice(1),c);if(k[0]==='c')return hCol(+k.slice(1),c);const [i,j]=k.split(',').map(Number);return hCells([[i,j]],c)});
+    const hl=(i,j)=>{let out='';for(const fn of rules){const v=fn(i,j);if(v)out=v}return out};
+    el.outerHTML=mat(A,{raw:true,type:el.dataset.t||'p',name:el.dataset.n,hl});});
+  const tl=$('#tri-legend');if(tl)tl.innerHTML=[0,1].map(g=>`<div class="row">`+TERMS.slice(g*3,g*3+3).map((t,kk)=>{const k=g*3+kk;return `<div class="mini ${k<3?'plus':'minus'}" title="${t.n}">${triSvg(null,k,{w:150})}<div class="small" style="text-align:center">${k<3?'<span class="hl-g">+</span>':'<span class="hl-r">−</span>'} ${t.p.map(([i,j])=>aij(i+1,j+1)).join('')}</div></div>`}).join('')+`<span class="muted small">${g?'«минусовые»: побочная диагональ ↙ и 2 треугольника — со знаком «−»':'«плюсовые»: главная диагональ ↘ и 2 треугольника — со знаком «+»'}</span></div>`).join('');
+  if(false)tl.innerHTML=TERMS.map((t,k)=>`<div class="mini ${k<3?'plus':'minus'}" title="${t.n}">${triSvg(null,k,{w:150})}<div class="small" style="text-align:center">${k<3?'<span class="hl-g">+</span>':'<span class="hl-r">−</span>'} ${t.p.map(([i,j])=>aij(i+1,j+1)).join('')}</div></div>`).join('');
+  const sr=$('#sarrus');if(sr)sr.innerHTML=sarrusSvg(null);
+}
+document.addEventListener('DOMContentLoaded',renderStatic,{once:true});
+</script></body></html>
